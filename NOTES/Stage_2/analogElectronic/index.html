@@ -1,0 +1,4993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ziyu Tian's Website">
+      
+      
+        <meta name="author" content="Ziyu Tian">
+      
+      
+        <link rel="canonical" href="https://ziyu-tian.github.io/NOTES/Stage_2/analogElectronic/">
+      
+      
+        <link rel="prev" href="../computerSystems/">
+      
+      
+        <link rel="next" href="../microProcessors/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>Analogue Electronics - Nothing except Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analog-electronics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Nothing except Notes" class="md-header__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nothing except Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analogue Electronics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../DEV/" class="md-tabs__link">
+          
+  
+    
+  
+  Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BLOGS/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Nothing except Notes" class="md-nav__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Nothing except Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage1_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Stage1_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Job_Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Placement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Placement Year
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1001/EngineeringMath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engineering Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Programing Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/Matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MATLAB Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/PythonDataAnalysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Data Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electronics Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Electronics Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Electronics/FundamentalElectricCircuits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals of Electric Circuits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage2_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Stage2_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semiconductor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semiconductors Devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signalsAndCommunication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signals and Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computerSystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Systems and Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Analogue Electronics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Analogue Electronics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-introduction-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: Introduction &amp; Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: Introduction & Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-basic-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Basic Laws
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Basic Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-kirchoffs-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Kirchoff's Law
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-diode-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: The diode basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ideal-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: Ideal Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-equivalent-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: Equivalent circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-small-and-large-signal-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Small and Large signal modelling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-small-signal-conductance" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: Small signal conductance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-load-line-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: Load line analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Noise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Noise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-thermal-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Thermal Noise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-shot-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Shot noise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-filters-bode-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: Filters &amp; Bode Plots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: Filters & Bode Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-low-pass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Low Pass filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-high-pass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: High Pass Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-multi-stage-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Multi-stage Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-passive-bandpass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Passive bandpass filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-bjt-transistors-the-analog-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      III: BJT transistors - the analog perspective
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III: BJT transistors - the analog perspective">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-discrete-bjt-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Discrete BJT structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bjt-large-signal-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: BJT large signal operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: BJT large signal operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ebers-moll-model-for-bjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Ebers Moll model for BJT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-driving-the-bjt-with-v_be-and-i_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Driving the BJT with V_BE and I_B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bjt-operating-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: BJT operating regions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-2-port-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV: 2-port Network
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV: 2-port Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-two-port-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Two port analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Two port analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-two-port-analysis-of-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Two port analysis of transistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-two-port-analysis-of-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Two port analysis of Mosfet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-hybrid-pi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Hybrid pi model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-h-parameter-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4: H parameter Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bjt-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: BJT Amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: BJT Amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-ideal-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: The ideal Amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-th-way-to-build-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Th way to build amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bjt-single-transistor-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: BJT single transistor amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-bjt-ce-large-signal-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: BJT CE Large signal summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-transistor-biasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Transistor biasing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-bjt-ce-amplifier-small-model-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: BJT CE amplifier - small model summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-bjt-ce-small-model-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: BJT CE small model analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-example-of-ce-bjt-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8: Example of CE BJT analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8: Example of CE BJT analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#281-setting-up-the-dc-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.1: Setting up the DC characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#282-calculating-the-emitter-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.2: Calculating the emitter resistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#283-calculating-the-bias-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.3: Calculating the Bias resistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#284-setting-up-the-ac-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.4: Setting up the AC characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-common-collector-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9: Common collector amplifier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-fet-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      V: FET Transistors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V: FET Transistors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mosfet-large-signal-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: MOSFET large signal operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: MOSFET large signal operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-mosfets-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: MOSFETs operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-bjt-vs-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: BJT vs MOSFET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-saturation-drain-current-variance-with-v_gs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Saturation drain current variance with \(V_{GS\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-channel-length-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4: Channel length modulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5: Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mosfet-small-signal-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: MOSFET small signal operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: MOSFET small signal operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mosfet-complete-small-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: MOSFET complete small signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mosfet-simplified-small-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: MOSFET simplified small model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mosfet-operational-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: MOSFET operational speed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mosfet-single-transistor-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: MOSFET single transistor amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: MOSFET single transistor amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mosfet-common-source-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: MOSFET Common source amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mosfet-common-drain-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: MOSFET Common drain amplifier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mosfet-as-a-resistor-diode-connected-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: MOSFET as a Resistor (diode connected MOSFET)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: MOSFET as a Resistor (diode connected MOSFET)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-diode-connected-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Diode connected MOSFET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-diode-connected-mosfet-as-active-resistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Diode connected MOSFET as active resistor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-active-resistor-potential-divider" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3: Active resistor potential divider
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-power-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      VI: Power Amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VI: Power Amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-power-amplifier-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Power Amplifier classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-power-amplifier-classes-by-power-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Power Amplifier classes (by power usage)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Power Amplifier classes (by power usage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-class-a-eg-common-emitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Class A - eg. Common Emitter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1: Class A - eg. Common Emitter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1: Efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2: Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mosfet-clipping-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3: MOSFET clipping distortion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-the-wrong-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4: The Wrong Bias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-frequency-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.5: Frequency Effects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-power-analysis-class-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.6: Power analysis - class A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-class-a-amplifier-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.7: Class A amplifier: summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-class-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Class B
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2: Class B">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-class-b-push-pull-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1: Class B push pull amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-class-b-amplifier-crossover-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2: Class B amplifier crossover distortion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-power-analysis-class-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3: Power analysis - Class B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4: Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-class-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: Class AB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3: Class AB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-class-ab-power-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1: Class AB power amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-crossover-distortion-improvement-in-class-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2: Crossover distortion improvement in Class AB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.3: Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-operational-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      VII: Operational Amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VII: Operational Amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-classic-op-amp-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Classic op-amp circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Feedback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-feedback-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Feedback Gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-advantage-1-gain-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Advantage 1 - Gain sensitivity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-advantage-2-eliminating-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Advantage 2 - Eliminating distortion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-advantage-3-noise-rejection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Advantage 3 - noise rejection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-cost-of-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: Cost of Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-frequency-response-open-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Frequency response - open loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-non-ideal-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Non-ideal performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Non-ideal performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-slew-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Slew rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-input-offset-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Input offset voltage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-digital-to-analog-conversion-back-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII: Digital to Analog Conversion (&amp; back again)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VIII: Digital to Analog Conversion (& back again)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analog-digital-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Analog &lt;-&gt; digital representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-accuracy-in-adcdac-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Accuracy in ADC/DAC conversion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-nyquist-shannon-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Nyquist - Shannon theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-adcdac-quantization-error-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: ADC/DAC Quantization error (noise)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-adcdac-quantization-snr" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: ADC/DAC Quantization SNR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-digital-to-analog-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6: Digital to Analog conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6: Digital to Analog conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-core-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1: Core principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-dac-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2: DAC system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-weighted-resistor-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3: Weighted resistor DAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-r-2r-ladder-network-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4: R-2R Ladder network DAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-capacitive-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5: Capacitive DAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-charge-scaling-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6: Charge Scaling DAC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-analog-to-digital-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7: Analog to digital Conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7: Analog to digital Conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-types-of-adcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1: Types of ADC's
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-sample-and-hold-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2: Sample and hold concept
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3: Comparator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-flash-adc-operational-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4: Flash ADC - operational principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-flash-adc-3-bit-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5: Flash ADC -3 Bit ADC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-half-flash-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6: Half Flash ADC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#77-sigma-delta-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.7: Sigma-delta ADC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#78-successive-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.8: Successive approximation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#79-adc-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.9: ADC Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microProcessors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitalElectronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhdl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VHDL Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statisticalMethod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acElectrical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AC Electrical Power
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automaticControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatic Control Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage3_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Stage3_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Industrial_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Control and PLC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Introduction_to_Law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction to Business Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Digital_Signal_Process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Signal Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../DEV/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Dev
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/TimeComplexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time & Space Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/StaticInC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static modifier in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/ValueRefPass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pass-by-Value & Pass-by-Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/BitOperation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bit Operation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../BLOGS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/BlogsZero/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blogs_Zero
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_220822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 22/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_240822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 24/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Literature_260822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Poem Thoughts 26/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-introduction-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: Introduction &amp; Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: Introduction & Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-basic-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Basic Laws
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Basic Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-kirchoffs-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Kirchoff's Law
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-diode-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: The diode basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ideal-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: Ideal Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-equivalent-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: Equivalent circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-small-and-large-signal-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Small and Large signal modelling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-small-signal-conductance" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: Small signal conductance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-load-line-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: Load line analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Noise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Noise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-thermal-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Thermal Noise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-shot-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Shot noise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-filters-bode-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: Filters &amp; Bode Plots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: Filters & Bode Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-low-pass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Low Pass filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-high-pass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: High Pass Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-multi-stage-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Multi-stage Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-passive-bandpass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Passive bandpass filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-bjt-transistors-the-analog-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      III: BJT transistors - the analog perspective
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III: BJT transistors - the analog perspective">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-discrete-bjt-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Discrete BJT structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bjt-large-signal-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: BJT large signal operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: BJT large signal operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ebers-moll-model-for-bjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Ebers Moll model for BJT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-driving-the-bjt-with-v_be-and-i_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Driving the BJT with V_BE and I_B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bjt-operating-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: BJT operating regions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-2-port-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV: 2-port Network
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV: 2-port Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-two-port-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Two port analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Two port analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-two-port-analysis-of-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Two port analysis of transistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-two-port-analysis-of-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Two port analysis of Mosfet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-hybrid-pi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Hybrid pi model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-h-parameter-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4: H parameter Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bjt-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: BJT Amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: BJT Amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-ideal-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: The ideal Amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-th-way-to-build-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Th way to build amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bjt-single-transistor-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: BJT single transistor amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-bjt-ce-large-signal-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: BJT CE Large signal summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-transistor-biasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Transistor biasing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-bjt-ce-amplifier-small-model-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: BJT CE amplifier - small model summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-bjt-ce-small-model-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: BJT CE small model analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-example-of-ce-bjt-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8: Example of CE BJT analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8: Example of CE BJT analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#281-setting-up-the-dc-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.1: Setting up the DC characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#282-calculating-the-emitter-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.2: Calculating the emitter resistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#283-calculating-the-bias-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.3: Calculating the Bias resistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#284-setting-up-the-ac-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.4: Setting up the AC characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-common-collector-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9: Common collector amplifier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-fet-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      V: FET Transistors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V: FET Transistors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mosfet-large-signal-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: MOSFET large signal operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: MOSFET large signal operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-mosfets-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: MOSFETs operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-bjt-vs-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: BJT vs MOSFET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-saturation-drain-current-variance-with-v_gs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Saturation drain current variance with \(V_{GS\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-channel-length-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4: Channel length modulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5: Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mosfet-small-signal-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: MOSFET small signal operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: MOSFET small signal operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mosfet-complete-small-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: MOSFET complete small signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mosfet-simplified-small-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: MOSFET simplified small model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mosfet-operational-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: MOSFET operational speed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mosfet-single-transistor-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: MOSFET single transistor amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: MOSFET single transistor amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mosfet-common-source-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: MOSFET Common source amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mosfet-common-drain-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: MOSFET Common drain amplifier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mosfet-as-a-resistor-diode-connected-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: MOSFET as a Resistor (diode connected MOSFET)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: MOSFET as a Resistor (diode connected MOSFET)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-diode-connected-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Diode connected MOSFET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-diode-connected-mosfet-as-active-resistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Diode connected MOSFET as active resistor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-active-resistor-potential-divider" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3: Active resistor potential divider
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-power-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      VI: Power Amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VI: Power Amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-power-amplifier-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Power Amplifier classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-power-amplifier-classes-by-power-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Power Amplifier classes (by power usage)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Power Amplifier classes (by power usage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-class-a-eg-common-emitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Class A - eg. Common Emitter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1: Class A - eg. Common Emitter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1: Efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2: Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mosfet-clipping-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3: MOSFET clipping distortion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-the-wrong-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4: The Wrong Bias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-frequency-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.5: Frequency Effects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-power-analysis-class-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.6: Power analysis - class A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-class-a-amplifier-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.7: Class A amplifier: summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-class-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Class B
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2: Class B">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-class-b-push-pull-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1: Class B push pull amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-class-b-amplifier-crossover-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2: Class B amplifier crossover distortion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-power-analysis-class-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3: Power analysis - Class B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4: Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-class-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: Class AB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3: Class AB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-class-ab-power-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1: Class AB power amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-crossover-distortion-improvement-in-class-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2: Crossover distortion improvement in Class AB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.3: Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-operational-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      VII: Operational Amplifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VII: Operational Amplifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-classic-op-amp-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Classic op-amp circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Feedback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-feedback-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Feedback Gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-advantage-1-gain-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Advantage 1 - Gain sensitivity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-advantage-2-eliminating-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Advantage 2 - Eliminating distortion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-advantage-3-noise-rejection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Advantage 3 - noise rejection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-cost-of-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: Cost of Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-frequency-response-open-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Frequency response - open loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-non-ideal-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Non-ideal performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Non-ideal performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-slew-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Slew rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-input-offset-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Input offset voltage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-digital-to-analog-conversion-back-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII: Digital to Analog Conversion (&amp; back again)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VIII: Digital to Analog Conversion (& back again)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analog-digital-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Analog &lt;-&gt; digital representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-accuracy-in-adcdac-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Accuracy in ADC/DAC conversion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-nyquist-shannon-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Nyquist - Shannon theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-adcdac-quantization-error-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: ADC/DAC Quantization error (noise)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-adcdac-quantization-snr" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: ADC/DAC Quantization SNR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-digital-to-analog-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6: Digital to Analog conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6: Digital to Analog conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-core-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1: Core principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-dac-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2: DAC system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-weighted-resistor-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3: Weighted resistor DAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-r-2r-ladder-network-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4: R-2R Ladder network DAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-capacitive-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5: Capacitive DAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-charge-scaling-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6: Charge Scaling DAC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-analog-to-digital-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7: Analog to digital Conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7: Analog to digital Conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-types-of-adcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1: Types of ADC's
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-sample-and-hold-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2: Sample and hold concept
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3: Comparator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-flash-adc-operational-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4: Flash ADC - operational principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-flash-adc-3-bit-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5: Flash ADC -3 Bit ADC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-half-flash-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6: Half Flash ADC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#77-sigma-delta-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.7: Sigma-delta ADC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#78-successive-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.8: Successive approximation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#79-adc-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.9: ADC Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="analog-electronics">Analog Electronics<a class="headerlink" href="#analog-electronics" title="Permanent link">&para;</a></h1>
+<h2 id="i-introduction-overview">I: Introduction &amp; Overview<a class="headerlink" href="#i-introduction-overview" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduction">1: Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Consider what can affect these circuits (noise etc)</p>
+</li>
+<li>
+<p>Consider how to improve designing circuits </p>
+</li>
+<li>
+<p>Focus on 2 examples:</p>
+<ul>
+<li>instrumentation amplifier for sensors</li>
+<li>Power amplifier </li>
+</ul>
+</li>
+</ul>
+<h3 id="2-basic-laws">2: Basic Laws<a class="headerlink" href="#2-basic-laws" title="Permanent link">&para;</a></h3>
+<h4 id="21-kirchoffs-law">2.1: Kirchoff's Law<a class="headerlink" href="#21-kirchoffs-law" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-08-10-54.png" /></p>
+<h4 id="22-the-diode-basics">2.2: The diode basics<a class="headerlink" href="#22-the-diode-basics" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-08-11-27.png" /></p>
+<p><img alt="" src="../image/2022-11-14-08-11-57.png" /></p>
+<h4 id="23-ideal-sources">2.3: Ideal Sources<a class="headerlink" href="#23-ideal-sources" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-08-12-24.png" /></p>
+<h4 id="24-equivalent-circuits">2.4: Equivalent circuits<a class="headerlink" href="#24-equivalent-circuits" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-08-13-07.png" /></p>
+<h4 id="25-small-and-large-signal-modelling">2.5: Small and Large signal modelling<a class="headerlink" href="#25-small-and-large-signal-modelling" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-08-15-04.png" /></p>
+<ul>
+<li>
+<p>The input signal can be separated to the large signal (DC component) and small signal (AC component).</p>
+</li>
+<li>
+<p>The DC component is called <strong>the DC bias</strong> (Quiescent point, Q point, or the operating point, bias point)</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-14-08-18-37.png" /></p>
+<p><img alt="" src="../image/2022-11-14-08-21-00.png" /></p>
+<ul>
+<li>For BJT circuit like below:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-21-21-13-09.png" /></p>
+<ul>
+<li>Using <span class="arithmatex">\(I_B\)</span>, <span class="arithmatex">\(I_C\)</span> and <span class="arithmatex">\(V_{CE}\)</span> and the V-I curve of transistors, the Q point can be found:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-21-21-15-04.png" /></p>
+<ul>
+<li>The Q-point in the middle will be most proper.</li>
+</ul>
+<h4 id="26-small-signal-conductance">2.6: Small signal conductance<a class="headerlink" href="#26-small-signal-conductance" title="Permanent link">&para;</a></h4>
+<p>For AC model:</p>
+<p><img alt="" src="../image/2022-11-14-11-14-12.png" /></p>
+<p>we tend to think in terms of conductance g:</p>
+<div class="arithmatex">\[
+\frac{1}{r_{AC}} = g_{ac} = \frac{\Delta I_{AC}}{\Delta V_{AC}}
+\]</div>
+<p>noted that we typically use <span class="arithmatex">\(i_{ac}\)</span> and <span class="arithmatex">\(v_{ac}\)</span> short for <span class="arithmatex">\(\Delta I_{AC}\)</span> and <span class="arithmatex">\(\Delta I_{AC}\)</span>。</p>
+<p><img alt="" src="../image/2022-11-14-11-30-56.png" /></p>
+<h4 id="27-load-line-analysis">2.7: Load line analysis<a class="headerlink" href="#27-load-line-analysis" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-11-31-57.png" /></p>
+<p><img alt="" src="../image/2022-11-14-11-32-07.png" /></p>
+<h3 id="3-noise">3: Noise<a class="headerlink" href="#3-noise" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Noise refers to unwanted signals.</p>
+</li>
+<li>
+<p>Noise can originate in the sensor, lines or amps.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-14-11-34-02.png" /></p>
+<h4 id="31-thermal-noise">3.1: Thermal Noise<a class="headerlink" href="#31-thermal-noise" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Also known as Johnson-Nyquist noise.</p>
+</li>
+<li>
+<p>Thermal noise from random motions of electrons in conductors.</p>
+</li>
+</ul>
+<h4 id="32-shot-noise">3.2: Shot noise<a class="headerlink" href="#32-shot-noise" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Also known as Poisson noise.</p>
+</li>
+<li>
+<p>From the quantum nature of charge flow.</p>
+</li>
+</ul>
+<h2 id="ii-filters-bode-plots">II: Filters &amp; Bode Plots<a class="headerlink" href="#ii-filters-bode-plots" title="Permanent link">&para;</a></h2>
+<h3 id="1-low-pass-filter">1: Low Pass filter<a class="headerlink" href="#1-low-pass-filter" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-11-14-11-38-41.png" /></p>
+<ul>
+<li>
+<p>For resistance, <span class="arithmatex">\(Z_R=R\)</span>; for capacitance, <span class="arithmatex">\(Z_C = X_C = \frac{1}{j\omega C} = \frac{1}{2\pi f C}\)</span></p>
+</li>
+<li>
+<p>Low pass filter can be considered as a potential divider:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+V_{OUT} = V_{in}\times (\frac{Z_C}{Z_{total}})
+\]</div>
+<p>The total impedance <span class="arithmatex">\(Z_{total}\)</span> is given by:</p>
+<div class="arithmatex">\[
+Z_{total} = \sqrt{R^2 +X_C ^2}
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+V_{out} = V_{in} \times (\frac{X_C}{\sqrt{R^2+X_c ^2}})
+\]</div>
+<ul>
+<li>If we increase the frequency, the output voltage will be:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-14-11-45-04.png" /></p>
+<p>And the gain in dB = 20log(Vout/Vin):</p>
+<p><img alt="" src="../image/2022-11-14-11-46-18.png" /></p>
+<ul>
+<li>
+<p>This plot is known as a <strong>Bode Plot</strong>.</p>
+</li>
+<li>
+<p>There is a frequency at which <span class="arithmatex">\(X_c = R\)</span>, which is know as the cut-off frequency (<span class="arithmatex">\(f_c\)</span>).</p>
+</li>
+<li>
+<p>The cut-off frequency is 100 Hz as above.</p>
+</li>
+<li>
+<p>The gain in dB in <span class="arithmatex">\(f_c\)</span> usually defines the band-width.</p>
+</li>
+</ul>
+<h3 id="2-high-pass-filter">2: High Pass Filter<a class="headerlink" href="#2-high-pass-filter" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-11-14-11-48-19.png" /></p>
+<p>Use the same method, the formula is:</p>
+<div class="arithmatex">\[
+V_{out} = V_{in} \times (\frac{R}{\sqrt{R^2 +X_c^2}})
+\]</div>
+<ul>
+<li>If we increase the frequency, the output will be:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-14-12-48-12.png" /></p>
+<p><img alt="" src="../image/2022-11-14-12-48-31.png" /></p>
+<h3 id="3-multi-stage-filter">3: Multi-stage Filter<a class="headerlink" href="#3-multi-stage-filter" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-11-14-12-51-07.png" /></p>
+<div class="arithmatex">\[
+V_{out2} = V_{in1} * (\frac{R_1^2}{R_1^2+X_{c1}^2})
+\]</div>
+<h3 id="4-passive-bandpass-filter">4: Passive bandpass filter<a class="headerlink" href="#4-passive-bandpass-filter" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-11-14-13-07-20.png" /></p>
+<p><strong>A band pass filter</strong> is to be constructed using RC components will only allow a range of frequencies to pass, calculating the </p>
+<ul>
+<li>Note that the high pass filter defines the lower threshold.</li>
+</ul>
+<h2 id="iii-bjt-transistors-the-analog-perspective">III: BJT transistors - the analog perspective<a class="headerlink" href="#iii-bjt-transistors-the-analog-perspective" title="Permanent link">&para;</a></h2>
+<h3 id="1-discrete-bjt-structure">1: Discrete BJT structure<a class="headerlink" href="#1-discrete-bjt-structure" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-11-14-15-13-22.png" /></p>
+<h3 id="2-bjt-large-signal-operation">2: BJT large signal operation<a class="headerlink" href="#2-bjt-large-signal-operation" title="Permanent link">&para;</a></h3>
+<h4 id="21-ebers-moll-model-for-bjt">2.1: Ebers Moll model for BJT<a class="headerlink" href="#21-ebers-moll-model-for-bjt" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-15-19-11.png" /></p>
+<p>For example of NPN:</p>
+<p><img alt="" src="../image/2022-11-14-15-22-25.png" /></p>
+<p>where <span class="arithmatex">\(\alpha _F\)</span> is the forward current gain:</p>
+<div class="arithmatex">\[
+\alpha _F = \frac{I_C}{I_E}
+\]</div>
+<p>and </p>
+<div class="arithmatex">\[
+\beta _F = \frac{I_C}{I_B}
+\]</div>
+<p>with some operations we can also get the relation between <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span>:</p>
+<div class="arithmatex">\[
+\beta _F = \frac{\alpha _F}{1-\alpha _F}
+\]</div>
+<h4 id="22-driving-the-bjt-with-v_be-and-i_b">2.2: Driving the BJT with V_BE and I_B<a class="headerlink" href="#22-driving-the-bjt-with-v_be-and-i_b" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-15-35-04.png" /></p>
+<p>The collector current increases exponentially with <span class="arithmatex">\(V_{BE}\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-11-14-15-37-20.png" /></th>
+<th><img alt="" src="../image/2022-11-14-15-37-29.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="../image/2022-11-14-15-39-54.png" /></p>
+<h4 id="23-bjt-operating-regions">2.3: BJT operating regions<a class="headerlink" href="#23-bjt-operating-regions" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-14-15-41-27.png" /></p>
+<h2 id="iv-2-port-network">IV: 2-port Network<a class="headerlink" href="#iv-2-port-network" title="Permanent link">&para;</a></h2>
+<h3 id="1-two-port-analysis">1: Two port analysis<a class="headerlink" href="#1-two-port-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Circuits are built from building blocks.</li>
+<li>Each of these blocks can defined has an input impedance and a Norton or Thevenin output stage as:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-16-09-13-59.png" /></p>
+<h4 id="11-two-port-analysis-of-transistors">1.1: Two port analysis of transistors<a class="headerlink" href="#11-two-port-analysis-of-transistors" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The common transistor types such as BJTs and MOSFETs operate by one terminal controlling the current flow between other 2 terminals. </li>
+<li>They are therefore current sources with control.</li>
+<li>For BJT, the base is controlled by a current so the impedance is almost just resistance.</li>
+<li>The output impedance is really just the resistance from collector to emitter if we ignore the small internal capacitance.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-21-10-17-14.png" /></p>
+<h4 id="12-two-port-analysis-of-mosfet">1.2: Two port analysis of Mosfet<a class="headerlink" href="#12-two-port-analysis-of-mosfet" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>For mosfet, the gate is controlled by a voltage so the impedance is just a capacitance.</p>
+</li>
+<li>
+<p>The output impedance is just resistance from source to drain.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-21-10-20-04.png" /></p>
+<h4 id="13-hybrid-pi-model">1.3: Hybrid pi model<a class="headerlink" href="#13-hybrid-pi-model" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The 2 port model can be used as the basis for circuit simulator.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-21-10-23-14.png" /></p>
+<h4 id="14-h-parameter-model">1.4: H parameter Model<a class="headerlink" href="#14-h-parameter-model" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The H parameter model uses the input current as one of variables.</p>
+</li>
+<li>
+<p>H11 is the input impedance</p>
+</li>
+<li>
+<p>H12 is the usually assumed to 0.</p>
+</li>
+<li>
+<p>H21 is the gain.</p>
+</li>
+<li>
+<p>H22 is the output impedance of transistor.</p>
+</li>
+</ul>
+<p>H method be like:</p>
+<div class="arithmatex">\[
+\left(\begin{matrix}
+    V_1 \\
+    I_2
+\end{matrix}\right)=\left(\begin{matrix}
+    h_{11} &amp; h_{12} \\
+    h_{21} &amp; h_{22} 
+\end{matrix}\right)\left(\begin{matrix}
+    I_1 \\
+    V_2 
+\end{matrix}\right)
+\]</div>
+<h3 id="2-bjt-amplifier">2: BJT Amplifier<a class="headerlink" href="#2-bjt-amplifier" title="Permanent link">&para;</a></h3>
+<h4 id="21-the-ideal-amplifier">2.1: The ideal Amplifier<a class="headerlink" href="#21-the-ideal-amplifier" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-21-10-34-42.png" /></p>
+<ul>
+<li>
+<p>Voltage gain = <span class="arithmatex">\(A_{v} = \frac{V_{out}}{V_{in}}\)</span></p>
+</li>
+<li>
+<p>Current gain = <span class="arithmatex">\(A_{i} = \frac{I_{out}}{I_{in}}\)</span></p>
+</li>
+<li>
+<p>Power gain = . <span class="arithmatex">\(A_{p} = \frac{P_{out}}{P_{in}}\)</span> </p>
+</li>
+</ul>
+<h4 id="22-th-way-to-build-amplifier">2.2: Th way to build amplifier<a class="headerlink" href="#22-th-way-to-build-amplifier" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For example, the common-emitter amplifier:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-21-10-39-24.png" /></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(I_E = I_C +I_B\)</span></p>
+</li>
+<li>
+<p>Current gain <span class="arithmatex">\(\beta = \frac{I_C}{I_B}\)</span></p>
+</li>
+</ul>
+<h4 id="23-bjt-single-transistor-amplifier">2.3: BJT single transistor amplifier<a class="headerlink" href="#23-bjt-single-transistor-amplifier" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-21-10-42-33.png" /></p>
+<h4 id="24-bjt-ce-large-signal-summary">2.4: BJT CE Large signal summary<a class="headerlink" href="#24-bjt-ce-large-signal-summary" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-21-10-45-11.png" /></p>
+<ul>
+<li>
+<p>CE amplifier: <span class="arithmatex">\(v_{in}\)</span> form base and <span class="arithmatex">\(v_{out}\)</span> from collector.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(C_{in}\)</span>: AC isolation of input, preventing input from affecting Q point.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(R_{B1}\)</span> and <span class="arithmatex">\(R_{B2}\)</span>: determine the base voltage independent of BJT types.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(R_C\)</span>: set the gain of circuit which cannot be too large.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(R_{E1}\)</span>: improve the impedance of the amplifier.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(R_{E2}\)</span>: Set the voltage level of Q point / make the output independent of <span class="arithmatex">\(\beta\)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\(C_{out}\)</span>: AC isolation of the output.</p>
+</li>
+</ul>
+<h4 id="25-transistor-biasing">2.5: Transistor biasing<a class="headerlink" href="#25-transistor-biasing" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-23-09-05-34.png" /></p>
+<p><img alt="" src="../image/2022-11-23-09-05-49.png" /></p>
+<p><img alt="" src="../image/2022-11-23-09-14-18.png" /></p>
+<ul>
+<li>As <span class="arithmatex">\(I_B = (V_CC-V_{BE})/R_{B1})\)</span>, <span class="arithmatex">\(I_B\)</span> is limited by <span class="arithmatex">\(R_{B1}\)</span>.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-23-09-14-38.png" /></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(R_E\)</span> will reduces the gain. </p>
+</li>
+<li>
+<p>We can also use the <span class="arithmatex">\(R_{B}\)</span> to bias the <span class="arithmatex">\(V_B\)</span>, while pay for extra loss of power.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-23-09-18-44.png" /></p>
+<ul>
+<li>Add the <span class="arithmatex">\(C_E\)</span> as bypass capacitor.</li>
+</ul>
+<h4 id="26-bjt-ce-amplifier-small-model-summary">2.6: BJT CE amplifier - small model summary<a class="headerlink" href="#26-bjt-ce-amplifier-small-model-summary" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-23-09-22-26.png" /></p>
+<p><img alt="" src="../image/2022-11-23-09-24-49.png" /></p>
+<h4 id="27-bjt-ce-small-model-analysis">2.7: BJT CE small model analysis<a class="headerlink" href="#27-bjt-ce-small-model-analysis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>First, remove the capacitors (treated as wires) and the DC Vcc.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-23-09-41-32.png" /></p>
+<ul>
+<li>Second, rearrange to small model.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-23-09-42-16.png" /></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(r_{\pi}\)</span> and <span class="arithmatex">\(r_0\)</span> is the resistance of BJT.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(g_m = \frac{i_c}{v_{BE}}\)</span>, so <span class="arithmatex">\(g_m v_{BE}\)</span> is the <span class="arithmatex">\(i_c\)</span>.</p>
+</li>
+<li>
+<p>Consider the input impedance:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-23-09-44-44.png" /></p>
+<p>The input impedance <span class="arithmatex">\(r_{in}\)</span> is defined as <span class="arithmatex">\(r_{in} = \frac{v_{in}}{i_{in}}=R_{B1}||R_{B2}||r_x\)</span>. <span class="arithmatex">\(r_x\)</span> is the impedance from transistor and <span class="arithmatex">\(R_{E1}\)</span>.</p>
+<p><img alt="" src="../image/2022-11-23-09-47-51.png" /></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(r_{in} = R_{B1} || R_{B2} || (r_{\pi}+\beta _FR_{E1})\)</span></p>
+</li>
+<li>
+<p>Consider the output impedance, <span class="arithmatex">\(r_{out} \approx R_C || (r_0+R_{E1})\)</span>, which is approx to <span class="arithmatex">\(R_C\)</span>.</p>
+</li>
+<li>
+<p>The voltage gain is given by <span class="arithmatex">\(A_V=\frac{v_{out}}{v_{in}}\)</span>.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-23-09-53-14.png" /></p>
+<ul>
+<li><span class="arithmatex">\(v_{out} = -i_c R_c = -\beta_F i_b R_C\)</span></li>
+</ul>
+<div class="arithmatex">\[
+\begin{aligned}
+    v_{in} &amp;= v_{b} \\
+    &amp;= r_{\pi}i_b + i_eR_{E1} \\
+    &amp;= i_b(r_{\pi} + (\beta _F +1)R_{E1})
+\end{aligned}
+\]</div>
+<p>so <span class="arithmatex">\(A_V = \frac{-\beta _FR_C}{r_{\pi} + \beta _F R_{E1}}\)</span></p>
+<p><img alt="" src="../image/2022-11-23-09-59-17.png" /></p>
+<h4 id="28-example-of-ce-bjt-analysis">2.8: Example of CE BJT analysis<a class="headerlink" href="#28-example-of-ce-bjt-analysis" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-23-19-48-42.png" /></p>
+<h5 id="281-setting-up-the-dc-characteristics">2.8.1: Setting up the DC characteristics<a class="headerlink" href="#281-setting-up-the-dc-characteristics" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>The AC signal is assumed ton be small compared to the DC, so it can be considered later.</p>
+</li>
+<li>
+<p>The first step is to review the transistor data sheet and decide the Q point.</p>
+</li>
+<li>
+<p>The transistor curves can be generated using simulation software:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-23-20-22-40.png" /></p>
+<ul>
+<li>
+<p>First, we assume that <span class="arithmatex">\(V_{cc} = 10V\)</span> in this condition, then we choose <span class="arithmatex">\(V_{CE} = 5V\)</span>, almost half of <span class="arithmatex">\(V_{CC}\)</span> is common. If we choose <span class="arithmatex">\(I_b = 40\mu A\)</span>, then we can mark the Q point in the graph.  </p>
+</li>
+<li>
+<p>Then we can find that the <span class="arithmatex">\(I_c\)</span> value and the gain (<span class="arithmatex">\(\frac{I_C}{I_B}\)</span>) can be defined.</p>
+</li>
+<li>
+<p>It would be reasonable to choose the line to make sure the Q point is in the m idle of the curve.</p>
+</li>
+<li>
+<p>The next step is to calculated the <span class="arithmatex">\(R_C\)</span>, which control the gain (the larger the <span class="arithmatex">\(R_C\)</span> is, the larger the voltage <span class="arithmatex">\(R_C\)</span> have will be larger, so that increase the gain). According to voltage divider, we assumed that <span class="arithmatex">\(V_{RE1} + V_{RE2} = 1 V\)</span> to keep it small.</p>
+</li>
+<li>
+<p>The total voltage <span class="arithmatex">\(V_{CC} = V_{RE1} + V_{RE2} + V_{CE} + V_{RC}\)</span>, then <span class="arithmatex">\(V_{RC}\)</span> can be calculated.</p>
+</li>
+<li>
+<p>Using the Ohm's Law, <span class="arithmatex">\(R_C = \frac{V_{RC}}{I_C}\)</span>.</p>
+</li>
+<li>
+<p><strong>Up to now, we have defined the value of <span class="arithmatex">\(I_B\)</span>, <span class="arithmatex">\(I_C\)</span>, <span class="arithmatex">\(R_C\)</span> and the voltage cover two <span class="arithmatex">\(R_E\)</span>.</strong></p>
+</li>
+</ul>
+<h5 id="282-calculating-the-emitter-resistors">2.8.2: Calculating the emitter resistors<a class="headerlink" href="#282-calculating-the-emitter-resistors" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>We know the <span class="arithmatex">\(I_E = I_C + I_B\)</span> according to the KCL.</p>
+</li>
+<li>
+<p>Using Ohm Law on <span class="arithmatex">\(I_E\)</span>, we can find that <span class="arithmatex">\(R_{E1} + R_{E2}\)</span> can be defined by <span class="arithmatex">\(\frac{1}{I_E}\)</span>.</p>
+</li>
+<li>
+<p>We need a small value of <span class="arithmatex">\(R_{E1}\)</span> so we define that <span class="arithmatex">\(R_{E1} = 5 \Omega\)</span>. The other resistor can be calculated.</p>
+</li>
+</ul>
+<h5 id="283-calculating-the-bias-resistors">2.8.3: Calculating the Bias resistors<a class="headerlink" href="#283-calculating-the-bias-resistors" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>The bias resistors are in the circuit to ensure the base voltage. The current flowing down the <span class="arithmatex">\(\frac{R_{B1}}{R_{B2}}\)</span> chain is chosen to be many times that of <span class="arithmatex">\(I_B\)</span>. So we choose <span class="arithmatex">\(I_{RB2} = 20 \times I_B\)</span>.</p>
+</li>
+<li>
+<p>As we know $V_{R_{B2}} = V_B = V_{RE1} +V_{RE2} + V_{BE} $, <span class="arithmatex">\(V_{BE}\)</span> is given if the type of the transistor is vested.</p>
+</li>
+<li>
+<p>Using Ohm Law, the <span class="arithmatex">\(R_{B2} = \frac{V_{RB2}}{I_{RB2}}\)</span></p>
+</li>
+<li>
+<p>Applying KCL, <span class="arithmatex">\(I_{RB1} = I_{RB2} + I_B\)</span>.</p>
+</li>
+<li>
+<p>The voltage across <span class="arithmatex">\(R_{B1} = V_{CC} - V_{RB2}\)</span>, so the <span class="arithmatex">\(V_{RB1} = R_{B1} \times I_{RB1}\)</span>.</p>
+</li>
+</ul>
+<h5 id="284-setting-up-the-ac-characteristics">2.8.4: Setting up the AC characteristics<a class="headerlink" href="#284-setting-up-the-ac-characteristics" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Using the two-port model to simplify the CE BJT, we can get the formula of the voltage gain:</li>
+</ul>
+<div class="arithmatex">\[
+A_V = \displaystyle\frac{-g_m R_C}{1+g_m(R_{E1} + R_{E2})}
+\]</div>
+<ul>
+<li>
+<p>We can find that the emitter resistors reduce the gain. However, the bypass capacitor helps as iof we choose the value of <span class="arithmatex">\(C_E\)</span>, it will short-cut <span class="arithmatex">\(R_{E2}\)</span>.</p>
+</li>
+<li>
+<p>The bypass capacitor is there making the effect of the larger emitter resistor disappear for the AC signal so it is in effect a kind of filter:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+f_C = \frac{1}{2\pi RC}
+\]</div>
+<p>So we can use:</p>
+<div class="arithmatex">\[
+f_C = \frac{1}{2\pi R_{E2} C_E}
+\]</div>
+<ul>
+<li>
+<p>If we want the frequencies above 20 Hz to pass through so we can take <span class="arithmatex">\(f_C=20\)</span> Hz.</p>
+</li>
+<li>
+<p>Then we can calculate <span class="arithmatex">\(C_E\)</span>.</p>
+</li>
+<li>
+<p>The value of <span class="arithmatex">\(C_{in}\)</span> and <span class="arithmatex">\(C_{out}\)</span> can be choose depends on the type of signal.</p>
+</li>
+<li>
+<p>The <span class="arithmatex">\(R_L\)</span> is also be chosen depends on conditions.</p>
+</li>
+</ul>
+<h4 id="29-common-collector-amplifier">2.9: Common collector amplifier<a class="headerlink" href="#29-common-collector-amplifier" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-20-11-18.png" /></p>
+<ul>
+<li>
+<p>The output of CC is connected to the emitter.</p>
+</li>
+<li>
+<p>The gain of CC is approx to 1.</p>
+</li>
+<li>
+<p>High impedance in and low impedance out.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-20-13-25.png" /></p>
+<h2 id="v-fet-transistors">V: FET Transistors<a class="headerlink" href="#v-fet-transistors" title="Permanent link">&para;</a></h2>
+<h3 id="1-mosfet-large-signal-operation">1: MOSFET large signal operation<a class="headerlink" href="#1-mosfet-large-signal-operation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Note that we discuss the enhancement mode only.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-20-25-58.png" /></p>
+<h4 id="11-mosfets-operation">1.1: MOSFETs operation<a class="headerlink" href="#11-mosfets-operation" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-11-27-20-27-35.png" /></th>
+<th><img alt="" src="../image/2022-11-27-20-27-47.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="12-bjt-vs-mosfet">1.2: BJT vs MOSFET<a class="headerlink" href="#12-bjt-vs-mosfet" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-20-44-26.png" /></p>
+<p><img alt="" src="../image/2022-11-27-20-46-11.png" /></p>
+<h4 id="13-saturation-drain-current-variance-with-v_gs">1.3: Saturation drain current variance with <span class="arithmatex">\(V_{GS\)</span><a class="headerlink" href="#13-saturation-drain-current-variance-with-v_gs" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-20-50-02.png" /></p>
+<p><img alt="" src="../image/2022-11-27-20-50-12.png" /></p>
+<h4 id="14-channel-length-modulation">1.4: Channel length modulation<a class="headerlink" href="#14-channel-length-modulation" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-20-51-45.png" /></p>
+<h4 id="15-summary">1.5: Summary<a class="headerlink" href="#15-summary" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-20-55-21.png" /></p>
+<h3 id="2-mosfet-small-signal-operation">2: MOSFET small signal operation<a class="headerlink" href="#2-mosfet-small-signal-operation" title="Permanent link">&para;</a></h3>
+<h4 id="21-mosfet-complete-small-signal">2.1: MOSFET complete small signal<a class="headerlink" href="#21-mosfet-complete-small-signal" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-20-59-08.png" /></p>
+<h4 id="22-mosfet-simplified-small-model">2.2: MOSFET simplified small model<a class="headerlink" href="#22-mosfet-simplified-small-model" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-21-02-38.png" /></p>
+<h4 id="23-mosfet-operational-speed">2.3: MOSFET operational speed<a class="headerlink" href="#23-mosfet-operational-speed" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-21-05-16.png" /></p>
+<ul>
+<li>
+<p>Lets assume the dominant capacitance is the GS capacitance.</p>
+</li>
+<li>
+<p>The general formula for unity gain current frequency <span class="arithmatex">\(f_T\)</span> for an R-C combination is given by: </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+f_t = \frac{1}{2\pi RC}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(r=\frac{1}{g}\)</span> where g is conductance.</li>
+</ul>
+<p>So <span class="arithmatex">\(f_t = \frac{g}{2\pi C}\)</span></p>
+<ul>
+<li>If we only calculate the most significant <span class="arithmatex">\(C_{GS}\)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+f_T = \frac{g_m}{2\pi C_{GS}}
+\]</div>
+<p><img alt="" src="../image/2022-11-27-21-15-19.png" /></p>
+<h3 id="3-mosfet-single-transistor-amplifier">3: MOSFET single transistor amplifier<a class="headerlink" href="#3-mosfet-single-transistor-amplifier" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-11-27-21-18-52.png" /></p>
+<h4 id="31-mosfet-common-source-amplifier">3.1: MOSFET Common source amplifier<a class="headerlink" href="#31-mosfet-common-source-amplifier" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-21-21-32.png" /></p>
+<p><img alt="" src="../image/2022-11-27-21-25-57.png" /></p>
+<p><img alt="" src="../image/2022-11-27-21-28-39.png" /></p>
+<h4 id="32-mosfet-common-drain-amplifier">3.2: MOSFET Common drain amplifier<a class="headerlink" href="#32-mosfet-common-drain-amplifier" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-21-32-04.png" /></p>
+<h3 id="4-mosfet-as-a-resistor-diode-connected-mosfet">4: MOSFET as a Resistor (diode connected MOSFET)<a class="headerlink" href="#4-mosfet-as-a-resistor-diode-connected-mosfet" title="Permanent link">&para;</a></h3>
+<h4 id="41-diode-connected-mosfet">4.1: Diode connected MOSFET<a class="headerlink" href="#41-diode-connected-mosfet" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-21-34-22.png" /></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(V_{DS} = V_{GS}\)</span>, so <span class="arithmatex">\(V_{DS} &gt; V_T\)</span>, device is always in saturation.</p>
+</li>
+<li>
+<p>As the device is in saturation, so the drain current is given by:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+I_D = K(V_{GS} - V_T)^2
+\]</div>
+<ul>
+<li>But we want to find the output voltage:</li>
+</ul>
+<div class="arithmatex">\[
+V_{OUT} = V_{DS} = $V_{GS$
+\]</div>
+<p>Then we get:</p>
+<div class="arithmatex">\[
+V_{OUT} = V_T + \sqrt{\frac{|I_{sig}|}{K}}
+\]</div>
+<h4 id="42-diode-connected-mosfet-as-active-resistor">4.2: Diode connected MOSFET as active resistor<a class="headerlink" href="#42-diode-connected-mosfet-as-active-resistor" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-21-46-37.png" /></p>
+<ul>
+<li>Connecting the gate to the drain means that <span class="arithmatex">\(V_{DS}\)</span> controls <span class="arithmatex">\(I_D\)</span>, therefore the transconductance becomes the channel conductance, the total resistance is given by:</li>
+</ul>
+<div class="arithmatex">\[
+r = \frac{1}{g_m +g_{mb} + g_{ds}}
+\]</div>
+<ul>
+<li>However, if the body effect is small, and we use long channel transistors, <span class="arithmatex">\(g_m\)</span> becomes dominant:</li>
+</ul>
+<div class="arithmatex">\[
+r = \frac{1}{g_m}
+\]</div>
+<h4 id="43-active-resistor-potential-divider">4.3: Active resistor potential divider<a class="headerlink" href="#43-active-resistor-potential-divider" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-27-21-54-26.png" /></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(g_m = \frac{dI_D}{dV_{GS}} = 2K[V_{GS} - V_T]\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(K = \frac{\mu C_{ox}}{2}\frac{W}{L}\)</span></p>
+</li>
+<li>
+<p>Lets consider the strong inversion case:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+r = \frac{1}{g_m}
+\]</div>
+<ul>
+<li>So for a potential divider:</li>
+</ul>
+<div class="arithmatex">\[
+V_{OUT} = \frac{R_2}{R_1 + R_2}V_{DD}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(V_{OUT}\)</span> can be altered by varying W and L in each transistor, this is ideal for integration into a micro-chip.</li>
+</ul>
+<h2 id="vi-power-amplifier">VI: Power Amplifier<a class="headerlink" href="#vi-power-amplifier" title="Permanent link">&para;</a></h2>
+<h3 id="1-power-amplifier-classes">1: Power Amplifier classes<a class="headerlink" href="#1-power-amplifier-classes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Common emitter and common drain amplifier are considered as class A amplifiers - single active device (transistor)</p>
+</li>
+<li>
+<p>There are other classes:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-22-18-28.png" /></p>
+<h3 id="2-power-amplifier-classes-by-power-usage">2: Power Amplifier classes (by power usage)<a class="headerlink" href="#2-power-amplifier-classes-by-power-usage" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-11-27-22-20-13.png" /></p>
+<h4 id="21-class-a-eg-common-emitter">2.1: Class A - eg. Common Emitter<a class="headerlink" href="#21-class-a-eg-common-emitter" title="Permanent link">&para;</a></h4>
+<h5 id="211-efficiency">2.1.1: Efficiency<a class="headerlink" href="#211-efficiency" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-27-22-27-03.png" /></p>
+<ul>
+<li>
+<p>we need to understand how efficient our amplifier are.</p>
+</li>
+<li>
+<p>Consider the common-emitter amplifier.</p>
+</li>
+<li>
+<p>To set up the amplifier, we first arrange the DC bias conditions, which puts the transistor at the Q-point and <span class="arithmatex">\(I_B\)</span>:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-22-30-39.png" /></p>
+<ul>
+<li>
+<p>The red line is the load line and <span class="arithmatex">\(i_c\)</span>(max) is <span class="arithmatex">\(\frac{V_{cc}}{R_L}\)</span> and B is <span class="arithmatex">\(V_{cc}\)</span></p>
+</li>
+<li>
+<p>As an AC signal is applied on top of the bias, the base current <span class="arithmatex">\(I_B\)</span>, travels up and down the load line. Imagine that the signal causes <span class="arithmatex">\(I_B\)</span> to vary between the points M and N for example.</p>
+</li>
+<li>
+<p>That will cause <span class="arithmatex">\(V_{CE}\)</span> and <span class="arithmatex">\(I_C\)</span> to vary as the green waves.</p>
+</li>
+</ul>
+<h5 id="212-quality">2.1.2: Quality<a class="headerlink" href="#212-quality" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>There are other potential problems as well. The common emitter amplifier works well if the AC input signal is small.</p>
+</li>
+<li>
+<p>If the signal gets too large, then eventually the base current could "hit" either access axis (<span class="arithmatex">\(V_{CE}\)</span> or I_C axes)</p>
+</li>
+<li>
+<p>In fact this problem becomes an issue as soon as the output signal reaches <span class="arithmatex">\(V_{cc}~V_{CE-SAT}\)</span>.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-11-27-23-06-28.png" /></th>
+<th><img alt="" src="../image/2022-11-27-23-07-00.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="213-mosfet-clipping-distortion">2.1.3: MOSFET clipping distortion<a class="headerlink" href="#213-mosfet-clipping-distortion" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-27-23-11-41.png" /></p>
+<h5 id="214-the-wrong-bias">2.1.4: The Wrong Bias<a class="headerlink" href="#214-the-wrong-bias" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>if the transistor is biased wrongly then the signal might also get clipped even if the AC input is small.</p>
+</li>
+<li>
+<p>Suppose for example, the Q point was chosen to be N by mistake. Then even for a small AC input, the output might be clipped in the negative half.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-23-20-06.png" /></p>
+<h5 id="215-frequency-effects">2.1.5: Frequency Effects<a class="headerlink" href="#215-frequency-effects" title="Permanent link">&para;</a></h5>
+<ul>
+<li>The transistor will not amplify all frequencies equally - that can distort a more complex signal that has multiple frequencies.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-23-27-11.png" /></p>
+<h5 id="216-power-analysis-class-a">2.1.6: Power analysis - class A<a class="headerlink" href="#216-power-analysis-class-a" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-27-23-32-51.png" /></p>
+<ul>
+<li>
+<p>Imagine common-emitter amplifier powering a resistive load.</p>
+</li>
+<li>
+<p>Then load receives the amplified <span class="arithmatex">\(I_c\)</span> wave (green) with magnitude.</p>
+</li>
+<li>
+<p>The amplified wave is usually smaller than the quiescent current.</p>
+</li>
+<li>
+<p>In fact the amplified wave should never have a peak-peak current greater than 2<span class="arithmatex">\(I_Q\)</span>. So output power is much smaller than that consumed.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-23-38-51.png" /></p>
+<h5 id="217-class-a-amplifier-summary">2.1.7: Class A amplifier: summary<a class="headerlink" href="#217-class-a-amplifier-summary" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-27-23-40-30.png" /></p>
+<h4 id="22-class-b">2.2: Class B<a class="headerlink" href="#22-class-b" title="Permanent link">&para;</a></h4>
+<h5 id="221-class-b-push-pull-amplifier">2.2.1: Class B push pull amplifier<a class="headerlink" href="#221-class-b-push-pull-amplifier" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-27-23-48-10.png" /></p>
+<ul>
+<li>
+<p>To improve efficiency compared to a Class A amplifier, we may try to eliminate the dissipation at zero output. That means, we aim to design an amplifier whose dissipation is zero when <span class="arithmatex">\(v_{in} = 0\)</span></p>
+</li>
+<li>
+<p>The solution will be Class B push-pull output stage.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-27-23-53-55.png" /></p>
+<p><img alt="" src="../image/2022-11-27-23-54-21.png" /></p>
+<p><img alt="" src="../image/2022-11-27-23-56-58.png" /></p>
+<p><img alt="" src="../image/2022-11-27-23-57-15.png" /></p>
+<p><img alt="" src="../image/2022-11-27-23-57-33.png" /></p>
+<h5 id="222-class-b-amplifier-crossover-distortion">2.2.2: Class B amplifier crossover distortion<a class="headerlink" href="#222-class-b-amplifier-crossover-distortion" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-28-00-00-18.png" /></p>
+<h5 id="223-power-analysis-class-b">2.2.3: Power analysis - Class B<a class="headerlink" href="#223-power-analysis-class-b" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-28-00-02-56.png" /></p>
+<h5 id="224-summary">2.2.4: Summary<a class="headerlink" href="#224-summary" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-28-00-03-39.png" /></p>
+<h4 id="23-class-ab">2.3: Class AB<a class="headerlink" href="#23-class-ab" title="Permanent link">&para;</a></h4>
+<h5 id="231-class-ab-power-amplifier">2.3.1: Class AB power amplifier<a class="headerlink" href="#231-class-ab-power-amplifier" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-28-00-05-57.png" /></p>
+<h5 id="232-crossover-distortion-improvement-in-class-ab">2.3.2: Crossover distortion improvement in Class AB<a class="headerlink" href="#232-crossover-distortion-improvement-in-class-ab" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-28-00-09-38.png" /></p>
+<h5 id="233-summary">2.3.3: Summary<a class="headerlink" href="#233-summary" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-28-00-11-07.png" /></p>
+<h2 id="vii-operational-amplifier">VII: Operational Amplifier<a class="headerlink" href="#vii-operational-amplifier" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduction_1">1: Introduction<a class="headerlink" href="#1-introduction_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Op-Amps are as general purpose amplifier:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-29-08-05-15.png" /></p>
+<ul>
+<li>Two Golden rules :<ul>
+<li>Rule 1: the output attempts to do whatever is necessary to make the voltage between the two inputs zero.</li>
+<li>The input draw no current.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-classic-op-amp-circuits">2: Classic op-amp circuits<a class="headerlink" href="#2-classic-op-amp-circuits" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Inverting Amplifier </li>
+</ul>
+<div class="arithmatex">\[
+\frac{v_{out}}{v_{in}} = -\frac{R_1}{R_1}
+\]</div>
+<ul>
+<li>Non-inverting Amplifier </li>
+</ul>
+<div class="arithmatex">\[
+\frac{V_o}{v_i} = \frac{R_2}{R_1} +1
+\]</div>
+<ul>
+<li>Difference Amplifier </li>
+</ul>
+<div class="arithmatex">\[
+V_{o} = \frac{R_2}{R_1}(V_2-V_1)
+\]</div>
+<ul>
+<li>Instrument Amplifier:</li>
+</ul>
+<div class="arithmatex">\[
+V_o = -(V_1-V_2)(1+\frac{R_2}{R_1}\times 2)\frac{R_4}{R_3}
+\]</div>
+<h3 id="3-feedback">3: Feedback<a class="headerlink" href="#3-feedback" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>A: Basic amplifier gain</p>
+</li>
+<li>
+<p>f: Feedback gain factor </p>
+</li>
+<li>
+<p><span class="arithmatex">\(S_{out}\)</span>: Output signal</p>
+</li>
+<li>
+<p><span class="arithmatex">\(S_e\)</span>: Error signal</p>
+</li>
+<li>
+<p><span class="arithmatex">\(S_f\)</span>: Feedback signal </p>
+</li>
+<li>
+<p>In negative, the feedback signal tries to negate the input, so it is termed error.</p>
+</li>
+</ul>
+<h4 id="31-feedback-gain">3.1: Feedback Gain<a class="headerlink" href="#31-feedback-gain" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-02-08-10-30.png" /></p>
+<p>For any amplifier, the output signal will be given by:</p>
+<div class="arithmatex">\[
+s_{out} = As_e
+\]</div>
+<p>where:</p>
+<div class="arithmatex">\[
+\begin{cases}
+    s_e &amp;= s_{in} - s_f \\
+    s_f &amp;= fs_{out}    
+\end{cases}
+\]</div>
+<p>where <span class="arithmatex">\(f\)</span> is the feedback factor.</p>
+<p>So: <span class="arithmatex">\(s_{out} = A(s_{in}-s_f) = A(s_{in}-fs_{out}\)</span></p>
+<p>By definition:</p>
+<div class="arithmatex">\[
+A_f = \frac{s_{out}}{s_{in}} = \frac{A(s_{in}-fs_{out})}{s_{in}} = A - \frac{A.fs_{out}}{s_{in}}
+\]</div>
+<p>So:</p>
+<div class="arithmatex">\[
+A_f = A - Af\frac{s_{out}}{s_{in}} = A-AfA_f
+\]</div>
+<p>Finally:</p>
+<div class="arithmatex">\[
+A_f = \frac{A}{1+Af} \approx \frac{1}{f}
+\]</div>
+<h4 id="32-advantage-1-gain-sensitivity">3.2: Advantage 1 - Gain sensitivity<a class="headerlink" href="#32-advantage-1-gain-sensitivity" title="Permanent link">&para;</a></h4>
+<p>If assume:</p>
+<div class="arithmatex">\[
+A = A\pm \delta A
+\]</div>
+<p>Bring back to the former formula:</p>
+<div class="arithmatex">\[
+A_f = \frac{A \pm \delta A}{1+(A\pm \delta A)f}
+\]</div>
+<p>As long as <span class="arithmatex">\(Af &gt;&gt; 1\)</span>:</p>
+<div class="arithmatex">\[
+A_f \approx \frac{1}{f}
+\]</div>
+<h4 id="33-advantage-2-eliminating-distortion">3.3: Advantage 2 - Eliminating distortion<a class="headerlink" href="#33-advantage-2-eliminating-distortion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Suppose the basic amplifier is distortive. So the output does not give a sine wave for a sine wave input.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-12-02-08-15-25.png" /></th>
+<th><img alt="" src="../image/2022-12-02-08-16-10.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>The gain is about 1/f. </p>
+</li>
+<li>
+<p>This gives a very good property of feedback amplifier in terms of eliminating distortion.</p>
+</li>
+</ul>
+<h4 id="34-advantage-3-noise-rejection">3.4: Advantage 3 - noise rejection<a class="headerlink" href="#34-advantage-3-noise-rejection" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-12-02-08-19-29.png" /></th>
+<th><img alt="" src="../image/2022-12-02-08-19-50.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Consider a noisy amplifier scenario (predicted conditions). It generates noise, such that:</li>
+</ul>
+<div class="arithmatex">\[
+s\prime _e = s_e + \tilde{v_n}
+\]</div>
+<ul>
+<li>
+<p>Where <span class="arithmatex">\(\tilde{v_n}\)</span> is the <em>rms</em> noise at the amplifier input.</p>
+</li>
+<li>
+<p>The easiest way to analyze this is to simply assume the input signal is a combination of signal <span class="arithmatex">\(s_{in\)</span> and noise <span class="arithmatex">\(\tilde{v_n}\)</span></p>
+</li>
+<li>
+<p>The signal to noise ratio is then defined as:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+SNR = \displaystyle\frac{Afs_{in}}{Af\tilde{v_n}} = \frac{s_{in}}{\tilde{v_n}}
+\]</div>
+<h4 id="35-cost-of-feedback">3.5: Cost of Feedback<a class="headerlink" href="#35-cost-of-feedback" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Feedback comes with reduced gain, hence you may need to add a pre-amplifier to boost the gain.</p>
+</li>
+<li>
+<p>Wherever you have a loop, there is hazard of oscillation.</p>
+</li>
+</ul>
+<h4 id="36-frequency-response-open-loop">3.6: Frequency response - open loop<a class="headerlink" href="#36-frequency-response-open-loop" title="Permanent link">&para;</a></h4>
+<p>For the amplifier without feedback, we can simply define the frequency response in terms of the first pole:</p>
+<div class="arithmatex">\[
+A(j\omega) = \frac{A_{LF}}{1+i\omega/P_1}
+\]</div>
+<p><img alt="" src="../image/2022-12-03-08-52-46.png" /></p>
+<h3 id="4-non-ideal-performance">4: Non-ideal performance<a class="headerlink" href="#4-non-ideal-performance" title="Permanent link">&para;</a></h3>
+<h4 id="41-slew-rate">4.1: Slew rate<a class="headerlink" href="#41-slew-rate" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-09-02-53.png" /></p>
+<h4 id="42-input-offset-voltage">4.2: Input offset voltage<a class="headerlink" href="#42-input-offset-voltage" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-09-03-41.png" /></p>
+<h2 id="viii-digital-to-analog-conversion-back-again">VIII: Digital to Analog Conversion (&amp; back again)<a class="headerlink" href="#viii-digital-to-analog-conversion-back-again" title="Permanent link">&para;</a></h2>
+<h3 id="1-analog-digital-representation">1: Analog &lt;-&gt; digital representation<a class="headerlink" href="#1-analog-digital-representation" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-12-03-09-06-24.png" /></p>
+<h3 id="2-accuracy-in-adcdac-conversion">2: Accuracy in ADC/DAC conversion<a class="headerlink" href="#2-accuracy-in-adcdac-conversion" title="Permanent link">&para;</a></h3>
+<p>Consider the two components of information in the signal:</p>
+<ul>
+<li>
+<p><strong>Time</strong>: Accuracy is determined by the sampling rate (<span class="arithmatex">\(\Delta T\)</span>)</p>
+</li>
+<li>
+<p><strong>Amplitude</strong>: Accuracy is determined by the dynamic range resolution (<span class="arithmatex">\(\Delta S\)</span>)</p>
+</li>
+</ul>
+<p>These will determine the rate of information the system to deal with, which is called the bit rate, defined by:</p>
+<div class="arithmatex">\[
+BR = information\quad packet \quad size \times sampling \quad rate
+\]</div>
+<p><img alt="" src="../image/2022-12-03-09-15-17.png" /></p>
+<h3 id="3-nyquist-shannon-theorem">3: Nyquist - Shannon theorem<a class="headerlink" href="#3-nyquist-shannon-theorem" title="Permanent link">&para;</a></h3>
+<p>Minimum sampling rate should be at least twice the highest data frequency of the analog signal:</p>
+<div class="arithmatex">\[
+f_{sampling} \ge 2.f_{max}
+\]</div>
+<h3 id="4-adcdac-quantization-error-noise">4: ADC/DAC Quantization error (noise)<a class="headerlink" href="#4-adcdac-quantization-error-noise" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-12-03-09-32-46.png" /></p>
+<p><span class="arithmatex">\(S_{out}\)</span> is affected by the discrete levels. It is not possible to match exactly, the error <span class="arithmatex">\(S_{out} - S_{in}\)</span> is the quantization noise that has an amplitude of <span class="arithmatex">\(\pm \frac{1}{2}\)</span> LSB.</p>
+<ul>
+<li>If all error values are equally likely the RMS quantization error is:</li>
+</ul>
+<div class="arithmatex">\[
+NOISE_{RMS} = \frac{1}{\sqrt{12}}LSB = 0.3LSB
+\]</div>
+<h3 id="5-adcdac-quantization-snr">5: ADC/DAC Quantization SNR<a class="headerlink" href="#5-adcdac-quantization-snr" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-12-03-09-40-55.png" /></p>
+<h3 id="6-digital-to-analog-conversion">6: Digital to Analog conversion<a class="headerlink" href="#6-digital-to-analog-conversion" title="Permanent link">&para;</a></h3>
+<h4 id="61-core-principle">6.1: Core principle<a class="headerlink" href="#61-core-principle" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-09-42-32.png" /></p>
+<h4 id="62-dac-system">6.2: DAC system<a class="headerlink" href="#62-dac-system" title="Permanent link">&para;</a></h4>
+<p>Objective is to take a digital signal and convert it into an analog one. It can use a simple summing amplifier, which is know as a weighted resistor DAC.</p>
+<p><img alt="" src="../image/2022-12-03-09-45-45.png" /></p>
+<h4 id="63-weighted-resistor-dac">6.3: Weighted resistor DAC<a class="headerlink" href="#63-weighted-resistor-dac" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-09-47-13.png" /></p>
+<h4 id="64-r-2r-ladder-network-dac">6.4: R-2R Ladder network DAC<a class="headerlink" href="#64-r-2r-ladder-network-dac" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-09-50-18.png" /></p>
+<h4 id="65-capacitive-dac">6.5: Capacitive DAC<a class="headerlink" href="#65-capacitive-dac" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-01-49.png" /></p>
+<h4 id="66-charge-scaling-dac">6.6: Charge Scaling DAC<a class="headerlink" href="#66-charge-scaling-dac" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-04-12.png" /></p>
+<h3 id="7-analog-to-digital-conversion">7: Analog to digital Conversion<a class="headerlink" href="#7-analog-to-digital-conversion" title="Permanent link">&para;</a></h3>
+<h4 id="71-types-of-adcs">7.1: Types of ADC's<a class="headerlink" href="#71-types-of-adcs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Flash ADC </p>
+</li>
+<li>
+<p>Sigma-delta ADC </p>
+</li>
+<li>
+<p>Successive approximation converter </p>
+</li>
+</ul>
+<h4 id="72-sample-and-hold-concept">7.2: Sample and hold concept<a class="headerlink" href="#72-sample-and-hold-concept" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-15-21.png" /></p>
+<h4 id="73-comparator">7.3: Comparator<a class="headerlink" href="#73-comparator" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-15-41.png" /></p>
+<h4 id="74-flash-adc-operational-principle">7.4: Flash ADC - operational principle<a class="headerlink" href="#74-flash-adc-operational-principle" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-24-33.png" /></p>
+<h4 id="75-flash-adc-3-bit-adc">7.5: Flash ADC -3 Bit ADC<a class="headerlink" href="#75-flash-adc-3-bit-adc" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-26-33.png" /></p>
+<h4 id="76-half-flash-adc">7.6: Half Flash ADC<a class="headerlink" href="#76-half-flash-adc" title="Permanent link">&para;</a></h4>
+<p>If we need high resolution (high number of bits) but don't have the space for lots of components.</p>
+<p><img alt="" src="../image/2022-12-03-10-32-47.png" /></p>
+<h4 id="77-sigma-delta-adc">7.7: Sigma-delta ADC<a class="headerlink" href="#77-sigma-delta-adc" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-33-53.png" /></p>
+<p><img alt="" src="../image/2022-12-03-10-34-05.png" /></p>
+<h4 id="78-successive-approximation">7.8: Successive approximation<a class="headerlink" href="#78-successive-approximation" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-49-40.png" /></p>
+<p><img alt="" src="../image/2022-12-03-10-52-20.png" /></p>
+<h4 id="79-adc-comparison">7.9: ADC Comparison<a class="headerlink" href="#79-adc-comparison" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-03-10-57-39.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ziyu Tian
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ziyu-Tian" target="_blank" rel="noopener" title="GitHub | Ziyu Tian" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

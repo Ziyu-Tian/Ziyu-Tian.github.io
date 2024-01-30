@@ -1,0 +1,4761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ziyu Tian's Website">
+      
+      
+        <meta name="author" content="Ziyu Tian">
+      
+      
+        <link rel="canonical" href="https://ziyu-tian.github.io/NOTES/Stage_2/computerSystems/">
+      
+      
+        <link rel="prev" href="../signalsAndCommunication/">
+      
+      
+        <link rel="next" href="../analogElectronic/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>Computer Systems and Microprocessors - Nothing except Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computer-systems-and-microprocessors" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Nothing except Notes" class="md-header__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nothing except Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computer Systems and Microprocessors
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../DEV/" class="md-tabs__link">
+          
+  
+    
+  
+  Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BLOGS/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Nothing except Notes" class="md-nav__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Nothing except Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage1_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Stage1_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Job_Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Placement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Placement Year
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1001/EngineeringMath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engineering Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Programing Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/Matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MATLAB Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/PythonDataAnalysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Data Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electronics Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Electronics Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Electronics/FundamentalElectricCircuits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals of Electric Circuits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage2_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Stage2_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semiconductor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semiconductors Devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signalsAndCommunication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signals and Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Computer Systems and Microprocessors
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Computer Systems and Microprocessors
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: Background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fundamentals-of-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Fundamentals of CMOS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Fundamentals of CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-transistor-fundamentals-nmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Transistor fundamentals: NMOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-transistor-fundamentals-pmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Transistor fundamentals: PMOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-cmos-complementary-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: CMOS: complementary MOSFET
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cmos-logic-circuits-inverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: CMOS logic Circuits: Inverter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cmos-logic-circuits-nand" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: CMOS Logic Circuits: NAND
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cmos-logic-circuits-nor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: CMOS Logic Circuits: NOR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-d-type-flip-flop-latches" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: D-type flip-flop (Latches)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-computer-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: Computer Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: Computer Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-modern-computing-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Modern Computing Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-computer-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Computer Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-type-of-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Type of Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-memory-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Memory Trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-memory-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Memory Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-cache-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: Cache Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-cache-memory-sram-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Cache Memory: SRAM basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-cache-memory-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7: Cache Memory Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-cache-size-tradeoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8: Cache Size Tradeoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-main-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9: Main Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9: Main Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#391-the-dram-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.1: The DRAM basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#392-dram-read-sense-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.2: DRAM Read: Sense Amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#393-dram-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.3: DRAM Array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-the-memory-wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10: The Memory Wall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-other-memories-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11: Other Memories: ROM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-secondary-storage-magnetic-disks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12: Secondary Storage: Magnetic Disks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-off-line-storage-cd-rom-dvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.13: Off-line Storage: CD-ROM, DVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-tertiary-storages-flash-memories" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.14: Tertiary Storages: Flash memories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-nor-multi-level-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.15: NOR Multi-Level Cells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-emerging-non-volatile-memories-memristors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.16: Emerging Non-volatile Memories: Memristors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Interconnects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Interconnects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-computer-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Computer Interconnect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-the-importance-of-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: The Importance of Interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-managing-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3: Managing Interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-interconnect-skew" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4: Interconnect Skew
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-interconnect-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5: Interconnect Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-synchronous-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6: Synchronous interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-asynchronous-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7: Asynchronous interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-interconnect-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8: Interconnect Topology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-shared-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9: Shared Bus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9: Shared Bus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#491-shared-bus-example-arm-amba" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.1: Shared Bus Example: ARM AMBA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#492-ahb-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.2: AHB Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#493-ahb-basic-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.3: AHB Basic Transfer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#494-ahb-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.4: AHB Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#495-shared-bus-multi-core-dilemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.5: Shared Bus: Multi-core Dilemma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#496-shared-bus-example-intel-pci" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.6: Shared Bus Example: Intel PCI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#497-pci-arbitration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.7: PCI Arbitration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-usb-universal-serial-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.10: USB: Universal Serial Bus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-point-to-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.11: Point-to-Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-crossbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12: Crossbar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-network-on-chip" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13: Network-on-Chip
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.13: Network-on-Chip">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4131-noc-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.1: NoC Router
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4132-noc-network-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.2: NoC Network Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4133-noc-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.3: NoC routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4134-xy-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.4: XY routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4135-fault-tolerant-xy-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.5: Fault-tolerant XY routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4136-a-typical-modern-system-on-chip" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.6: A typical modern system-on-chip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: Processors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Processors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-introduction-to-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1: Introduction to Processors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-functional-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2: Functional View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-structure-of-a-computer-top-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3: Structure of a computer - top level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-structure-of-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4: Structure of CPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-revisiting-resisters" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5: Revisiting Resisters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5: Revisiting Resisters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551-user-visible-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1: User Visible Registers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552-general-purpose-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.2: General Purpose Register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553-data-and-address-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.3: Data and Address Register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#554-condition-code-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.4: Condition Code Registers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#555-system-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.5: System register
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-control-unite-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6: Control Unite: Data Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6: Control Unite: Data Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561-cpu-control-steps-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.1: CPU Control Steps: Data Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562-cpu-instruction-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.2: CPU Instruction cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#563-data-flow-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.3: Data Flow (Execute)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#564-data-flow-with-interrupt" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.4: Data Flow (with interrupt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#564-prefetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.4: Prefetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#565-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.5: Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#566-timing-of-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.6: Timing of Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#567-branch-in-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.7: Branch in Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#568-branch-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.8: Branch Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#569-pipeline-stalls-5-stages-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.9: Pipeline stalls - 5 stages example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5610-speed-up-equation-for-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.10: Speed up Equation for Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5611-pipelined-architectures-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.11: Pipelined Architectures: Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-control-unit-cpu-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7: Control Unit: CPU Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7: Control Unit: CPU Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#571-von-neumann-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7.1: Von Neumann architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#572-structure-of-a-typical-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7.2: Structure of a Typical CPU
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-cisc-and-risc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8: CISC and RISC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8: CISC and RISC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#581-risc-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8.1: RISC philosophy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#582-cisc-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8.2: CISC characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#583-risc-versus-cisc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8.3: RISC versus CISC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-cpu-alus" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9: CPU: ALUs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#591-arithmetic-and-logic-unit-alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.1: Arithmetic and Logic Unit (ALU)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9.1: Arithmetic and Logic Unit (ALU)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#592-building-n-bit-alus" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.2: BUilding N-bit ALUs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593-understanding-cpu-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.3: Understanding CPU operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#594-example-instruction-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.4: Example: Instruction fetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#595-example-alu-based-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.5: Example: ALU-based Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analogElectronic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analogue Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microProcessors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitalElectronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhdl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VHDL Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statisticalMethod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acElectrical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AC Electrical Power
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automaticControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatic Control Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage3_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Stage3_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Industrial_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Control and PLC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Introduction_to_Law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction to Business Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Digital_Signal_Process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Signal Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../DEV/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Dev
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/TimeComplexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time & Space Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/StaticInC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static modifier in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/ValueRefPass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pass-by-Value & Pass-by-Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/BitOperation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bit Operation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../BLOGS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/BlogsZero/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blogs_Zero
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_220822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 22/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_240822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 24/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Literature_260822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Poem Thoughts 26/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: Background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fundamentals-of-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Fundamentals of CMOS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Fundamentals of CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-transistor-fundamentals-nmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Transistor fundamentals: NMOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-transistor-fundamentals-pmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Transistor fundamentals: PMOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-cmos-complementary-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: CMOS: complementary MOSFET
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cmos-logic-circuits-inverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: CMOS logic Circuits: Inverter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cmos-logic-circuits-nand" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: CMOS Logic Circuits: NAND
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cmos-logic-circuits-nor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: CMOS Logic Circuits: NOR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-d-type-flip-flop-latches" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: D-type flip-flop (Latches)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-computer-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: Computer Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: Computer Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-modern-computing-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Modern Computing Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-computer-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Computer Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-type-of-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Type of Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-memory-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Memory Trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-memory-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Memory Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-cache-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: Cache Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-cache-memory-sram-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Cache Memory: SRAM basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-cache-memory-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7: Cache Memory Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-cache-size-tradeoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8: Cache Size Tradeoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-main-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9: Main Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9: Main Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#391-the-dram-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.1: The DRAM basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#392-dram-read-sense-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.2: DRAM Read: Sense Amplifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#393-dram-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.3: DRAM Array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-the-memory-wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10: The Memory Wall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-other-memories-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11: Other Memories: ROM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-secondary-storage-magnetic-disks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12: Secondary Storage: Magnetic Disks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-off-line-storage-cd-rom-dvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.13: Off-line Storage: CD-ROM, DVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-tertiary-storages-flash-memories" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.14: Tertiary Storages: Flash memories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-nor-multi-level-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.15: NOR Multi-Level Cells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-emerging-non-volatile-memories-memristors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.16: Emerging Non-volatile Memories: Memristors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Interconnects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Interconnects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-computer-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Computer Interconnect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-the-importance-of-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: The Importance of Interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-managing-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3: Managing Interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-interconnect-skew" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4: Interconnect Skew
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-interconnect-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5: Interconnect Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-synchronous-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6: Synchronous interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-asynchronous-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7: Asynchronous interconnects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-interconnect-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8: Interconnect Topology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-shared-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9: Shared Bus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9: Shared Bus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#491-shared-bus-example-arm-amba" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.1: Shared Bus Example: ARM AMBA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#492-ahb-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.2: AHB Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#493-ahb-basic-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.3: AHB Basic Transfer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#494-ahb-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.4: AHB Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#495-shared-bus-multi-core-dilemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.5: Shared Bus: Multi-core Dilemma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#496-shared-bus-example-intel-pci" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.6: Shared Bus Example: Intel PCI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#497-pci-arbitration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.7: PCI Arbitration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-usb-universal-serial-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.10: USB: Universal Serial Bus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-point-to-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.11: Point-to-Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-crossbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12: Crossbar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-network-on-chip" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13: Network-on-Chip
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.13: Network-on-Chip">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4131-noc-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.1: NoC Router
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4132-noc-network-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.2: NoC Network Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4133-noc-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.3: NoC routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4134-xy-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.4: XY routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4135-fault-tolerant-xy-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.5: Fault-tolerant XY routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4136-a-typical-modern-system-on-chip" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.13.6: A typical modern system-on-chip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: Processors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Processors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-introduction-to-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1: Introduction to Processors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-functional-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2: Functional View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-structure-of-a-computer-top-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3: Structure of a computer - top level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-structure-of-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4: Structure of CPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-revisiting-resisters" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5: Revisiting Resisters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5: Revisiting Resisters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551-user-visible-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1: User Visible Registers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552-general-purpose-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.2: General Purpose Register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553-data-and-address-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.3: Data and Address Register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#554-condition-code-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.4: Condition Code Registers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#555-system-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.5: System register
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-control-unite-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6: Control Unite: Data Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6: Control Unite: Data Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561-cpu-control-steps-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.1: CPU Control Steps: Data Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562-cpu-instruction-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.2: CPU Instruction cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#563-data-flow-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.3: Data Flow (Execute)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#564-data-flow-with-interrupt" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.4: Data Flow (with interrupt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#564-prefetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.4: Prefetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#565-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.5: Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#566-timing-of-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.6: Timing of Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#567-branch-in-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.7: Branch in Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#568-branch-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.8: Branch Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#569-pipeline-stalls-5-stages-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.9: Pipeline stalls - 5 stages example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5610-speed-up-equation-for-pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.10: Speed up Equation for Pipelining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5611-pipelined-architectures-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.11: Pipelined Architectures: Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-control-unit-cpu-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7: Control Unit: CPU Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7: Control Unit: CPU Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#571-von-neumann-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7.1: Von Neumann architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#572-structure-of-a-typical-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7.2: Structure of a Typical CPU
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-cisc-and-risc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8: CISC and RISC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8: CISC and RISC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#581-risc-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8.1: RISC philosophy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#582-cisc-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8.2: CISC characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#583-risc-versus-cisc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8.3: RISC versus CISC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-cpu-alus" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9: CPU: ALUs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#591-arithmetic-and-logic-unit-alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.1: Arithmetic and Logic Unit (ALU)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9.1: Arithmetic and Logic Unit (ALU)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#592-building-n-bit-alus" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.2: BUilding N-bit ALUs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593-understanding-cpu-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.3: Understanding CPU operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#594-example-instruction-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.4: Example: Instruction fetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#595-example-alu-based-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9.5: Example: ALU-based Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="computer-systems-and-microprocessors">Computer Systems and Microprocessors<a class="headerlink" href="#computer-systems-and-microprocessors" title="Permanent link">&para;</a></h1>
+<h2 id="i-background">I: Background<a class="headerlink" href="#i-background" title="Permanent link">&para;</a></h2>
+<h3 id="1-fundamentals-of-cmos">1: Fundamentals of CMOS<a class="headerlink" href="#1-fundamentals-of-cmos" title="Permanent link">&para;</a></h3>
+<h4 id="11-transistor-fundamentals-nmos">1.1: Transistor fundamentals: NMOS<a class="headerlink" href="#11-transistor-fundamentals-nmos" title="Permanent link">&para;</a></h4>
+<ul>
+<li>NMOS, i.e. Negative Metal Oxide Field Efficient Transistor.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-04-10-03-42.png" /></p>
+<ul>
+<li>
+<p>The drain / source area are both doping with electrons (n-type doping), while the substrate is doped with holes.</p>
+</li>
+<li>
+<p>The insulator is filled with oxide.</p>
+</li>
+<li>
+<p>The gate is a switch which controlled by the <span class="arithmatex">\(V_{GS}\)</span> (voltage between gate and source). The high potential voltage will attracts the minor electrons in substrate so that form the channel.</p>
+</li>
+<li>
+<p>The electrons will move from the source to the drain and inverse for the current.</p>
+</li>
+<li>
+<p>The symbol of NMOS is below (sometimes using 'inlet' arrow ):</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-04-10-10-35.png" /></p>
+<h4 id="12-transistor-fundamentals-pmos">1.2: Transistor fundamentals: PMOS<a class="headerlink" href="#12-transistor-fundamentals-pmos" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The same mechanism as NMOS. </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-10-04-10-12-56.png" /></th>
+<th><img alt="" src="../image/2022-10-04-10-13-04.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="13-cmos-complementary-mosfet">1.3: CMOS: complementary MOSFET<a class="headerlink" href="#13-cmos-complementary-mosfet" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-10-04-10-15-04.png" /></p>
+<h3 id="2-cmos-logic-circuits-inverter">2: CMOS logic Circuits: Inverter<a class="headerlink" href="#2-cmos-logic-circuits-inverter" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-10-04-10-15-41.png" /></p>
+<ul>
+<li>
+<p>Note that the positive voltage for gate for NMOS is ON, the negative voltage for PMOS is ON.</p>
+</li>
+<li>
+<p>2 transistors needed.</p>
+</li>
+</ul>
+<h3 id="3-cmos-logic-circuits-nand">3: CMOS Logic Circuits: NAND<a class="headerlink" href="#3-cmos-logic-circuits-nand" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-10-04-10-54-58.png" /></p>
+<ul>
+<li>If we fix one input as '1', this can also be used as an inverter. </li>
+</ul>
+<h3 id="4-cmos-logic-circuits-nor">4: CMOS Logic Circuits: NOR<a class="headerlink" href="#4-cmos-logic-circuits-nor" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-10-04-10-58-27.png" /></p>
+<ul>
+<li>If we fix one of the input as '0', this can be used as an inverter.</li>
+</ul>
+<h3 id="5-d-type-flip-flop-latches">5: D-type flip-flop (Latches)<a class="headerlink" href="#5-d-type-flip-flop-latches" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-10-04-10-59-09.png" /></p>
+<ul>
+<li>'0' for reset and '1' for set when clock is '1'.</li>
+</ul>
+<h2 id="ii-computer-systems">II: Computer Systems<a class="headerlink" href="#ii-computer-systems" title="Permanent link">&para;</a></h2>
+<h3 id="1-modern-computing-systems">1: Modern Computing Systems<a class="headerlink" href="#1-modern-computing-systems" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>High Performance Computing </p>
+</li>
+<li>
+<p>General Purpose Computing</p>
+</li>
+<li>
+<p>Embedded Computing </p>
+</li>
+<li>
+<p>Ubiquitous Computing </p>
+</li>
+</ul>
+<h3 id="2-computer-architecture">2: Computer Architecture<a class="headerlink" href="#2-computer-architecture" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-10-04-11-34-40.png" /></p>
+<ul>
+<li>
+<p>Core to the computation is the processors and memory organization.</p>
+</li>
+<li>
+<p>IO devices allow various user-interfaced.</p>
+</li>
+<li>
+<p>Modulation keeps the things simple.</p>
+</li>
+<li>
+<p>Key components of a Microprocessor:</p>
+<ul>
+<li>Memories </li>
+<li>Busses / Interconnects</li>
+<li>Processors (CPU,etc.)</li>
+<li>IOs and controllers.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-memory">3: Memory<a class="headerlink" href="#3-memory" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Provides the temporary or permanent storage needed by the processors/ IOs.</li>
+</ul>
+<h4 id="31-type-of-memory">3.1: Type of Memory<a class="headerlink" href="#31-type-of-memory" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A. Register:<ul>
+<li>Small and fast; consists of a number of flip-flops</li>
+<li>Flashed out when powered off.</li>
+</ul>
+</li>
+<li>B. Cache Memory:<ul>
+<li>Large but slower memories, usually Static Random Access Memories (SRAMs)</li>
+<li>Flashed out when powered off.</li>
+</ul>
+</li>
+<li>C. Main Memory:<ul>
+<li>Even larger and slower.</li>
+<li>Usually Dynamic Random Access Memories (DRAMs)</li>
+</ul>
+</li>
+<li>D. Secondary Storage:<ul>
+<li>Larger and even slower.</li>
+<li>Usually disk drives.</li>
+</ul>
+</li>
+<li>E. Other Memories: Offline/Flash Memories<ul>
+<li>Used to store offline information.</li>
+</ul>
+</li>
+</ul>
+<h4 id="32-memory-trade-offs">3.2: Memory Trade-offs<a class="headerlink" href="#32-memory-trade-offs" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-10-04-11-45-57.png" /></p>
+<h4 id="33-memory-hierarchy">3.3: Memory Hierarchy<a class="headerlink" href="#33-memory-hierarchy" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The memory elements close to CPU are generally the fastest and costliest.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-04-11-58-04.png" /></p>
+<h4 id="34-register">3.4: Register<a class="headerlink" href="#34-register" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>A register is a parallel set of N flip-flops, with all clock lines connected with the CPU clock.</p>
+</li>
+<li>
+<p>Size N is equal to the CPU word length. In 32-bits CPU, you can find 32-bits registers.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-04-12-01-46.png" /></p>
+<ul>
+<li>
+<p>Registers can be different types:</p>
+<ul>
+<li><em>Accumulators</em>: register that directly stories/retrieves from memory.</li>
+<li><em>General purpose</em>: store data during execution.</li>
+<li><em>Special purpose</em>: used by the computer systems instead of the user:</li>
+</ul>
+</li>
+<li>
+<p>Different architectures have different number of registers depend on the <strong>Instruction Set Architecture</strong>.</p>
+</li>
+</ul>
+<h4 id="35-cache-memory">3.5: Cache Memory<a class="headerlink" href="#35-cache-memory" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cache memories are usually static random memory (SRAM) (6 transistors)</li>
+</ul>
+<p><img alt="" src="../image/2022-10-10-07-48-17.png" /></p>
+<ul>
+<li>SRAMs have three operations:<ul>
+<li>Hold (WL = 0), Write and Read (WL = 1)</li>
+</ul>
+</li>
+<li>BL: bit line feeds data into the cell.</li>
+<li>
+<p>WL: word select line</p>
+</li>
+<li>
+<p>BL/WL basically feed two inverters.</p>
+</li>
+<li>
+<p>Back to back inverters in the red circles.</p>
+</li>
+<li>
+<p>M4 and M5 are access transistors as switches.</p>
+</li>
+</ul>
+<h4 id="36-cache-memory-sram-basics">3.6: Cache Memory: SRAM basics<a class="headerlink" href="#36-cache-memory-sram-basics" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-10-10-07-52-28.png" /></p>
+<ul>
+<li>Hold<ul>
+<li>WL=Low, M5 and M6 (access transistors) are OFF.</li>
+<li>data held in latch.(back to back inverter)</li>
+</ul>
+</li>
+<li>
+<p>Write: (BL = High and WL = High, write 1)</p>
+<ul>
+<li>M5 and M6 are switched on.</li>
+<li>M6 allows the current through (High) and feeds the inverter <span class="arithmatex">\(I_2\)</span>.</li>
+<li><span class="arithmatex">\(I_2\)</span> generates Low output; then the output is fed back to <span class="arithmatex">\(I_1\)</span>; <span class="arithmatex">\(I_1\)</span> generate High output.</li>
+<li>The high and low loop between the inverters remember the logic (<span class="arithmatex">\(I_1\)</span> output).</li>
+</ul>
+</li>
+<li>
+<p>Read: (WL = High select the word line)</p>
+<ul>
+<li>M5 and M6 are switched on.</li>
+<li>If <span class="arithmatex">\(I_1\)</span> is high - M4 is on, causes current (<span class="arithmatex">\(V_{dd}\)</span>) to flow through M4 to the BL.</li>
+<li>The current and its direction is read by a current sense amp (detect logic high).</li>
+</ul>
+</li>
+</ul>
+<h4 id="37-cache-memory-operation">3.7: Cache Memory Operation<a class="headerlink" href="#37-cache-memory-operation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Cache exploits the <strong>principle of locality</strong>: programs tends to execute the same small set of instructions and data repeatedly.</p>
+</li>
+<li>
+<p>When the processor needs data for execution, first checks the cache:</p>
+<ul>
+<li>If the data in the cache, it is called a HIT.</li>
+<li>If else, it is called a MISS.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-10-09-14-30.png" /></p>
+<ul>
+<li>
+<p>Size and Performance trade-offs:</p>
+<ul>
+<li>Larger cache may increase HIT ratio, but the overall access time may increase.</li>
+<li>Smaller cache may increase MISS ratio, which may affect the performance.</li>
+</ul>
+</li>
+<li>
+<p>The first write is slow and the following writes are faster as you just need to write or update cache.</p>
+</li>
+<li>The speed-up factor using cache is almost 10.</li>
+<li>When the cache becomes full, 'old' entries can be overwritten by randomly chosen.</li>
+<li>When cache entries are more updated than main memory, the entries marked as <strong>dirty entries</strong>.<ul>
+<li>Dirty lines are updated in the main memory soon.</li>
+<li>The process of ensuring integrity of data is called <strong>cache coherence</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="38-cache-size-tradeoff">3.8: Cache Size Tradeoff<a class="headerlink" href="#38-cache-size-tradeoff" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The word 'latency' means the latency time for the computer to read the data.</li>
+<li>Effective Latency = Hit ratio * Hit Latency + Miss Ratio * Miss Latency
+(the average time required for memory access)</li>
+<li>If the caches missed in the L1 Cache, then it will come to L2 cache.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-11-11-16-00.png" /></p>
+<ul>
+<li>
+<p>Note if we treat the miss ratio is fixed in every level as p, then the hit ratio will be 1-p.</p>
+</li>
+<li>
+<p>'Temporal locality' refers to the reuse of the data which are time relatively.</p>
+</li>
+<li>'Spatial locality' refers to use of the data within close storage locations. When am instruction or a data is repeated a number of time it manifests spatial locality.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-11-11-25-16.png" /></p>
+<ul>
+<li>Caches contains several blocks.</li>
+<li>For the same caches size, larger block size lead to good temporal locality.</li>
+</ul>
+<h4 id="39-main-memory">3.9: Main Memory<a class="headerlink" href="#39-main-memory" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-10-11-11-34-11.png" /></p>
+<ul>
+<li>Generally DRAMs:<ul>
+<li>Dynamic: refreshed needed (the electrons may discharge when time past)</li>
+<li>Volatile: loses data when power is removed.</li>
+</ul>
+</li>
+<li>Comparison to SRAMs:<ul>
+<li>Smaller but more expansive.</li>
+<li>Not fast as SRAMs.(more refreshing circuitry)</li>
+</ul>
+</li>
+<li>
+<p>Main memory is the primary storage - all changes in registers and caches must be coherent with the mai memory.</p>
+</li>
+<li>
+<p>In theory, when the word line is '0', the electrons in the capacitor may keep. However the electrons may leap, if the original voltage is 1 V, the electrons will not be detected when V = 0.5. So we need a charging after the 0.5 point, which is the freshing.</p>
+</li>
+</ul>
+<h5 id="391-the-dram-basics">3.9.1: The DRAM basics<a class="headerlink" href="#391-the-dram-basics" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Write:</li>
+<li>BL = '1' and WL = '1':</li>
+<li>Access transistor ON, C charge to Vdd (HI).</li>
+<li>After refresh period, rewrite the data.</li>
+<li>Read:</li>
+<li>WL = HI</li>
+<li>Access transistor is ON, assume C has ~Vdd(HI) charge.</li>
+<li>Bit line read the voltage across C.</li>
+<li>Hold:</li>
+<li>C will retain the charge.</li>
+<li>The leakage current cause the discharge.</li>
+<li>Refresh needed.</li>
+</ul>
+<h5 id="392-dram-read-sense-amplifier">3.9.2: DRAM Read: Sense Amplifier<a class="headerlink" href="#392-dram-read-sense-amplifier" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-10-12-14-45-34.png" />
+<img alt="" src="../image/2022-10-12-14-52-52.png" /></p>
+<ul>
+<li>To read '1':</li>
+<li>WL = '0', the up and down BL keep 0.5 V.</li>
+<li>WL = '1', the BL connected with C (HI), the discharging begin.</li>
+<li>In the side with BL, the voltage increased and other side decreased.</li>
+<li>Then the signal '1' in BL side can be detected.</li>
+<li>The voltage will soon charge the C again.</li>
+<li>To read '0':</li>
+<li>WL = '0', the up and down keep 0.5 V.</li>
+<li>WL = '1', the BL connected with C (LOW), the charging begin.</li>
+<li>In the side with BL, the voltage decreased and other side decreased.</li>
+<li>Then the signal '0' in BL side can be detected.</li>
+<li>The voltage will soon discharge the C again.</li>
+<li>To write dada:</li>
+<li>The double side pre-charged to 0.5 V.</li>
+<li>Activate the WL, set BL to '0' or '1'.</li>
+<li>Data wrote to cell.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-13-07-57-20.png" /></p>
+<h5 id="393-dram-array">3.9.3: DRAM Array<a class="headerlink" href="#393-dram-array" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Several memory cell consist the memory array.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-13-08-00-02.png" /></p>
+<h4 id="310-the-memory-wall">3.10: The Memory Wall<a class="headerlink" href="#310-the-memory-wall" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Faster and parallel processor reducing CPI (clocks per Instruction).</p>
+</li>
+<li>
+<p>Complicated memory hierarchy is increasing the memory latency.</p>
+</li>
+<li>
+<p>The memory will limit the core efficiency.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-11-12-02-24.png" /></p>
+<h4 id="311-other-memories-rom">3.11: Other Memories: ROM<a class="headerlink" href="#311-other-memories-rom" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Read-only Memory<ul>
+<li>No capability for memory write.</li>
+<li>Data programmed</li>
+<li>Stable storage even when power is off</li>
+</ul>
+</li>
+<li>Example: NOR-based ROM <ul>
+<li>8 bits words</li>
+<li>Address selects active (HI) row </li>
+<li>The row selects lines program which line is HI, so teh data stored is fixed.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-13-08-32-57.png" /></p>
+<h4 id="312-secondary-storage-magnetic-disks">3.12: Secondary Storage: Magnetic Disks<a class="headerlink" href="#312-secondary-storage-magnetic-disks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Non-volatile memory, large and slower</li>
+<li>The disc is coated with magnetic material。</li>
+<li>Data is written serially in CW direction.</li>
+<li>Magnetise for '1', demagntise for '0'.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-13-09-17-02.png" />
+<img alt="" src="../image/2022-10-13-10-00-57.png" /></p>
+<ul>
+<li>The magnetic disks are consisted of:<ul>
+<li>Head: the head detector to read the magnetic direction.(hovering)</li>
+<li>Track: the circle track drawn by head.</li>
+<li>Cylinder: consist of different surface located in same radium circle, is a cylinder surface.</li>
+<li>Sector: the different sector area divided by gap.</li>
+</ul>
+</li>
+<li>
+<p>Total disk capacity = sector size x sector per track x number of tracks per cylinder x number of cylinder.</p>
+</li>
+<li>
+<p>The sector is the actual data container:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-13-11-15-23.png" /></p>
+<h4 id="313-off-line-storage-cd-rom-dvd">3.13: Off-line Storage: CD-ROM, DVD<a class="headerlink" href="#313-off-line-storage-cd-rom-dvd" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Optical non-volatile, for long-term storage.</li>
+<li>Coated in metal with the area reflect light differently.</li>
+<li>Normal surface called the 'land'.</li>
+<li>Surface affects by laser is called the 'pit'.</li>
+<li>The pit and land can be read by weak laser beam.</li>
+<li>From inside to outside.
+<img alt="" src="../image/2022-10-13-11-19-47.png" /></li>
+</ul>
+<h4 id="314-tertiary-storages-flash-memories">3.14: Tertiary Storages: Flash memories<a class="headerlink" href="#314-tertiary-storages-flash-memories" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Non-volatile; can be electronically erased and reprogrammed.<ul>
+<li>Modern solid-state drives (SSD) for secondary storage.</li>
+<li>Secure Digital (SD) Cards.</li>
+</ul>
+</li>
+<li>Semiconductor non-volatile, non-rotary devices.<ul>
+<li>Faster than HDDs.</li>
+</ul>
+</li>
+<li>Flash memories are made of storage cells:<ul>
+<li>Eg. Single-level cell (SLC)</li>
+<li>Control Gate is the MOS gate.</li>
+<li>Floating Gate electrically isolate the channel.</li>
+<li>Higher threshold  voltage need to charge FG for write.</li>
+<li>A voltage lower than threshold for reading.</li>
+<li>For higher electron biasing hot electrons injection needed.</li>
+</ul>
+</li>
+<li>
+<p><img alt="" src="../image/2022-10-13-11-26-51.png" /></p>
+</li>
+<li>
+<p>Two charge states:</p>
+<ul>
+<li>By default non charge in the float gate means '1'.</li>
+<li>If the electrons injected to float gate, means '0'.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-13-12-22-22.png" /></p>
+<ul>
+<li>Operations (NOR-based flash)<ul>
+<li>Reading:<ul>
+<li>For the '0', higher CG bias (<span class="arithmatex">\(V_{T0}&gt;5V\)</span>) required. (high voltage required to overcome the channel potential and the trapped charged impact)</li>
+<li>For the '1', lower CG bias (<span class="arithmatex">\(V_{T1}&lt;V_{T0}\)</span>) required.</li>
+</ul>
+</li>
+<li>Writing:<ul>
+<li>Need hot electrons injection (HEI)</li>
+<li>HEI follow the quantum tunnelling.</li>
+<li>Write '0': HEI applies HI (+ve) across the gate-source to allow FG to be charged negatively with low bit line.</li>
+<li>Write '1': HEI applies HI (-ve) across gate-source to allow FG data to be erased with low bit line.</li>
+</ul>
+</li>
+<li>Hold:<ul>
+<li>The FG dictates the hold operation.</li>
+<li>Negative charge for bit value = 0</li>
+<li>No FG charge for bit value = 1</li>
+<li>HEI causes oxide layer damage and this limit the lifetime of flash memories.</li>
+<li>SLC have ~100k write cycles.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="315-nor-multi-level-cells">3.15: NOR Multi-Level Cells<a class="headerlink" href="#315-nor-multi-level-cells" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Multi-level Cell (MLC)<ul>
+<li>Popular and high packing density</li>
+<li>Multiple SLC in parallel give multiple logic levels.</li>
+<li>MLC have typically ~10k cycles</li>
+</ul>
+</li>
+<li>REading <ul>
+<li>SImilar to the SLC, but with different biasing for different cells and configuration.</li>
+</ul>
+</li>
+</ul>
+<h4 id="316-emerging-non-volatile-memories-memristors">3.16: Emerging Non-volatile Memories: Memristors<a class="headerlink" href="#316-emerging-non-volatile-memories-memristors" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Also called RRAM or register-RAM.</li>
+<li>
+<p>T</p>
+</li>
+<li>
+<p>Two terminal element with variable doping:</p>
+<ul>
+<li>The width and resistance of doped region varies with biasing.</li>
+<li>When biasing makes w=D (device width) it is ON with <span class="arithmatex">\(R_{ON}\)</span></li>
+<li>When biasing makes w=0 it is OFF with <span class="arithmatex">\(R_{OFF}\)</span>.</li>
+<li>The resistance cannot change without biasing.</li>
+</ul>
+</li>
+<li>Resistive Memory: Meristor</li>
+<li>Current-Mode In-Memory Circuits: A <em>multiplier</em><ul>
+<li><img alt="" src="../image/2022-10-18-12-03-07.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-interconnects">4: Interconnects<a class="headerlink" href="#4-interconnects" title="Permanent link">&para;</a></h3>
+<h4 id="41-computer-interconnect">4.1: Computer Interconnect<a class="headerlink" href="#41-computer-interconnect" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Interconnect is a critical component in modern computer systems as it defines the underlying performance of the systems.</li>
+<li>Interconnects are used to connect various components in the system.</li>
+</ul>
+<h4 id="42-the-importance-of-interconnects">4.2: The Importance of Interconnects<a class="headerlink" href="#42-the-importance-of-interconnects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Affects performance and energy efficiency</li>
+<li>Affect the scalability of a system.</li>
+</ul>
+<h4 id="43-managing-interconnects">4.3: Managing Interconnects<a class="headerlink" href="#43-managing-interconnects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Driving an interconnect is hard for devices, which contain lots of buffers and wiring.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-22-15-42-44.png" /></p>
+<ul>
+<li>Every system has an interconnect topology and protocol to manage how to:<ul>
+<li><strong>accessed</strong>:(IO pin counts, and handshakes)</li>
+<li><strong>shared</strong></li>
+<li><strong>power managed</strong></li>
+</ul>
+</li>
+<li>Different vendors like different bus architectures and protocols<ul>
+<li>ARM: AMBA </li>
+<li>Freescale: VME </li>
+<li>Intel: QuickPath</li>
+</ul>
+</li>
+</ul>
+<h4 id="44-interconnect-skew">4.4: Interconnect Skew<a class="headerlink" href="#44-interconnect-skew" title="Permanent link">&para;</a></h4>
+<ul>
+<li>All interconnects suffer from interconnect or bus <strong>skew</strong>, because the differences in wire length.</li>
+<li>Consider the following interconnect:</li>
+</ul>
+<p><img alt="" src="../image/2022-10-22-16-09-51.png" /></p>
+<ul>
+<li>Uneven wire lengths between send and receive nodes.</li>
+<li>Bound to cause skew between them.</li>
+<li>Designer need to design protocols addressing worst case skew times.</li>
+<li>Also affects the interconnect clock frequency.</li>
+</ul>
+<h4 id="45-interconnect-types">4.5: Interconnect Types<a class="headerlink" href="#45-interconnect-types" title="Permanent link">&para;</a></h4>
+<p>There are two fundamentally different bus protocols:</p>
+<ul>
+<li>
+<p>Synchronous:</p>
+<ul>
+<li>Includes a clock in the control lines.</li>
+<li>A fixed protocol for communication relative to the clock.</li>
+<li>Advantage: involves very little logic and can run fast.</li>
+<li>Disadvantages: every device on the bus must run at the same clock rate to avoid clock skew, it cannot be very long.</li>
+</ul>
+</li>
+<li>
+<p>Asynchronous:</p>
+<ul>
+<li>It is not clocked.</li>
+<li>It can accommodate a wide range of device.</li>
+<li>It can be lengthened without worrying about clock skew.</li>
+<li>It requires a (rather complicated) handshaking protocol with overhands.</li>
+</ul>
+</li>
+</ul>
+<h4 id="46-synchronous-interconnects">4.6: Synchronous interconnects<a class="headerlink" href="#46-synchronous-interconnects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Having a clock line, which drives the interconnect transactions based on cycles.</li>
+<li>Interconnect cycles = several CPU cycles (typically 4-10)</li>
+<li>Example timing diagram: CPU reads data from device </li>
+<li>Slanted line mean the possible change.</li>
+</ul>
+<p><img alt="" src="../image/2022-10-23-09-30-11.png" /></p>
+<ul>
+<li>At T0, the CPU sets the address lines and sets the mode bits to "read".</li>
+<li>The clock pulse width (T1-T0) must be long enough to:<ul>
+<li>accommodate propagation delay (skew)</li>
+<li>allow the receiver to read the address </li>
+</ul>
+</li>
+<li>The receiver is ready to receive at T1. It sets the data lines.</li>
+<li>The data is read into the interconnect. At A2, the CPU reads the data.</li>
+<li>All lines are cleared for a new bus cycles at T3.</li>
+</ul>
+<h4 id="47-asynchronous-interconnects">4.7: Asynchronous interconnects<a class="headerlink" href="#47-asynchronous-interconnects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Do not have a global/master clock, BUS cycles can have any length, depending upon the master/slave.</p>
+</li>
+<li>
+<p>Transfer is achieved by means of <strong>handshaking</strong>.</p>
+</li>
+<li>
+<p>Input (i.e.Read) operation:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-23-09-57-55.png" /></p>
+<p><img alt="" src="../image/2022-11-12-22-45-28.png" /></p>
+<ul>
+<li>
+<p>(T5-T0) is one interconnect cycle. At T0, the CPU sets the address and mode lines.</p>
+</li>
+<li>
+<p>The CPU allows until T1 for bus skew. It then sets the Ready signal. The addressed device receives the Ready signal shortly before T2. It sets the data line, and raises the Accept line to <strong>acknowledge</strong>  receipt.</p>
+</li>
+<li>
+<p>When the CPU sees the Accept, it allows for skew. At T3, it lowers Ready and read the data. After a bus skew delay, the CPU removes the address T4.</p>
+</li>
+<li>
+<p>At T5, the addressed device sees Ready going down. It lowers Accept and removes the data.</p>
+</li>
+<li>
+<p>The bus cycle is then finished.</p>
+</li>
+<li>
+<p>Output (Write) operation form CPU to device</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-10-23-18-38-43.png" /></p>
+<ul>
+<li>The CPU provides the data, so this is made immediately.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-12-22-46-06.png" /></p>
+<h4 id="48-interconnect-topology">4.8: Interconnect Topology<a class="headerlink" href="#48-interconnect-topology" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Topology: Specifies the way interconnect are wired.</p>
+</li>
+<li>
+<p>Different Topologies:</p>
+<ul>
+<li>Shared bus:<ul>
+<li>Simplest, State-of-the-art </li>
+<li>Simpler arbitration protocols </li>
+<li>Scalability issues </li>
+</ul>
+</li>
+<li>Point-to-point<ul>
+<li>ideal but high cost </li>
+<li>lots of wires </li>
+<li>Poor scalability</li>
+</ul>
+</li>
+<li>Cross bar or Network-on-chip <ul>
+<li>emerging modular architectures</li>
+<li>Packet switching based</li>
+</ul>
+</li>
+<li>Irregular interconnect <ul>
+<li>Highly customized for given application </li>
+<li>not good scalability</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="49-shared-bus">4.9: Shared Bus<a class="headerlink" href="#49-shared-bus" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Simple and Cost effective.</li>
+<li>Easy to implement coherence.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-11-06-46.png" /></p>
+<ul>
+<li>
+<p>A bus transaction or bus cycle includes two parts:</p>
+<ul>
+<li>Issuing the command and address.</li>
+<li>Transferring the data.</li>
+</ul>
+</li>
+<li>
+<p>The <strong>master</strong> starts the bus transaction through command &amp; address.</p>
+</li>
+<li>
+<p>The <strong>slave</strong> is the one who responds to the address by:</p>
+<ul>
+<li>Sending data to master upon request.</li>
+<li>Receiving data from the master.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-11-22-01.png" /></p>
+<h5 id="491-shared-bus-example-arm-amba">4.9.1: Shared Bus Example: ARM AMBA<a class="headerlink" href="#491-shared-bus-example-arm-amba" title="Permanent link">&para;</a></h5>
+<ul>
+<li>AMBA: Advanced Microprocessor Bus Architecture。</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-16-59-35.png" /></p>
+<h5 id="492-ahb-architecture">4.9.2: AHB Architecture<a class="headerlink" href="#492-ahb-architecture" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-01-17-01-12.png" /></p>
+<ul>
+<li>
+<p>The red squared area is the bus.</p>
+</li>
+<li>
+<p>The three masters shared the one address bus, one write bus and one read bus.</p>
+</li>
+<li>
+<p>The three masters and slaves shared one bandwidth.</p>
+</li>
+</ul>
+<h5 id="493-ahb-basic-transfer">4.9.3: AHB Basic Transfer<a class="headerlink" href="#493-ahb-basic-transfer" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>The transfer is divided into two parts: Address phase and Data phase.</p>
+</li>
+<li>
+<p>One cycle for address and the other or data (read/write).</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-17-20-12.png" /></p>
+<ul>
+<li>
+<p>However, the slave may have different wait states (the bus skew or have busy state).</p>
+</li>
+<li>
+<p>The first two data phases are meaning waiting time.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-17-24-33.png" /></p>
+<h5 id="494-ahb-pipelining">4.9.4: AHB Pipelining<a class="headerlink" href="#494-ahb-pipelining" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Transaction pipelining increase bus bandwidth.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-17-41-33.png" /></p>
+<ul>
+<li>
+<p>As the AHB have different address and data controller, in one cycle time (for example the second cycle in picture), instruction B is getting address while A is doing data writing.</p>
+</li>
+<li>
+<p>During the transactions shown in picture, A,B and C three transactions (instructions) finished, which have 5 cycles. So the CPI (cycles per instruction) is 5/3.</p>
+</li>
+</ul>
+<h5 id="495-shared-bus-multi-core-dilemma">4.9.5: Shared Bus: Multi-core Dilemma<a class="headerlink" href="#495-shared-bus-multi-core-dilemma" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Achieving parallelism using a shared global bus is hard with multi-core or multi-masters:</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-11-25-50.png" /></p>
+<ul>
+<li>We use new AXI4 (Advanced exXtensible Interface) AMBA standards feature:<ul>
+<li>multi-layering, simpler handshaking</li>
+<li>Higher performance.</li>
+<li>Each master have own bandwidth which no need to share as AHB.</li>
+</ul>
+</li>
+</ul>
+<h5 id="496-shared-bus-example-intel-pci">4.9.6: Shared Bus Example: Intel PCI<a class="headerlink" href="#496-shared-bus-example-intel-pci" title="Permanent link">&para;</a></h5>
+<ul>
+<li>PCI: Peripheral component interconnection<ul>
+<li>High-speed shared bus</li>
+<li>Intel released PCI in 1990s </li>
+<li>Bit-width / speed depends on the Peripherals </li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-20-08-12.png" /></p>
+<h4 id="497-pci-arbitration">4.9.7: PCI Arbitration<a class="headerlink" href="#497-pci-arbitration" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PCI uses a centralized, synchronous arbitration scheme.<ul>
+<li>Each device has its own unique GNT(Grant) &amp; REQ (Request) line.</li>
+<li>Simple request-grant handshake is used to grant bus access.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-20-11-21.png" /></p>
+<h4 id="410-usb-universal-serial-bus">4.10: USB: Universal Serial Bus<a class="headerlink" href="#410-usb-universal-serial-bus" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Shared bus for low-speed I/O device.</p>
+</li>
+<li>
+<p>Expandable</p>
+<ul>
+<li>through other buses </li>
+<li>up to 127 devices (one for root)</li>
+<li>serial data-in and data-out </li>
+<li>Simple design:<ul>
+<li>Also supplying power</li>
+<li>Support for real-time device </li>
+<li>Simple to manufacture </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cable contain four wires <ul>
+<li>2 data lines </li>
+<li>1 power (+5V) and 1 GND </li>
+</ul>
+</li>
+<li>Data transmitted as:<ul>
+<li>'0' is transmitted as a voltage transition (0 to 1 or 1 to 0).</li>
+<li>'1' as the absence of transition (keep).</li>
+<li>Sequence of '0' forms a regular pulse stream.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-20-16-42.png" /></p>
+<ul>
+<li>Has a root hub connected to the main bus <ul>
+<li>Following hubs connected to this hub forming a tree-topology.</li>
+</ul>
+</li>
+<li>USB root hub multiplex data from devices and transmits data through regular polling.</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-20-19-58.png" /></p>
+<h4 id="411-point-to-point">4.11: Point-to-Point<a class="headerlink" href="#411-point-to-point" title="Permanent link">&para;</a></h4>
+<p>Every node connected to every other.</p>
+<ul>
+<li>
+<p>Lowest contention.</p>
+</li>
+<li>
+<p>Lowest latency </p>
+</li>
+<li>
+<p>Ideal except of the cost.</p>
+</li>
+<li>
+<p>Not scalable.</p>
+</li>
+<li>
+<p>O(<span class="arithmatex">\(n\)</span>) connection per node</p>
+</li>
+<li>
+<p>O(<span class="arithmatex">\(n^2\)</span>) links</p>
+</li>
+<li>
+<p>eg. Nvidia GPU </p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-11-55-04.png" /></p>
+<h4 id="412-crossbar">4.12: Crossbar<a class="headerlink" href="#412-crossbar" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-01-20-27-00.png" /></p>
+<ul>
+<li>
+<p>Every node connected to every other busy node.</p>
+</li>
+<li>
+<p>Good for small number of nodes. </p>
+</li>
+<li>
+<p>Low latency and high throughput (data in and out)</p>
+</li>
+<li>
+<p>Expansive and not scalable.</p>
+<ul>
+<li>lots of switches to scale up</li>
+</ul>
+</li>
+<li>
+<p>O(<span class="arithmatex">\(n^2\)</span>) cost</p>
+</li>
+</ul>
+<h4 id="413-network-on-chip">4.13: Network-on-Chip<a class="headerlink" href="#413-network-on-chip" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Tile-based scalable architecture:</p>
+<ul>
+<li>Each core is connected via a network interface, router (switch).</li>
+</ul>
+</li>
+<li>
+<p>Enable concurrent (parallel) sends to non-conflicting destinations.</p>
+</li>
+<li>
+<p>Low latency and high throughput.</p>
+</li>
+<li>
+<p>Expansive.</p>
+</li>
+<li>
+<p>Scalable.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-01-20-30-43.png" /></p>
+<h5 id="4131-noc-router">4.13.1: NoC Router<a class="headerlink" href="#4131-noc-router" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-01-20-31-51.png" /></p>
+<ul>
+<li>
+<p>The router can receive and send the direction of last and next step (eg. south-in and north-out).</p>
+</li>
+<li>
+<p>There is also buffer in router to store the data in order to read or write in one time to protect the device.</p>
+</li>
+</ul>
+<h5 id="4132-noc-network-interface">4.13.2: NoC Network Interface<a class="headerlink" href="#4132-noc-network-interface" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-01-20-36-51.png" /></p>
+<ul>
+<li>
+<p>FIFO means the first-in / first-out controller.</p>
+</li>
+<li>
+<p>Packet is an assemble of data, like the packed mail parcel.</p>
+</li>
+<li>
+<p>The NI add headers for packetising and to remove headers when depacketsing.</p>
+</li>
+</ul>
+<h5 id="4133-noc-routing">4.13.3: NoC routing<a class="headerlink" href="#4133-noc-routing" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Affects performance and communication scalability.</p>
+</li>
+<li>
+<p>Example routing algorithm on-chip:</p>
+<ul>
+<li>Source routing <ul>
+<li>Source tile tells the packet specifically how to reach the destination.</li>
+<li>Simple but not scalable.</li>
+</ul>
+</li>
+<li>XY routing <ul>
+<li>Go as far close to destination in X direction first, then in Y direction.</li>
+<li>Adaptive to NoC congestion.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="4134-xy-routing">4.13.4: XY routing<a class="headerlink" href="#4134-xy-routing" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-01-20-56-15.png" /></p>
+<h5 id="4135-fault-tolerant-xy-routing">4.13.5: Fault-tolerant XY routing<a class="headerlink" href="#4135-fault-tolerant-xy-routing" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-01-20-56-57.png" /></p>
+<h5 id="4136-a-typical-modern-system-on-chip">4.13.6: A typical modern system-on-chip<a class="headerlink" href="#4136-a-typical-modern-system-on-chip" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-01-20-57-56.png" /></p>
+<h3 id="5-processors">5: Processors<a class="headerlink" href="#5-processors" title="Permanent link">&para;</a></h3>
+<h4 id="51-introduction-to-processors">5.1: Introduction to Processors<a class="headerlink" href="#51-introduction-to-processors" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-15-11-18-27.png" />
+<img alt="" src="../image/2022-11-15-11-23-58.png" /></p>
+<ul>
+<li>Opcode: the binary code of operation.</li>
+<li>Mode: whether privilege allowed (user or administrator)</li>
+<li>Address: address denote to the memory as caches.</li>
+</ul>
+<h4 id="52-functional-view">5.2: Functional View<a class="headerlink" href="#52-functional-view" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-15-11-26-04.png" /></p>
+<h4 id="53-structure-of-a-computer-top-level">5.3: Structure of a computer - top level<a class="headerlink" href="#53-structure-of-a-computer-top-level" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-15-11-27-44.png" /></p>
+<h4 id="54-structure-of-cpu">5.4: Structure of CPU<a class="headerlink" href="#54-structure-of-cpu" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-11-15-11-32-22.png" /></p>
+<h4 id="55-revisiting-resisters">5.5: Revisiting Resisters<a class="headerlink" href="#55-revisiting-resisters" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Types:<ul>
+<li>User visible registers<ul>
+<li>General Purpose registers </li>
+<li>Data registers</li>
+<li>Address registers </li>
+<li>Status and condition code register</li>
+</ul>
+</li>
+<li>Internal (system) registers </li>
+</ul>
+</li>
+</ul>
+<h5 id="551-user-visible-registers">5.5.1: User Visible Registers<a class="headerlink" href="#551-user-visible-registers" title="Permanent link">&para;</a></h5>
+<ul>
+<li>General Purpose:<ul>
+<li>true general purpose</li>
+<li>occasional use for data or addressing</li>
+<li>restricted use </li>
+</ul>
+</li>
+<li>Data <ul>
+<li>Primary data holders </li>
+<li>Accumulators</li>
+</ul>
+</li>
+<li>Address<ul>
+<li>segment or address</li>
+</ul>
+</li>
+<li>Condition Codes (Jump register)<ul>
+<li>used for storing jump labels and address </li>
+</ul>
+</li>
+</ul>
+<h5 id="552-general-purpose-register">5.5.2: General Purpose Register<a class="headerlink" href="#552-general-purpose-register" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Typically 8, 16,32 or 128 (Itanium)</li>
+<li>Fewer <span class="arithmatex">\(\rightarrow\)</span> more memory references </li>
+<li>More <span class="arithmatex">\(\rightarrow\)</span> does not reduce memory references (make more complex) and takes up processors space </li>
+</ul>
+<p>Each processor needs to be:</p>
+<ul>
+<li>Large enough to hold full address</li>
+<li>Large enough to hold full word</li>
+</ul>
+<h5 id="553-data-and-address-register">5.5.3: Data and Address Register<a class="headerlink" href="#553-data-and-address-register" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Data registers can hold numeric values such as integer and , in some architecture, floating-point values and other data.</p>
+<ul>
+<li>In some older and low-end CPUs, a special data register, known as the accumulator.</li>
+<li>The number required is determined by cost and architectural aspects, such as parallelism, the number of ALUs, etc.</li>
+</ul>
+</li>
+<li>
+<p>Address register hold addresses and used by instructions that indirectly access primary memory.</p>
+<ul>
+<li>Some processors contain registers that may not only be used to hold an address or only to hold numeric values.</li>
+<li>The number required is determined by the cost consideration and architecture.</li>
+</ul>
+</li>
+</ul>
+<h5 id="554-condition-code-registers">5.5.4: Condition Code Registers<a class="headerlink" href="#554-condition-code-registers" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Sets of individual bits.</p>
+</li>
+<li>
+<p>Can be read by programs.</p>
+</li>
+<li>
+<p>Can not be set by program.</p>
+</li>
+<li>
+<p>Two kinds: Control and Status registers:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-11-28-00-36-29.png" /></p>
+<h5 id="555-system-register">5.5.5: System register<a class="headerlink" href="#555-system-register" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-28-00-38-08.png" /></p>
+<h4 id="56-control-unite-data-flow">5.6: Control Unite: Data Flow<a class="headerlink" href="#56-control-unite-data-flow" title="Permanent link">&para;</a></h4>
+<h5 id="561-cpu-control-steps-data-flow">5.6.1: CPU Control Steps: Data Flow<a class="headerlink" href="#561-cpu-control-steps-data-flow" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-11-15-12-15-28.png" /></p>
+<ul>
+<li>Fetch instructions </li>
+<li>Interpret instructions </li>
+<li>Fetch data </li>
+<li>Process data </li>
+<li>Write data </li>
+</ul>
+<h5 id="562-cpu-instruction-cycle">5.6.2: CPU Instruction cycle<a class="headerlink" href="#562-cpu-instruction-cycle" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>PC: (program counters) count the number of memory address number.</p>
+</li>
+<li>
+<p>MAR: (memory access registers) access the address of memory transferred from PC.</p>
+</li>
+<li>
+<p>MDR: (memory data registers) fetch the data or instruction from memory according to the address transferred for MAR.</p>
+</li>
+<li>
+<p>MBR: memory buffer registers</p>
+</li>
+<li>
+<p>IR: instruction register </p>
+</li>
+<li>
+<p>CIR: (current instruction register) decode and execute the instruction or data.</p>
+</li>
+<li>
+<p>CC: Condition code register </p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-12-01-22-08-45.png" /></p>
+<ul>
+<li>
+<p><strong>Fetching</strong>: The next instruction is fetched from the memory address (that is currently stored in the PC), and stored in the instruction register (IR). At theend of the fetch operation, the PC points to the next instruction that will be read in next cycle.</p>
+</li>
+<li>
+<p><strong>Decode</strong>: during the cycle the encoded instruction in the IR is interpreted by the decoder.</p>
+</li>
+<li>
+<p><strong>Execute</strong>: The CPU and ALU (Arithmetic Logic Unit) receive the signal and PC may be updated to a different address from which the next instruction will be fetched.</p>
+</li>
+</ul>
+<h5 id="563-data-flow-execute">5.6.3: Data Flow (Execute)<a class="headerlink" href="#563-data-flow-execute" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Fetch and Decode are very common in all CPU architectures, <strong>while Execute flow may vary</strong>.</p>
+</li>
+<li>
+<p><strong>Execute</strong> usually does nit access main memory.</p>
+</li>
+<li>
+<p>May include:</p>
+<ul>
+<li>Memory read / write </li>
+<li>IO</li>
+<li>Register transfer </li>
+<li>ALU operation </li>
+</ul>
+</li>
+</ul>
+<h5 id="564-data-flow-with-interrupt">5.6.4: Data Flow (with interrupt)<a class="headerlink" href="#564-data-flow-with-interrupt" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>CPU data flow can be interrupted by IO or others.</p>
+</li>
+<li>
+<p>Current PC saved to allow resumption after interrupt.</p>
+</li>
+<li>
+<p>Data contents of the current instruction copied to MBR/MDR form memory.</p>
+</li>
+<li>
+<p>Instruction address saved in special memory location via MAR.</p>
+</li>
+<li>
+<p>After loaded the current flow then fetch the next instruction.</p>
+</li>
+</ul>
+<h5 id="564-prefetch">5.6.4: Prefetch<a class="headerlink" href="#564-prefetch" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Some architectures can fetch next instruction during execution of current instruction (pipelining).</p>
+</li>
+<li>
+<p>Prefetch can require accessing main memory.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-12-01-22-31-09.png" /></p>
+<ul>
+<li>Prefetch offers good performance as it reduces the latency between CPU and the main memory.</li>
+</ul>
+<h5 id="565-pipelining">5.6.5: Pipelining<a class="headerlink" href="#565-pipelining" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Fetch instruction (memory read)</p>
+</li>
+<li>
+<p>Decode instruction (internal decode)</p>
+</li>
+<li>
+<p>Control operand addresses (internal control)</p>
+</li>
+<li>
+<p>Fetch operand (memory read)</p>
+</li>
+<li>
+<p>Execute instructions (ALU)</p>
+</li>
+<li>
+<p>Write result (write memory)</p>
+</li>
+<li>
+<p><strong>Overlap these operations.</strong></p>
+</li>
+</ul>
+<h5 id="566-timing-of-pipelining">5.6.6: Timing of Pipelining<a class="headerlink" href="#566-timing-of-pipelining" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-12-01-22-36-24.png" /></p>
+<h5 id="567-branch-in-pipelining">5.6.7: Branch in Pipelining<a class="headerlink" href="#567-branch-in-pipelining" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-12-01-22-36-51.png" /></p>
+<h5 id="568-branch-prediction">5.6.8: Branch Prediction<a class="headerlink" href="#568-branch-prediction" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Predict the next jump.</p>
+</li>
+<li>
+<p>Predict never taken (bad condition, pessimistic)</p>
+<ul>
+<li>Assume the jump will not happen.</li>
+<li>Always fetch next instruction.</li>
+<li>Do not prefetch after branch.</li>
+</ul>
+</li>
+<li>
+<p>Predict always taken (good condition, optimistic) </p>
+<ul>
+<li>Assume the jump will happen during fetch.</li>
+<li>Next fetch the branch target instruction.</li>
+<li>Newer processors.</li>
+</ul>
+</li>
+<li>
+<p>Predict by Opcode:</p>
+<ul>
+<li>Some instructions are more likely to jump than others.</li>
+<li>Can get up to 75% success.</li>
+</ul>
+</li>
+<li>
+<p>Taken/Not taken switch</p>
+<ul>
+<li>Based on a previous history.</li>
+<li>Good for loops.</li>
+</ul>
+</li>
+<li>
+<p>Delayed Branch </p>
+<ul>
+<li>Do not take jump until you have to.</li>
+<li>Do all current in sequency until jump instruction.</li>
+<li>Rearrange instructions.</li>
+</ul>
+</li>
+</ul>
+<h5 id="569-pipeline-stalls-5-stages-example">5.6.9: Pipeline stalls - 5 stages example<a class="headerlink" href="#569-pipeline-stalls-5-stages-example" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-12-06-13-18-33.png" /></p>
+<ul>
+<li>If the machine have two transfer ports.</li>
+</ul>
+<h5 id="5610-speed-up-equation-for-pipelining">5.6.10: Speed up Equation for Pipelining<a class="headerlink" href="#5610-speed-up-equation-for-pipelining" title="Permanent link">&para;</a></h5>
+<p>Without pipelining, cycles per instruction is equal to the number of stages in Data Flow; assuming each stage requires 1 cycle (=Ideal CPI x Pipeline depth)</p>
+<p><img alt="" src="../image/2022-12-06-13-20-42.png" /></p>
+<p>For example:</p>
+<ul>
+<li>
+<p>Machine A: Dual port DRAM system, same clock for both piped and unpipelined.</p>
+</li>
+<li>
+<p>Machine B: single port DRAM system, but it's pipeline implementation has a 1.05 times faster clock rate.</p>
+</li>
+<li>
+<p>Ideal CPI = 1 for both: what are their comparative speed ups when Loads are 40% of the instructions executed?</p>
+</li>
+<li>
+<p>Assume same clock for pipelined system:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-12-06-13-39-08.png" /></p>
+<ul>
+<li>Machine A is 1.33 times faster. </li>
+</ul>
+<h5 id="5611-pipelined-architectures-examples">5.6.11: Pipelined Architectures: Examples<a class="headerlink" href="#5611-pipelined-architectures-examples" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-12-06-13-41-08.png" /></p>
+<h4 id="57-control-unit-cpu-types">5.7: Control Unit: CPU Types<a class="headerlink" href="#57-control-unit-cpu-types" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2022-12-06-13-44-51.png" /></p>
+<h5 id="571-von-neumann-architecture">5.7.1: Von Neumann architecture<a class="headerlink" href="#571-von-neumann-architecture" title="Permanent link">&para;</a></h5>
+<ul>
+<li>common store for program and data </li>
+</ul>
+<p><img alt="" src="../image/2022-12-06-13-47-48.png" /></p>
+<h5 id="572-structure-of-a-typical-cpu">5.7.2: Structure of a Typical CPU<a class="headerlink" href="#572-structure-of-a-typical-cpu" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-12-12-10-32-10.png" /></p>
+<h4 id="58-cisc-and-risc">5.8: CISC and RISC<a class="headerlink" href="#58-cisc-and-risc" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>CISC: complex instruction set computer </p>
+</li>
+<li>
+<p>RISC: reduced instruction set computer </p>
+</li>
+</ul>
+<h5 id="581-risc-philosophy">5.8.1: RISC philosophy<a class="headerlink" href="#581-risc-philosophy" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Instructions of fixed length executing in a single clock cycle.</p>
+</li>
+<li>
+<p>Pipelines to achieve one-instruction-per-clock-cycle (need to predict branches in program flow in advance)</p>
+</li>
+<li>
+<p>Simple control logic and no micro code.</p>
+</li>
+<li>
+<p>Operations performed on internal registers only; only LOAD and STORE instructions access external memory.</p>
+</li>
+</ul>
+<h5 id="582-cisc-characteristics">5.8.2: CISC characteristics<a class="headerlink" href="#582-cisc-characteristics" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Binary compatibility.</p>
+</li>
+<li>
+<p>Complex control logic.</p>
+</li>
+<li>
+<p>Use of micro code.</p>
+</li>
+<li>
+<p>Variable-length instructions to save program memory.</p>
+</li>
+<li>
+<p>Small internal register sets.</p>
+</li>
+<li>
+<p>Complex addressing modes, operands can reside in external memory or internal registers.</p>
+</li>
+</ul>
+<h5 id="583-risc-versus-cisc">5.8.3: RISC versus CISC<a class="headerlink" href="#583-risc-versus-cisc" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/2022-12-12-10-43-42.png" /></p>
+<h4 id="59-cpu-alus">5.9: CPU: ALUs<a class="headerlink" href="#59-cpu-alus" title="Permanent link">&para;</a></h4>
+<h4 id="591-arithmetic-and-logic-unit-alu">5.9.1: Arithmetic and Logic Unit (ALU)<a class="headerlink" href="#591-arithmetic-and-logic-unit-alu" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Arithmetic: an instruction involving just arithmetic des not involve any communication with the outside, so it is very fast.</p>
+</li>
+<li>
+<p>The ALU can perform a number of operations e.g. AND, NOT, XOR, &gt;&gt;, &lt;&lt;, etc.</p>
+</li>
+<li>
+<p>The operation is selected by a function code F, which is implemented by means of a decoder. This decoder enables one of the functions.</p>
+</li>
+</ul>
+<h5 id="592-building-n-bit-alus">5.9.2: BUilding N-bit ALUs<a class="headerlink" href="#592-building-n-bit-alus" title="Permanent link">&para;</a></h5>
+<ul>
+<li>To make an N-bit ALU: duplicated the 1-bit ALU N times.</li>
+</ul>
+<p><img alt="" src="../image/2022-12-12-11-06-29.png" /></p>
+<h5 id="593-understanding-cpu-operations">5.9.3: Understanding CPU operations<a class="headerlink" href="#593-understanding-cpu-operations" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>The decoder determines the nature of the instruction in IR, and passes this on to the PLA.</p>
+</li>
+<li>
+<p>The control Programmable Logic Array takes in information from all the other modules, and generate the data path operations.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-12-12-11-09-38.png" /></p>
+<h5 id="594-example-instruction-fetch">5.9.4: Example: Instruction fetch<a class="headerlink" href="#594-example-instruction-fetch" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Fetching an arithmetic instruction form memory for example.</p>
+</li>
+<li>
+<p>Loading IR with the contents of the memory location pointed to by by PC.</p>
+</li>
+<li>
+<p>The operation will be like:</p>
+<ul>
+<li>Load PC (1) into MAR (2). This require control signals to the PC and MAR. The address will start to propagate over the system bus.</li>
+<li>Set external control signal to indicate Read (3).</li>
+<li>The memory retrieves the data, and puts it on the data bus. Wait until completion.</li>
+<li>Load MDR (4) and enable IR (5) to be decoded. This require control signals to IR and MDR.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2022-12-12-11-20-30.png" /></p>
+<h5 id="595-example-alu-based-execution">5.9.5: Example: ALU-based Execution<a class="headerlink" href="#595-example-alu-based-execution" title="Permanent link">&para;</a></h5>
+<p>Supposed we want R3 to be set to the sum of R2 and R1. </p>
+<ul>
+<li>
+<p>load R2 (1) into A latch (2).</p>
+</li>
+<li>
+<p>load R1 (3) into B latch (4).</p>
+</li>
+<li>
+<p>set ALU to addition mode (5) by Control Path.(PLA output).</p>
+</li>
+<li>
+<p>store accumulator (6) in R3 (7).</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ziyu Tian
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ziyu-Tian" target="_blank" rel="noopener" title="GitHub | Ziyu Tian" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

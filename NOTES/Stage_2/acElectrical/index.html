@@ -1,0 +1,2860 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ziyu Tian's Website">
+      
+      
+        <meta name="author" content="Ziyu Tian">
+      
+      
+        <link rel="canonical" href="https://ziyu-tian.github.io/NOTES/Stage_2/acElectrical/">
+      
+      
+        <link rel="prev" href="../statisticalMethod/">
+      
+      
+        <link rel="next" href="../automaticControl/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>AC Electrical Power - Nothing except Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ac-electrical-power-and-conversion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Nothing except Notes" class="md-header__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nothing except Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AC Electrical Power
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../DEV/" class="md-tabs__link">
+          
+  
+    
+  
+  Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BLOGS/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Nothing except Notes" class="md-nav__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Nothing except Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage1_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Stage1_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Job_Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Placement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Placement Year
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1001/EngineeringMath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engineering Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Programing Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/Matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MATLAB Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/PythonDataAnalysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Data Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electronics Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Electronics Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Electronics/FundamentalElectricCircuits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals of Electric Circuits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage2_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Stage2_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semiconductor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semiconductors Devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signalsAndCommunication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signals and Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computerSystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Systems and Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analogElectronic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analogue Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microProcessors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitalElectronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhdl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VHDL Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statisticalMethod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AC Electrical Power
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    AC Electrical Power
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-ac-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: AC Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: AC Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Conventions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-convention-for-magnetic-flux-and-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Convention for magnetic flux and current
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-structure-of-single-phase-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Structure of Single phase generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-flux-linkage-and-induced-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Flux linkage and induced voltage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ac-phasors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: AC Phasors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: AC Phasors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-expression-of-ac-phasor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Expression of AC phasor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-returning-phasors-to-time-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Returning phasors to time domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ac-current-flux-and-the-induced-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: AC current, flux and the induced voltage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-properties-of-ac-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Properties of AC Power
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Properties of AC Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-single-phase-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Single Phase Power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-complex-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Complex Power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-resistance-and-impedance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Resistance and Impedance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-power-with-an-resistive-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Power with an Resistive Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-power-with-an-inductive-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Power with an Inductive Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-power-with-a-capacitive-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: Power with a capacitive Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-meaning-of-reactive-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Meaning of Reactive Power
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-single-phase-ac-to-three-phase-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Single phase AC to Three phase AC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Single phase AC to Three phase AC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-single-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Single phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-simple-three-phase-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Simple three phase generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-vector-representation-of-three-phase-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3: Vector representation of three-phase generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-star-connection-to-line-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4: Star connection to Line connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-delta-connection-to-line-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5: Delta connection to line quantities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-power-in-three-phase-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6: Power in three phase system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-3-phase-power-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7: 3 Phase Power Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-single-line-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8: Single line representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-per-unit-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9: Per-unit calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-electrical-magnetic-interaction-and-vf-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: Electrical magnetic interaction and VF drives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: Electrical magnetic interaction and VF drives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rotor-and-armature-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Rotor and armature interaction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Rotor and armature interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-field-interaction-and-torque" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Field interaction and torque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-3-phase-synchronous-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: 3 phase synchronous machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-3-phase-rotating-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: 3 phase rotating field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variable-frequency-electric-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Variable frequency electric drives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Variable frequency electric drives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-power-electronics-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Power Electronics Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-chopper-controlled-dc-motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Chopper controlled DC motor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-3-phase-voltage-source-inverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: 3-phase voltage source inverter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pwm-voltage-and-current-waveform" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: PWM voltage and current waveform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-sine-triangle-pwm-spwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Sine-triangle PWM (SPWM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-implementing-pwm-in-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: Implementing PWM in Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-shoot-through-fault" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: Shoot-through fault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-variable-frequency-3-phase-convert-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8: Variable frequency 3 phase convert Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automaticControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatic Control Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage3_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Stage3_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Industrial_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Control and PLC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Introduction_to_Law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction to Business Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Digital_Signal_Process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Signal Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../DEV/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Dev
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/TimeComplexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time & Space Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/StaticInC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static modifier in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/ValueRefPass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pass-by-Value & Pass-by-Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/BitOperation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bit Operation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../BLOGS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/BlogsZero/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blogs_Zero
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_220822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 22/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_240822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 24/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Literature_260822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Poem Thoughts 26/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-ac-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: AC Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: AC Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Conventions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-convention-for-magnetic-flux-and-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Convention for magnetic flux and current
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-structure-of-single-phase-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Structure of Single phase generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-flux-linkage-and-induced-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Flux linkage and induced voltage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ac-phasors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: AC Phasors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: AC Phasors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-expression-of-ac-phasor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Expression of AC phasor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-returning-phasors-to-time-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Returning phasors to time domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ac-current-flux-and-the-induced-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: AC current, flux and the induced voltage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-properties-of-ac-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Properties of AC Power
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Properties of AC Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-single-phase-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Single Phase Power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-complex-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Complex Power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-resistance-and-impedance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Resistance and Impedance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-power-with-an-resistive-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Power with an Resistive Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-power-with-an-inductive-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Power with an Inductive Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-power-with-a-capacitive-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: Power with a capacitive Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-meaning-of-reactive-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Meaning of Reactive Power
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-single-phase-ac-to-three-phase-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Single phase AC to Three phase AC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Single phase AC to Three phase AC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-single-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Single phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-simple-three-phase-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Simple three phase generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-vector-representation-of-three-phase-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3: Vector representation of three-phase generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-star-connection-to-line-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4: Star connection to Line connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-delta-connection-to-line-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5: Delta connection to line quantities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-power-in-three-phase-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6: Power in three phase system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-3-phase-power-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7: 3 Phase Power Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-single-line-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8: Single line representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-per-unit-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9: Per-unit calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-electrical-magnetic-interaction-and-vf-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: Electrical magnetic interaction and VF drives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: Electrical magnetic interaction and VF drives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rotor-and-armature-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Rotor and armature interaction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Rotor and armature interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-field-interaction-and-torque" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Field interaction and torque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-3-phase-synchronous-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: 3 phase synchronous machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-3-phase-rotating-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: 3 phase rotating field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variable-frequency-electric-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Variable frequency electric drives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Variable frequency electric drives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-power-electronics-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Power Electronics Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-chopper-controlled-dc-motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Chopper controlled DC motor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-3-phase-voltage-source-inverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: 3-phase voltage source inverter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pwm-voltage-and-current-waveform" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: PWM voltage and current waveform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-sine-triangle-pwm-spwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Sine-triangle PWM (SPWM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-implementing-pwm-in-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: Implementing PWM in Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-shoot-through-fault" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: Shoot-through fault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-variable-frequency-3-phase-convert-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8: Variable frequency 3 phase convert Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ac-electrical-power-and-conversion">AC Electrical Power and Conversion<a class="headerlink" href="#ac-electrical-power-and-conversion" title="Permanent link">&para;</a></h1>
+<h2 id="i-ac-systems">I: AC Systems<a class="headerlink" href="#i-ac-systems" title="Permanent link">&para;</a></h2>
+<h3 id="1-conventions">1: Conventions<a class="headerlink" href="#1-conventions" title="Permanent link">&para;</a></h3>
+<h4 id="11-convention-for-magnetic-flux-and-current">1.1: Convention for magnetic flux and current<a class="headerlink" href="#11-convention-for-magnetic-flux-and-current" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>'X' in circle means into paper.</p>
+</li>
+<li>
+<p>'.' in circle means out of paper.</p>
+</li>
+<li>
+<p>Right-hand (coil) rule can justify the direction of flux generated by current.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-04-19-11-12.png" /></p>
+<h4 id="12-structure-of-single-phase-generator">1.2: Structure of Single phase generator<a class="headerlink" href="#12-structure-of-single-phase-generator" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-04-19-12-59.png" /></p>
+<ul>
+<li>
+<p>The <em>armature coil 1 &amp; 2</em> in the <strong>fixed</strong> <em>stators</em>.</p>
+</li>
+<li>
+<p>The <em>filed coil</em> curled out of two different current are in the swirling <em>rotor</em>.</p>
+</li>
+</ul>
+<h4 id="13-flux-linkage-and-induced-voltage">1.3: Flux linkage and induced voltage<a class="headerlink" href="#13-flux-linkage-and-induced-voltage" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The <em>flux linkage</em> <span class="arithmatex">\(\psi = N\phi\)</span>. We omit the coil number <span class="arithmatex">\(N\)</span> at this condition. As:</li>
+</ul>
+<div class="arithmatex">\[
+\phi = Li 
+\]</div>
+<ul>
+<li>If we note that <span class="arithmatex">\(i = i_m\cos{(\omega t)}\)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+\phi = \phi_{mutual}\cos{(\omega t)}
+\]</div>
+<ul>
+<li>According to Faraday's Law:</li>
+</ul>
+<div class="arithmatex">\[
+V = -N\displaystyle\frac{d\phi}{dt}
+\]</div>
+<p><img alt="" src="../image/2023-02-04-19-59-40.png" /></p>
+<h3 id="2-ac-phasors">2: AC Phasors<a class="headerlink" href="#2-ac-phasors" title="Permanent link">&para;</a></h3>
+<h4 id="21-expression-of-ac-phasor">2.1: Expression of AC phasor<a class="headerlink" href="#21-expression-of-ac-phasor" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>For a signal <span class="arithmatex">\(f(t) = A\cos{(\omega t + \phi)}\)</span>, it can be represented in complex plane as <span class="arithmatex">\(F = Ae^{j\phi}\)</span> or <span class="arithmatex">\(F =A\angle \phi\)</span></p>
+</li>
+<li>
+<p>For example of V and I, if is is for a capacitor, which V is lagging the I, the expression would be:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+V = V_{rms}\angle \theta_v \\
+I = I_{rms}\angle \theta _v + \theta _i
+\]</div>
+<p><img alt="" src="../image/2023-02-04-20-08-21.png" /></p>
+<ul>
+<li>
+<p>Note the reminder tips of capacitor V lagging and inductance I lagging: "<strong>CIVIL</strong>".</p>
+</li>
+<li>
+<p>Usually take positive angle in anti-cw and <strong>take voltage as reference point and lock it to the horizontal or vertical axis.</strong></p>
+</li>
+</ul>
+<h4 id="22-returning-phasors-to-time-domain">2.2: Returning phasors to time domain<a class="headerlink" href="#22-returning-phasors-to-time-domain" title="Permanent link">&para;</a></h4>
+<p>For example, a signal named '<span class="arithmatex">\(F=e^{j\phi}\)</span>' in complex domain, to change it back to time domain, we can multiply it by <span class="arithmatex">\(e^{j\omega t}\)</span>:</p>
+<div class="arithmatex">\[
+Fe^{j\omega t} = Ae^{j(\omega t +\phi)} = A\angle (\omega t+ \phi)
+\]</div>
+<p>This expression can be simplified to:</p>
+<div class="arithmatex">\[
+f(t) = A[\cos{(\omega t+\phi)}+j\sin{(\omega t+ \phi)}]
+\]</div>
+<p>If we only take the real part:</p>
+<div class="arithmatex">\[
+f(t) = A\cos{(\omega t +\phi)}
+\]</div>
+<h4 id="23-ac-current-flux-and-the-induced-voltage">2.3: AC current, flux and the induced voltage<a class="headerlink" href="#23-ac-current-flux-and-the-induced-voltage" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-04-20-42-46.png" /></p>
+<h3 id="3-properties-of-ac-power">3: Properties of AC Power<a class="headerlink" href="#3-properties-of-ac-power" title="Permanent link">&para;</a></h3>
+<h4 id="31-single-phase-power">3.1: Single Phase Power<a class="headerlink" href="#31-single-phase-power" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Using the sink convention, which power into the load is positive.</p>
+</li>
+<li>
+<p>The instantaneous power flow into circuit is:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+P=v.i
+\]</div>
+<ul>
+<li>For AC case, </li>
+</ul>
+<div class="arithmatex">\[
+v = \hat{V}\cos{(\omega t)} \\
+i = \hat{I}\cos{(\omega t -\phi)}
+\]</div>
+<ul>
+<li>Bring the V and I together:</li>
+</ul>
+<div class="arithmatex">\[
+P = \hat{V}\hat{I}[\displaystyle\frac{1}{2}(1+\cos{(2\omega t)}\cos{(\phi)}+\frac{1}{2}\sin{(2\omega t)}\sin{(\phi)}]
+\]</div>
+<ul>
+<li>The PULSATING part deliver the <strong>active</strong> power and the OSCILLATING part deliver the <strong>reactance</strong> power which just goes back and forth. The stored energy in inductance or capacitor is <span class="arithmatex">\(\frac{1}{2}CV^2\)</span> OR <span class="arithmatex">\(\frac{1}{2}LI^2\)</span></li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-11-20-58.png" /></p>
+<h4 id="32-complex-power">3.2: Complex Power<a class="headerlink" href="#32-complex-power" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(\hat{I}\cos{(\omega t-\phi)}\)</span> and <span class="arithmatex">\(\hat{V}\cos{(\omega t)}\)</span> can be expressed as:</p>
+<div class="arithmatex">\[
+I = \frac{\hat{I}}{\sqrt{2}}-j\frac{\hat{I}}{\sqrt{2}}+j0
+\]</div>
+<ul>
+<li>So the complex is defined as:</li>
+</ul>
+<div class="arithmatex">\[
+S = P + jQ = VI*
+\]</div>
+<ul>
+<li><span class="arithmatex">\(I*\)</span> is called the <strong>Conjugate</strong> I, which change the imaginary part symbol to "-":</li>
+</ul>
+<div class="arithmatex">\[
+I* = \frac{\hat{I}}{\sqrt{2}}\cos{(\phi)}+j\frac{\hat{I}}{\sqrt{2}}\sin{(\phi)}
+\]</div>
+<ul>
+<li>So the complex power is defined as:</li>
+</ul>
+<div class="arithmatex">\[
+S = \frac{\hat{V}\hat{I}}{2}\cos{(\phi)} + j\frac{\hat{V}\hat{I}}{2}\sin{(\phi
+)}
+\]</div>
+<ul>
+<li>
+<p>The unit of complex power is <strong>unit voltamps(VA)</strong>, the unit of active power is just <strong>Watts</strong> and the unit of reactive power is <strong>Volt-Ampere Reactive (VAR)</strong>.</p>
+</li>
+<li>
+<p>The power factor is defined using the power triangle:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\cos{(\phi)} = \frac{Power}{Volt-Amperes}
+\]</div>
+<p><img alt="" src="../image/2023-02-08-11-21-19.png" /></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(S = \sqrt{P^2+Q^2}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(Q = VI\sin{(\phi)}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P = VI\cos{(\phi)}\)</span></p>
+</li>
+</ul>
+<h4 id="32-resistance-and-impedance">3.2: Resistance and Impedance<a class="headerlink" href="#32-resistance-and-impedance" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Compared to <span class="arithmatex">\(V=IR\)</span> in DC circuits, Z is used so <span class="arithmatex">\(V = IZ\)</span>.</p>
+</li>
+<li>
+<p>For a pure resistance, Z = R.</p>
+</li>
+<li>
+<p>For a pure inductance:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+Z = jX_L = j\omega L
+\]</div>
+<p><span class="arithmatex">\(X_L\)</span> is defined as <em>inductive reactance</em>.</p>
+<ul>
+<li>For a pure capacitance:</li>
+</ul>
+<div class="arithmatex">\[
+Z = -jX_C = -\frac{j}{\omega C}
+\]</div>
+<p><span class="arithmatex">\(X_C\)</span> is defined as <em>capacitive reactance</em>.</p>
+<ul>
+<li>Note that the resistance and reactance measured in ohm.</li>
+</ul>
+<h4 id="33-power-with-an-resistive-load">3.3: Power with an Resistive Load<a class="headerlink" href="#33-power-with-an-resistive-load" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Voltage and current are in phase, so the <span class="arithmatex">\(\phi = 0\)</span> and the power factor is 1.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(P = V_{rms}I_{rms}\)</span></p>
+</li>
+</ul>
+<h4 id="34-power-with-an-inductive-load">3.4: Power with an Inductive Load<a class="headerlink" href="#34-power-with-an-inductive-load" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Current lags the voltage by 90 degrees according to the calculation.</p>
+</li>
+<li>
+<p>The average power delivered should be '0', and anergy is released then stored each 1/2 cycle.</p>
+</li>
+</ul>
+<h4 id="35-power-with-a-capacitive-load">3.5: Power with a capacitive Load<a class="headerlink" href="#35-power-with-a-capacitive-load" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Current leads the voltage according to the calculation.</p>
+</li>
+<li>
+<p>The average power is '0'.</p>
+</li>
+</ul>
+<h4 id="36-meaning-of-reactive-power">3.6: Meaning of Reactive Power<a class="headerlink" href="#36-meaning-of-reactive-power" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Reactive power is the power that helps create and sustain the electric and magnetic fields required by alternating current.</p>
+</li>
+<li>
+<p>The reactive power in AC circuit depends on phase angle.</p>
+</li>
+</ul>
+<h3 id="4-single-phase-ac-to-three-phase-ac">4: Single phase AC to Three phase AC<a class="headerlink" href="#4-single-phase-ac-to-three-phase-ac" title="Permanent link">&para;</a></h3>
+<h4 id="41-single-phase">4.1: Single phase<a class="headerlink" href="#41-single-phase" title="Permanent link">&para;</a></h4>
+<ul>
+<li>To get more current spread out the winding, we add one pair of coil:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-09-11-16-38.png" /></p>
+<h4 id="42-simple-three-phase-generator">4.2: Simple three phase generator<a class="headerlink" href="#42-simple-three-phase-generator" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-09-11-19-39.png" />
+<img alt="" src="../image/2023-02-09-11-20-53.png" />
+<img alt="" src="../image/2023-02-09-11-24-51.png" /></p>
+<ul>
+<li>As <span class="arithmatex">\(I_1+I_2+I_3 =0\)</span>, the return path can be removed:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-09-11-23-49.png" /></p>
+<ul>
+<li><strong>The three phases using 3 cables and use machine better with 0.96 use factor</strong>, compared to single and four phase machines.</li>
+</ul>
+<h4 id="43-vector-representation-of-three-phase-generator">4.3: Vector representation of three-phase generator<a class="headerlink" href="#43-vector-representation-of-three-phase-generator" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(V = V_{rms}\angle{0}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(V = V_{rms}\angle{-120}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(V = V_{rms}\angle{-240}\)</span></p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-09-11-30-02.png" /></p>
+<h4 id="44-star-connection-to-line-connection">4.4: Star connection to Line connection<a class="headerlink" href="#44-star-connection-to-line-connection" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-09-11-32-58.png" /></p>
+<ul>
+<li>
+<p>Line voltage: measure across two lines.</p>
+</li>
+<li>
+<p>Line current: measure through a line.</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+V_{LINE} = \sqrt{3} \times V_{PHASE}
+\]</div>
+<div class="arithmatex">\[
+I_{LINE} = I_{PHASE}
+\]</div>
+<ul>
+<li>If the phases are the same or balanced:</li>
+</ul>
+<div class="arithmatex">\[
+P = \sqrt{3}V_LI_L\cos{\phi}
+\]</div>
+<h4 id="45-delta-connection-to-line-quantities">4.5: Delta connection to line quantities<a class="headerlink" href="#45-delta-connection-to-line-quantities" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-09-11-44-38.png" /></p>
+<div class="arithmatex">\[
+I_{LINE} = \sqrt{3} \times I_{PHASE}
+\]</div>
+<div class="arithmatex">\[
+V_{LINE} = V_{PHASE} 
+\]</div>
+<ul>
+<li>If all phases are the same or balanced:</li>
+</ul>
+<div class="arithmatex">\[
+P = \sqrt{3}V_LI_L\cos{\phi}
+\]</div>
+<h4 id="46-power-in-three-phase-system">4.6: Power in three phase system<a class="headerlink" href="#46-power-in-three-phase-system" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Active Power: <span class="arithmatex">\(P = \sqrt{3}V_LI_L\cos{(\phi)}\)</span></p>
+</li>
+<li>
+<p>Reactive Power: <span class="arithmatex">\(Q = \sqrt{3}V_LI_L\sin{(\phi)}\)</span></p>
+</li>
+<li>
+<p>Apparent Power: <span class="arithmatex">\(S = \sqrt{3}V_LI_L*\)</span></p>
+</li>
+<li>
+<p>Note that by default we use line values and total power (apparent power) with rms value.</p>
+</li>
+</ul>
+<h4 id="47-3-phase-power-systems">4.7: 3 Phase Power Systems<a class="headerlink" href="#47-3-phase-power-systems" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-26-23-05-22.png" /></p>
+<ul>
+<li>
+<p>Generation: there is a limit on generator voltage (22-23.5 kV)</p>
+</li>
+<li>
+<p>Transmission: Voltage stepped up for efficiency (275/400 kV)</p>
+</li>
+<li>
+<p>Distribution: voltage stepped down for underground cables and safe load.</p>
+</li>
+</ul>
+<h4 id="48-single-line-representation">4.8: Single line representation<a class="headerlink" href="#48-single-line-representation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The system is usually balanced if the system is healthy.</p>
+</li>
+<li>
+<p>No need to think of 3 phases, loom at a single phase instead.</p>
+</li>
+<li>
+<p>Assume balanced conditions, i.e. only one phase is used.</p>
+</li>
+<li>
+<p>Large loads are designed to be balanced.</p>
+</li>
+<li>
+<p>Single phase load are distributed evenly to balance the 3-phase load on the grid.</p>
+</li>
+</ul>
+<h4 id="49-per-unit-calculation">4.9: Per-unit calculation<a class="headerlink" href="#49-per-unit-calculation" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-27-18-21-49.png" /></p>
+<ul>
+<li>
+<p>Base (reference) value choice:</p>
+<ul>
+<li>Usually base of S and V are chosen and I and Z are derived.</li>
+</ul>
+</li>
+<li>
+<p>The unit of per-unit will be '<span class="arithmatex">\(p.u.\)</span>'.</p>
+</li>
+</ul>
+<h2 id="ii-electrical-magnetic-interaction-and-vf-drives">II: Electrical magnetic interaction and VF drives<a class="headerlink" href="#ii-electrical-magnetic-interaction-and-vf-drives" title="Permanent link">&para;</a></h2>
+<h3 id="1-rotor-and-armature-interaction">1: Rotor and armature interaction<a class="headerlink" href="#1-rotor-and-armature-interaction" title="Permanent link">&para;</a></h3>
+<h4 id="11-field-interaction-and-torque">1.1: Field interaction and torque<a class="headerlink" href="#11-field-interaction-and-torque" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The stator and rotor <strong>magnetic fields</strong> have to be in the correct position and the <strong>correct magnitude</strong> to create demanded torque.</p>
+</li>
+<li>
+<p>Electrical supply has to be sufficient to create enough speed and torque.</p>
+</li>
+<li>
+<p>Torque has to be sufficient to overcome mechanical resistance, inertia to the required speed.</p>
+</li>
+</ul>
+<h4 id="12-3-phase-synchronous-machine">1.2: 3 phase synchronous machine<a class="headerlink" href="#12-3-phase-synchronous-machine" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-27-19-29-47.png" /></p>
+<ul>
+<li>As the phase shift of 120 degrees between three phases, if we analyses at <span class="arithmatex">\(t=0\)</span>:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-20-19-59.png" /></p>
+<ul>
+<li>So we note <span class="arithmatex">\(F\)</span> as the <em>magnetomotive force</em>, defined as <span class="arithmatex">\(F = NI\)</span>:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-20-18-29.png" /></p>
+<h4 id="13-3-phase-rotating-field">1.3: 3 phase rotating field<a class="headerlink" href="#13-3-phase-rotating-field" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>3 stationary pulsating fields sum giving a rotating field <strong>constant in magnitude</strong> moving forwards at one pole pitch per half cycle.</p>
+</li>
+<li>
+<p>Mathematically expressed as <span class="arithmatex">\(\frac{3}{2}\Phi e^{j\omega t}\)</span></p>
+</li>
+<li>
+<p>A two pole field moves 1 revolution per electrical cycle - 50 Hz means 50 revs/sec.</p>
+</li>
+<li>
+<p>A four pole field rotates 1/2 revolution per electrical cycle.</p>
+</li>
+</ul>
+<h3 id="2-variable-frequency-electric-drives">2: Variable frequency electric drives<a class="headerlink" href="#2-variable-frequency-electric-drives" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The large efficiency gains should be made when process operate at variable speed.</p>
+</li>
+<li>
+<p>This need a variable frequency and variable voltage, so that requires a variable frequency converter.</p>
+</li>
+</ul>
+<h4 id="21-power-electronics-devices">2.1: Power Electronics Devices<a class="headerlink" href="#21-power-electronics-devices" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Mosfet: Low voltage rating (up to 1.5k), high speed.</p>
+</li>
+<li>
+<p>BJT: largely replaced by IGBT.</p>
+</li>
+<li>
+<p>IGBT: Moderate voltage rating and speed.</p>
+</li>
+<li>
+<p>GTO Thyristor: High V (6k), low speed, used in high power and low frequency devices.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-21-29-54.png" /></p>
+<h4 id="22-chopper-controlled-dc-motor">2.2: Chopper controlled DC motor<a class="headerlink" href="#22-chopper-controlled-dc-motor" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2023-02-27-21-31-59.png" /></th>
+<th><img alt="" src="../image/2023-02-27-21-32-11.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Switching turning on / off to control the voltage.</p>
+</li>
+<li>
+<p>Voltage across the motor is pulsating.</p>
+</li>
+<li>
+<p>The motor responds to the average voltage.</p>
+</li>
+<li>
+<p>Resistance limits the steady state current.</p>
+</li>
+<li>
+<p>Inductance limits the speed of current rise.</p>
+</li>
+<li>
+<p>The chopper circuit can produce a sine wave if we alter the pulse width dynamically:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-22-08-20.png" /></p>
+<ul>
+<li>Apply PWM voltage to the motor winding, the inductance will provide the sin AC current.</li>
+</ul>
+<h4 id="23-3-phase-voltage-source-inverter">2.3: 3-phase voltage source inverter<a class="headerlink" href="#23-3-phase-voltage-source-inverter" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-28-18-14-49.png" /></p>
+<ul>
+<li>
+<p>The capacitor and diodes can provide the path when the lower side switch connected.</p>
+</li>
+<li>
+<p>The phase connection can be expressed as:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-28-18-17-05.png" /></p>
+<h4 id="24-pwm-voltage-and-current-waveform">2.4: PWM voltage and current waveform<a class="headerlink" href="#24-pwm-voltage-and-current-waveform" title="Permanent link">&para;</a></h4>
+<ul>
+<li>As the voltage in one phase can be <span class="arithmatex">\(\frac{2}{3}V_{DC}\)</span>, <span class="arithmatex">\(\frac{1}{3}V_{DC}\)</span>, 0, <span class="arithmatex">\(-\frac{1}{3}V_{DC}\)</span> and <span class="arithmatex">\(-\frac{2}{3}V_{DC}\)</span>, changing the switch we can get the phase voltage as:</li>
+</ul>
+<p><img alt="" src="../image/pwm.png" /></p>
+<ul>
+<li>By altering the modulation signal (change the switch altering frequency) we can change AC frequency.</li>
+</ul>
+<p><img alt="" src="../image/pwm2.png" /></p>
+<h4 id="25-sine-triangle-pwm-spwm">2.5: Sine-triangle PWM (SPWM)<a class="headerlink" href="#25-sine-triangle-pwm-spwm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Combine the square wave of triangle wave in high frequency, the modulated sin wave can be produced:</li>
+</ul>
+<p><img alt="" src="../image/20230228220338.png" /></p>
+<h4 id="26-implementing-pwm-in-logic">2.6: Implementing PWM in Logic<a class="headerlink" href="#26-implementing-pwm-in-logic" title="Permanent link">&para;</a></h4>
+<ul>
+<li>DSP and micro-controller usually have built in hardware to produce PWM:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-28-22-05-18.png" /></p>
+<h4 id="27-shoot-through-fault">2.7: Shoot-through fault<a class="headerlink" href="#27-shoot-through-fault" title="Permanent link">&para;</a></h4>
+<ul>
+<li>To avoid T1 and T2 connect at the same time causing the short circuit (shoot-through fault), a small time delay called <em>deadline</em> is inserted by the controller.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-28-22-09-01.png" /></p>
+<h4 id="28-variable-frequency-3-phase-convert-overview">2.8: Variable frequency 3 phase convert Overview<a class="headerlink" href="#28-variable-frequency-3-phase-convert-overview" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/20230228221325.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ziyu Tian
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ziyu-Tian" target="_blank" rel="noopener" title="GitHub | Ziyu Tian" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

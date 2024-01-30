@@ -1,0 +1,4732 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ziyu Tian's Website">
+      
+      
+        <meta name="author" content="Ziyu Tian">
+      
+      
+        <link rel="canonical" href="https://ziyu-tian.github.io/NOTES/Stage_2/digitalElectronics/">
+      
+      
+        <link rel="prev" href="../microProcessors/">
+      
+      
+        <link rel="next" href="../vhdl/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>Digital Electronics - Nothing except Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital-electronics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Nothing except Notes" class="md-header__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nothing except Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital Electronics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../DEV/" class="md-tabs__link">
+          
+  
+    
+  
+  Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BLOGS/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Nothing except Notes" class="md-nav__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Nothing except Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage1_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Stage1_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Job_Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Placement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Placement Year
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1001/EngineeringMath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engineering Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Programing Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/Matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MATLAB Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/PythonDataAnalysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Data Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electronics Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Electronics Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Electronics/FundamentalElectricCircuits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals of Electric Circuits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage2_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Stage2_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semiconductor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semiconductors Devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signalsAndCommunication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signals and Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computerSystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Systems and Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analogElectronic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analogue Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microProcessors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Digital Electronics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Digital Electronics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-logic-design-part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: Logic Design Part-1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: Logic Design Part-1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Building blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-logic-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Logic Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-digital-logic-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Digital logic Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-cmos-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4: CMOS transistors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-programmable-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Programmable logic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Programmable logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-programmable-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Programmable logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-sum-of-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Sum of products
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-sum-of-products-direct-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: Sum of products direct implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-buffering-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: Buffering implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-programmable-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Programmable Gates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-minimization-of-pla-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: Minimization of PLA equations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-from-truth-table-to-pla-bitmaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: From truth table to PLA bitmaps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-sum-of-product-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8: Sum-of-Product SOP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-basic-rules-of-boolean-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9: Basic rules of Boolean algebra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-andor-vs-nandnor-implementation-of-sop-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10: AND/OR vs NAND/NOR implementation of SOP expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-the-karnaugh-map-k-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11: The Karnaugh Map (K-map)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-multiple-output-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12: Multiple output minimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-hardware-implementation-of-connection-bitmaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.13: Hardware implementation of connection bitmaps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-diagram-review-of-pla" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.14: Diagram review of PLA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-full-programmability" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.15: Full programmability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-more-complex-k-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.16: More complex K-maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-from-plas-to-fpgas" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: From PLAs to FPGAs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: From PLAs to FPGAs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pla-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: PLA Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complex-programmable-logic-device-cpld" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Complex Programmable Logic Device (CPLD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-field-programmable-gate-array-fpga" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Field programmable gate array (FPGA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-memories-in-logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      III: Memories in logic design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III: Memories in logic design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sr-latch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: SR Latch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: SR Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-gated-sr-latch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Gated SR Latch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gated-d-latch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Gated D Latch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Gated D Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-d-flip-flop" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: D flip-flop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sram" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: SRAM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: SRAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-6t-sram" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: 6T SRAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-dram" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: DRAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-floating-gate-memory-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      6: Floating gate memory cells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-arithmetic-logic-adders" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV: Arithmetic Logic-Adders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV: Arithmetic Logic-Adders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-digital-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Digital arithmetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-case-of-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: The case of addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-n-bit-adder" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: N-bit adder
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: N-bit adder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-adder-as-a-sum-of-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Adder as a Sum of Products
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-a-more-modular-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: A more modular approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ripple-carry-adder" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Ripple carry adder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-speeding-up-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Speeding up addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-more-focused-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: More focused analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-propagate-and-generate" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Propagate and Generate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-taking-out-the-carry-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7: Taking out the carry chain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-cla-adder-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8: CLA adder delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-fan-in-and-fan-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9: Fan-in and Fan-out
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-gate-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10: Gate switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-gate-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11: Gate delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-fan-out-delay-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12: Fan-out delay cost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-fan-out-fan-in-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.13: Fan-out / Fan-in buffers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-fan-out-tree-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.14: Fan-out Tree optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-fan-in-optimization-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.15: Fan-in optimization example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-large-adders" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Large Adders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Large Adders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-adder-size-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Adder size limits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-large-adder-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Large adder design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2: Large adder design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-ripple-carrying-cla-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1: Ripple carrying CLA blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-block-carry-of-cla" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2: Block carry of CLA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-multiplication-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: Multiplication Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Multiplication Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-binary-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1: Binary multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-parallel-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2: Parallel Multiplier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2: Parallel Multiplier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-delay-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1: Delay analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-scope-for-further-speedup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2: Scope for further speedup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-carry-save-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3: Carry-save scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524-16-x-16-multiplier-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4: 16 x 16 Multiplier Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#525-per-row-delay-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.5: Per-row delay reduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#526-further-speedup-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.6: Further Speedup Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-serial-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3: Serial Multiplier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3: Serial Multiplier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-serial-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1: Serial arithmetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-serial-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2: Serial Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-the-algorithm-of-serial-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3: The algorithm of serial multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-improvement-of-serial-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.4: Improvement of Serial multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#535-delay-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.5: Delay Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#536-carry-save-in-serial-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.6: Carry-save in serial multiplier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-sequential-logic-control-and-fsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      V: Sequential Logic: Control and FSM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V: Sequential Logic: Control and FSM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-basic-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Basic control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Basic control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Hazard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-finite-state-machine-fsm-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Finite State Machine (FSM) Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sync-fsm-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Sync-FSM minimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Sync-FSM minimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-y-map-k-map-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Y-map / K-map reduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-finding-equivalence-redundancies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Finding equivalence / redundancies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-async-fsm-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Async-FSM minimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: Race condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhdl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VHDL Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statisticalMethod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acElectrical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AC Electrical Power
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automaticControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatic Control Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage3_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Stage3_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Industrial_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Control and PLC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Introduction_to_Law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction to Business Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Digital_Signal_Process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Signal Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../DEV/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Dev
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/TimeComplexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time & Space Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/StaticInC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static modifier in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/ValueRefPass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pass-by-Value & Pass-by-Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/BitOperation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bit Operation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../BLOGS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/BlogsZero/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blogs_Zero
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_220822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 22/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_240822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 24/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Literature_260822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Poem Thoughts 26/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-logic-design-part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      I: Logic Design Part-1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I: Logic Design Part-1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Building blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-logic-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2: Logic Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-digital-logic-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3: Digital logic Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-cmos-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4: CMOS transistors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-programmable-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Programmable logic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Programmable logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-programmable-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Programmable logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-sum-of-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2: Sum of products
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-sum-of-products-direct-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3: Sum of products direct implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-buffering-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4: Buffering implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-programmable-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5: Programmable Gates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-minimization-of-pla-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6: Minimization of PLA equations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-from-truth-table-to-pla-bitmaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7: From truth table to PLA bitmaps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-sum-of-product-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8: Sum-of-Product SOP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-basic-rules-of-boolean-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9: Basic rules of Boolean algebra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-andor-vs-nandnor-implementation-of-sop-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10: AND/OR vs NAND/NOR implementation of SOP expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-the-karnaugh-map-k-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11: The Karnaugh Map (K-map)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-multiple-output-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12: Multiple output minimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-hardware-implementation-of-connection-bitmaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.13: Hardware implementation of connection bitmaps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-diagram-review-of-pla" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.14: Diagram review of PLA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-full-programmability" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.15: Full programmability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-more-complex-k-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.16: More complex K-maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-from-plas-to-fpgas" class="md-nav__link">
+    <span class="md-ellipsis">
+      II: From PLAs to FPGAs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II: From PLAs to FPGAs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pla-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: PLA Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complex-programmable-logic-device-cpld" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Complex Programmable Logic Device (CPLD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-field-programmable-gate-array-fpga" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Field programmable gate array (FPGA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-memories-in-logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      III: Memories in logic design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III: Memories in logic design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sr-latch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: SR Latch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: SR Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-gated-sr-latch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Gated SR Latch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gated-d-latch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Gated D Latch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Gated D Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-d-flip-flop" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: D flip-flop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sram" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: SRAM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: SRAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-6t-sram" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: 6T SRAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-dram" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: DRAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-floating-gate-memory-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      6: Floating gate memory cells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-arithmetic-logic-adders" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV: Arithmetic Logic-Adders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV: Arithmetic Logic-Adders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-digital-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Digital arithmetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-case-of-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: The case of addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-n-bit-adder" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: N-bit adder
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: N-bit adder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-adder-as-a-sum-of-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Adder as a Sum of Products
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-a-more-modular-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: A more modular approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ripple-carry-adder" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Ripple carry adder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-speeding-up-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4: Speeding up addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-more-focused-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5: More focused analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-propagate-and-generate" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6: Propagate and Generate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-taking-out-the-carry-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7: Taking out the carry chain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-cla-adder-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8: CLA adder delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-fan-in-and-fan-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9: Fan-in and Fan-out
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-gate-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10: Gate switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-gate-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11: Gate delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-fan-out-delay-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12: Fan-out delay cost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-fan-out-fan-in-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.13: Fan-out / Fan-in buffers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-fan-out-tree-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.14: Fan-out Tree optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-fan-in-optimization-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.15: Fan-in optimization example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-large-adders" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Large Adders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Large Adders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-adder-size-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Adder size limits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-large-adder-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: Large adder design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2: Large adder design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-ripple-carrying-cla-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1: Ripple carrying CLA blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-block-carry-of-cla" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2: Block carry of CLA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-multiplication-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: Multiplication Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5: Multiplication Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-binary-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1: Binary multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-parallel-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2: Parallel Multiplier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2: Parallel Multiplier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-delay-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1: Delay analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-scope-for-further-speedup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2: Scope for further speedup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-carry-save-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3: Carry-save scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524-16-x-16-multiplier-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4: 16 x 16 Multiplier Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#525-per-row-delay-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.5: Per-row delay reduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#526-further-speedup-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.6: Further Speedup Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-serial-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3: Serial Multiplier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3: Serial Multiplier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-serial-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1: Serial arithmetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-serial-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2: Serial Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-the-algorithm-of-serial-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3: The algorithm of serial multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-improvement-of-serial-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.4: Improvement of Serial multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#535-delay-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.5: Delay Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#536-carry-save-in-serial-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.6: Carry-save in serial multiplier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-sequential-logic-control-and-fsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      V: Sequential Logic: Control and FSM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V: Sequential Logic: Control and FSM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-basic-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Basic control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Basic control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Hazard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-finite-state-machine-fsm-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Finite State Machine (FSM) Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sync-fsm-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Sync-FSM minimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Sync-FSM minimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-y-map-k-map-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Y-map / K-map reduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-finding-equivalence-redundancies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Finding equivalence / redundancies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-async-fsm-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Async-FSM minimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: Race condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="digital-electronics">Digital Electronics<a class="headerlink" href="#digital-electronics" title="Permanent link">&para;</a></h1>
+<h2 id="i-logic-design-part-1">I: Logic Design Part-1<a class="headerlink" href="#i-logic-design-part-1" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduction">1: Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Design based on <strong>Boolean algebra</strong> using combinatorial logics gates and sequential logic.</p>
+</li>
+<li>
+<p>Computer-aided design used and hence the inclusive of VHDL for hardware description.</p>
+</li>
+</ul>
+<h4 id="11-building-blocks">1.1: Building blocks<a class="headerlink" href="#11-building-blocks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Basic logic gates and their inverses:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-07-11-48.png" /></p>
+<h4 id="12-logic-integration">1.2: Logic Integration<a class="headerlink" href="#12-logic-integration" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Discrete elements:</p>
+<ul>
+<li>Assemble gates from transistors, diodes, etc.</li>
+</ul>
+</li>
+<li>
+<p>SSI, MSI - integrated circuits. </p>
+</li>
+<li>
+<p>LSI, VLSI (very large IC)</p>
+<ul>
+<li>More gates on a chip </li>
+</ul>
+</li>
+<li>
+<p>Design style progress:</p>
+<ul>
+<li>Programmable, semicustom and custom.</li>
+</ul>
+</li>
+</ul>
+<h4 id="13-digital-logic-structure">1.3: Digital logic Structure<a class="headerlink" href="#13-digital-logic-structure" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-01-07-16-37.png" /></p>
+<p><img alt="" src="../image/2023-02-01-07-17-30.png" /></p>
+<h4 id="14-cmos-transistors">1.4: CMOS transistors<a class="headerlink" href="#14-cmos-transistors" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MOSFETs are voltage-controlled switches used to make logic gates.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-09-11-34.png" /></p>
+<ul>
+<li>CMOS Inverter can be built using two transistors.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-09-13-46.png" /></p>
+<ul>
+<li>CMOS two input NOR Gate:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-09-18-07.png" /></p>
+<ul>
+<li>CMOS four-input NAND Gate:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-09-25-21.png" /></p>
+<ul>
+<li>
+<p>Gates with more than four inputs are rarely implemented directly, which can be composed of multiple gates with fewer inputs.</p>
+</li>
+<li>
+<p><strong>The negative logic gates can used as universal gates.</strong></p>
+</li>
+</ul>
+<h3 id="2-programmable-logic">2: Programmable logic<a class="headerlink" href="#2-programmable-logic" title="Permanent link">&para;</a></h3>
+<h4 id="21-programmable-logic">2.1: Programmable logic<a class="headerlink" href="#21-programmable-logic" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The generalized logic circuits can lead to a possibility of arbitrary logic, hence the <strong>Programmable Logic Array (PLA)</strong>.</p>
+</li>
+<li>
+<p>Based on the fact that nay Boolean function can be represented as a sum of products.</p>
+</li>
+<li>
+<p>PLD based on a PLA consists of a programmable array of AND gates and a fixed array of OR gates.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-09-38-41.png" /></p>
+<h4 id="22-sum-of-products">2.2: Sum of products<a class="headerlink" href="#22-sum-of-products" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Any Boolean function can be represented as a sum of products.</p>
+</li>
+<li>
+<p>And a boolean function can be found through a truth table.</p>
+</li>
+</ul>
+<h4 id="23-sum-of-products-direct-implementation">2.3: Sum of products direct implementation<a class="headerlink" href="#23-sum-of-products-direct-implementation" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-01-09-49-39.png" /></p>
+<p><img alt="" src="../image/2023-02-01-09-50-08.png" /></p>
+<ul>
+<li>The PLA is divided into the AND plane and OR plane:<ul>
+<li>The outputs of the AND plane are the product terms.</li>
+<li>Then these products terms become the inputs of the OR plane.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-10-12-35.png" /></p>
+<h4 id="24-buffering-implementation">2.4: Buffering implementation<a class="headerlink" href="#24-buffering-implementation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Each input variable needs to have both positive and negative wires:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-01-10-13-55.png" /></p>
+<h4 id="25-programmable-gates">2.5: Programmable Gates<a class="headerlink" href="#25-programmable-gates" title="Permanent link">&para;</a></h4>
+<p>For example of an AND gate with <span class="arithmatex">\(x_0\)</span>, <span class="arithmatex">\(\bar{x_1}\)</span>, <span class="arithmatex">\(x_2\)</span> three inputs:</p>
+<p><img alt="" src="../image/2023-02-01-10-15-41.png" /></p>
+<p>if connects to the OR array:</p>
+<p><img alt="" src="../image/2023-02-01-10-18-58.png" /></p>
+<p>We can also use the textual description:</p>
+<p><img alt="" src="../image/2023-02-01-10-19-37.png" /></p>
+<p>This plane is then defined by this "bit map".</p>
+<p>With n inputs and m outputs, the size of PLA can be calculated as <em>m(2n+q)</em> cells.</p>
+<h4 id="26-minimization-of-pla-equations">2.6: Minimization of PLA equations<a class="headerlink" href="#26-minimization-of-pla-equations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>For special-purpose PLA, their size can be minimized.</p>
+</li>
+<li>
+<p>The target of minimizing are:</p>
+<ul>
+<li>The total number of gates and as few gates as possible.</li>
+<li>Then number of inputs <strong>into</strong> each gate as small as possible.</li>
+</ul>
+</li>
+<li>
+<p>For PLA, the following wires going into each gates (n) and number of OR gates (q)</p>
+</li>
+<li>
+<p>The number of AND gates and the inputs into each OR gates can be <strong>reduced</strong>.</p>
+</li>
+</ul>
+<p>For example, <span class="arithmatex">\(y_0 = r_0\)</span> and <span class="arithmatex">\(y_1 = r_0 + r_2\)</span>, <span class="arithmatex">\(r_0\)</span> appears twice in outputs. To minimize, it only needs to be created once.</p>
+<ul>
+<li>PLA minimization is finding equivalent formulas to reduce <em>m</em>.</li>
+</ul>
+<h4 id="27-from-truth-table-to-pla-bitmaps">2.7: From truth table to PLA bitmaps<a class="headerlink" href="#27-from-truth-table-to-pla-bitmaps" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Using the RHS of truth table forming the OR plane:
+<img alt="" src="../image/2023-02-08-10-04-14.png" /></p>
+</li>
+<li>
+<p>Using all the value '1' in LHS forming AND plane positive column:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-04-27.png" /></p>
+<ul>
+<li>Using all value '0' in LHS forming AND plane negative column:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-04-37.png" /></p>
+<h4 id="28-sum-of-product-sop">2.8: Sum-of-Product SOP<a class="headerlink" href="#28-sum-of-product-sop" title="Permanent link">&para;</a></h4>
+<p>We can deduce the sum-of-product formula from the truth table value:</p>
+<ul>
+<li>Firstly, find out the SOP using result '1' lines:</li>
+</ul>
+<div class="arithmatex">\[
+z = \bar{a}\bar{b}c + \bar{a}bc + a\bar{b}\bar{c} + a\bar{b}c + abc
+\]</div>
+<ul>
+<li>Next step, rewrite the formula to product-of sum form (POS):</li>
+</ul>
+<div class="arithmatex">\[
+z = (a+b+c).(a+\bar{b}+c).(\bar{a}+\bar{b}+c)
+\]</div>
+<h4 id="29-basic-rules-of-boolean-algebra">2.9: Basic rules of Boolean algebra<a class="headerlink" href="#29-basic-rules-of-boolean-algebra" title="Permanent link">&para;</a></h4>
+<h4 id="210-andor-vs-nandnor-implementation-of-sop-expression">2.10: AND/OR vs NAND/NOR implementation of SOP expression<a class="headerlink" href="#210-andor-vs-nandnor-implementation-of-sop-expression" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Implementing an SOP expression simply requires ORing the outputs of AND gates.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-01-40.png" /></p>
+<ul>
+<li>NAND gates can be used to implement an SOP expression:</li>
+</ul>
+<h4 id="211-the-karnaugh-map-k-map">2.11: The Karnaugh Map (K-map)<a class="headerlink" href="#211-the-karnaugh-map-k-map" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The Karnaugh map can be used to minimize the Boolean function z(a,b,c).</p>
+</li>
+<li>
+<p>First write down the true table in K map:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-05-49.png" /></p>
+<ul>
+<li>Then draw the circle to combine the nearly blocks:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-07-03.png" /></p>
+<ul>
+<li>
+<p>The result will be <span class="arithmatex">\(z = a\bar{b}+c\)</span></p>
+</li>
+<li>
+<p>The same for 4 variable K-map:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-07-55.png" /></p>
+<ul>
+<li>The result will be <span class="arithmatex">\(z = a\bar{b}+a\bar{c}+\bar{b}\bar{c}\)</span></li>
+</ul>
+<h4 id="212-multiple-output-minimization">2.12: Multiple output minimization<a class="headerlink" href="#212-multiple-output-minimization" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-08-10-14-49.png" /></p>
+<ul>
+<li>
+<p>The key point is to find common-product term.</p>
+</li>
+<li>
+<p>Increase the number of AND gates, decrease the number of <em>m</em>.</p>
+</li>
+<li>
+<p>For example of:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-11-06-25.png" /></p>
+<ul>
+<li>The first step is to find all ANDs:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-21-54.png" /></p>
+<ul>
+<li>Finally we find that <em>m</em> reduced to 2:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-22-37.png" /></p>
+<h4 id="213-hardware-implementation-of-connection-bitmaps">2.13: Hardware implementation of connection bitmaps<a class="headerlink" href="#213-hardware-implementation-of-connection-bitmaps" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Hard-wired: NOT programmable.</p>
+</li>
+<li>
+<p>Single-time programmable: WORM (Write once read only).</p>
+</li>
+<li>
+<p>Multiple-time programmable: connections done through transistors switches controlled by external signals.</p>
+</li>
+</ul>
+<h4 id="214-diagram-review-of-pla">2.14: Diagram review of PLA<a class="headerlink" href="#214-diagram-review-of-pla" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fuses used for non-programmable and single programmable.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-27-07.png" /></p>
+<ul>
+<li>CMOS (transistors) used in multiple programmable device.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-27-55.png" /></p>
+<h4 id="215-full-programmability">2.15: Full programmability<a class="headerlink" href="#215-full-programmability" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Full programmability only requires one of the plane to have programmability:</p>
+</li>
+<li>
+<p>AND gates fixed and programmable OR gates are enough for full programmability.</p>
+</li>
+</ul>
+<h4 id="216-more-complex-k-maps">2.16: More complex K-maps<a class="headerlink" href="#216-more-complex-k-maps" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Minimize the 5-variables expression fro example:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-34-03.png" /></p>
+<ul>
+<li>
+<p>We can go with a <strong>3D presentation</strong> of the K-map.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(z = f(a,b,c,d,e)\)</span> can be expressed as $ z= f_{e=0}(a,b,c,d) + f_{e=1}(a,b,c,d)$.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-40-19.png" /></p>
+<ul>
+<li>For six variables:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-08-10-41-41.png" /></p>
+<p><img alt="" src="../image/2023-02-08-10-41-51.png" /></p>
+<ul>
+<li>To solve the problem in example, we can rewrite to:</li>
+</ul>
+<div class="arithmatex">\[
+G =G_{V=0} + G_{V=1}
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+G_{V=0} = X\bar{Y}\bar{Z} + WX\bar{Y}\bar{Z} \\
+G_{V=1} = \bar{Y}\bar{Z} +\bar{X}Y\bar{Z} +WX\bar{Y}\bar{Z}
+\]</div>
+<p><img alt="" src="../image/2023-02-08-10-53-08.png" /></p>
+<ul>
+<li>The result finally be <span class="arithmatex">\(G = X\bar{Y}\bar{Z} + V\bar{X}\bar{Z}\)</span></li>
+</ul>
+<h2 id="ii-from-plas-to-fpgas">II: From PLAs to FPGAs<a class="headerlink" href="#ii-from-plas-to-fpgas" title="Permanent link">&para;</a></h2>
+<h3 id="1-pla-usage">1: PLA Usage<a class="headerlink" href="#1-pla-usage" title="Permanent link">&para;</a></h3>
+<ul>
+<li>General PLA in CPU:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-06-24.png" /></p>
+<p>The control PLA takes in information and play a role as the controller.</p>
+<p>Usually not optimizable, but fully programmable at design-time to accommodate CPU.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2023-02-13-14-19-16.png" /></th>
+<th><img alt="" src="../image/2023-02-13-14-19-25.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>General and Custom PLA:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-20-53.png" /></p>
+<h3 id="2-complex-programmable-logic-device-cpld">2: Complex Programmable Logic Device (CPLD)<a class="headerlink" href="#2-complex-programmable-logic-device-cpld" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Complex devices extend the idea of programmable logic further.</p>
+</li>
+<li>
+<p>A matrix of PLAs and programmable interconnection array (PIA)</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-22-51.png" /></p>
+<h3 id="3-field-programmable-gate-array-fpga">3: Field programmable gate array (FPGA)<a class="headerlink" href="#3-field-programmable-gate-array-fpga" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>FPGA employs another approach programmable logic (not based on PLA)</p>
+</li>
+<li>
+<p>The three basic elements are <strong>configurable logic block (CLB)</strong> or <strong>logic array block (LAB)</strong>, the <strong>interconnections</strong>, and the <strong>IO Blocks</strong>. </p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-25-57.png" /></p>
+<ul>
+<li>
+<p>Each CLB is made up of <strong>multiple smaller logic modules</strong> and a lo<strong>cal programmable interconnect</strong> used to connect logic modules within CLB.</p>
+</li>
+<li>
+<p>General FPGA cell:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-33-04.png" /></p>
+<ul>
+<li>
+<p>SRAM -Based FPGAs </p>
+<ul>
+<li>FPGAs are either non-volatile because they are based on SRAM.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-38-13.png" /></p>
+<ul>
+<li>FPGA Cores:<ul>
+<li>A hard core is a portion of logic in an FPGA that is put in by the manufacturer to provide a specific function and that cannot be reprogrammed.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-39-45.png" /></p>
+<ul>
+<li>Specific FPGA Devices:<ul>
+<li>Example FPGA block diagram: Several manufacturer produce FPGAs as well as CPLDs.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-41-01.png" /></p>
+<h2 id="iii-memories-in-logic-design">III: Memories in logic design<a class="headerlink" href="#iii-memories-in-logic-design" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduction_1">1: Introduction<a class="headerlink" href="#1-introduction_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Gate-level memory cells (latches, flip-flops), used in CPU registers.</p>
+</li>
+<li>
+<p>Transistor level volatile memory cell:</p>
+<ul>
+<li>SRAM, used in cache memory.</li>
+<li>DRAM, used in main memory.</li>
+</ul>
+</li>
+<li>
+<p>Floating-gate memory cells (flash), non-volatile.</p>
+</li>
+<li>
+<p>FRAM, MRAM, Memristors: non-volatile.</p>
+</li>
+</ul>
+<h3 id="2-sr-latch">2: SR Latch<a class="headerlink" href="#2-sr-latch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Simplest memory elements based on a cross-paired of two input NAND or NOR gates.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-13-14-52-03.png" /></p>
+<p><img alt="" src="../image/2023-02-13-14-53-24.png" /></p>
+<h4 id="21-gated-sr-latch">2.1: Gated SR Latch<a class="headerlink" href="#21-gated-sr-latch" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-16-10-22-08.png" /></p>
+<ul>
+<li>The enable input E can define whether it is enabled for SR latch to receive signals.
+(only E = '1')</li>
+</ul>
+<h3 id="3-gated-d-latch">3: Gated D Latch<a class="headerlink" href="#3-gated-d-latch" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2023-02-16-10-23-57.png" /></p>
+<ul>
+<li>D latch only have one input D in addition to E.</li>
+</ul>
+<h4 id="31-d-flip-flop">3.1: D flip-flop<a class="headerlink" href="#31-d-flip-flop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Controlled by a periodic control signal, eg. CLK<ul>
+<li>Memory for single bit.</li>
+<li>Fast, high power.</li>
+<li>20 transistors as below design.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-16-10-30-17.png" /></p>
+<p><img alt="" src="../image/2023-02-16-10-30-25.png" /></p>
+<ul>
+<li>Operation:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-16-10-36-18.png" /></p>
+<h3 id="4-sram">4: SRAM<a class="headerlink" href="#4-sram" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Simple single-bit memory
+<img alt="" src="../image/2023-02-16-10-41-03.png" /></li>
+</ul>
+<h4 id="41-6t-sram">4.1: 6T SRAM<a class="headerlink" href="#41-6t-sram" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-16-10-42-48.png" /></p>
+<h3 id="5-dram">5: DRAM<a class="headerlink" href="#5-dram" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2023-02-16-10-47-45.png" /></p>
+<h3 id="6-floating-gate-memory-cells">6: Floating gate memory cells<a class="headerlink" href="#6-floating-gate-memory-cells" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Flash is based on floating gate.<ul>
+<li>FGMOS transistor </li>
+</ul>
+</li>
+</ul>
+<h2 id="iv-arithmetic-logic-adders">IV: Arithmetic Logic-Adders<a class="headerlink" href="#iv-arithmetic-logic-adders" title="Permanent link">&para;</a></h2>
+<h3 id="1-digital-arithmetic">1: Digital arithmetic<a class="headerlink" href="#1-digital-arithmetic" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Data path in charge of arithmetic operations.</p>
+</li>
+<li>
+<p>Controller defines the sequence of operations.</p>
+</li>
+<li>
+<p>Data path operation include:</p>
+<ul>
+<li>addition</li>
+<li>subtraction </li>
+<li>multiplication </li>
+<li>division </li>
+<li>AND, OR, etc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-the-case-of-addition">2: The case of addition<a class="headerlink" href="#2-the-case-of-addition" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Subtraction</p>
+<ul>
+<li>implemented by addition through the use of 2's complement.</li>
+<li>A - B = A + (2's complement of B)</li>
+</ul>
+</li>
+<li>
+<p>2's complement </p>
+<ul>
+<li>A bit string considers two interpretations:<ul>
+<li>Natural interpretation</li>
+<li>2's complement </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-20-14-15-55.png" /></p>
+<ul>
+<li>
+<p>Multiplication:</p>
+<ul>
+<li>Multiplication is repeated addition.
+<img alt="" src="../image/2023-02-20-14-18-48.png" /></li>
+</ul>
+</li>
+<li>
+<p>Division:</p>
+<ul>
+<li>The division can be divided into <strong>comparison</strong> and <strong>subtraction</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-20-14-20-52.png" /></p>
+<ul>
+<li>Integer power and roots:<ul>
+<li><span class="arithmatex">\(A^n\)</span>: repeated multiplication / division.</li>
+<li><span class="arithmatex">\(\sqrt[n]{A}\)</span>: successive approximation (monotony functions only)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-20-14-28-05.png" /></p>
+<ul>
+<li>Functions not amenable for successive approximation:<ul>
+<li>Power series and lookup table approach.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-n-bit-adder">3: N-bit adder<a class="headerlink" href="#3-n-bit-adder" title="Permanent link">&para;</a></h3>
+<p>Simplify the boolean expression of full-adder:</p>
+<p><img alt="" src="../image/2023-02-20-14-38-47.png" /></p>
+<h4 id="31-adder-as-a-sum-of-products">3.1: Adder as a Sum of Products<a class="headerlink" href="#31-adder-as-a-sum-of-products" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>No common product terms for random logic solution.</p>
+</li>
+<li>
+<p>AND and OR can be made using NAND.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-20-14-41-36.png" /></p>
+<h4 id="32-a-more-modular-approach">3.2: A more modular approach<a class="headerlink" href="#32-a-more-modular-approach" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A half adder adds two operands A and B without taken in carry in <span class="arithmatex">\(C_{in}\)</span>.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-20-14-47-17.png" /></p>
+<ul>
+<li>The practical point of the half adder is you can assemble a full adder using two half adders in modular fashion and end with smaller gates.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-20-14-48-37.png" /></p>
+<ul>
+<li>Fewer gates, smaller gates but delay more from B to <span class="arithmatex">\(C_{out}\)</span>.</li>
+</ul>
+<h4 id="33-ripple-carry-adder">3.3: Ripple carry adder<a class="headerlink" href="#33-ripple-carry-adder" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(C_{in}\)</span> of next bit is <span class="arithmatex">\(C_{out}\)</span> of current bit.</p>
+</li>
+<li>
+<p>If no <span class="arithmatex">\(C_{in}\)</span>, just wire <span class="arithmatex">\(C_{in}\)</span> to 0.</p>
+</li>
+<li>
+<p>An n-bit adder can add two n-bits number.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-23-10-23-29.png" /></p>
+<ul>
+<li>Delay problem:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-23-10-25-22.png" /></p>
+<h4 id="34-speeding-up-addition">3.4: Speeding up addition<a class="headerlink" href="#34-speeding-up-addition" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>For delay, carry is more critical.</p>
+</li>
+<li>
+<p>Fewer inputs gates are faster.</p>
+</li>
+<li>
+<p>Separate out non-carry portion.</p>
+</li>
+<li>
+<p>Composition of two half adders.</p>
+</li>
+<li>
+<p>Delay may different:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2023-02-27-14-20-06.png" /></th>
+<th><img alt="" src="../image/2023-02-27-14-20-39.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The max fan-in/fan-out = 2:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-14-22-12.png" /></p>
+<p>which delay is 2 gates per bit.</p>
+<h4 id="35-more-focused-analysis">3.5: More focused analysis<a class="headerlink" href="#35-more-focused-analysis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>If we rename the signals as k for 1 to n.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-14-23-57.png" /></p>
+<ul>
+<li>The carry to carry ripple delay is the critical path: <span class="arithmatex">\(2n\tau\)</span>:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-14-25-36.png" /></p>
+<ul>
+<li>Reviewing the truth table of adder, we may find the rule of <strong>propagate</strong>:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2023-02-27-14-28-38.png" /></th>
+<th><img alt="" src="../image/2023-02-27-14-28-44.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Carry Generate G = 1, then <span class="arithmatex">\(C_{out}=1\)</span> whatever <span class="arithmatex">\(C_{in}\)</span> is.</p>
+</li>
+<li>
+<p>Carry Propagate P = 1, then <span class="arithmatex">\(C_{out}=C_{in}\)</span></p>
+</li>
+<li>
+<p>As G and P are dependent on A and B nothing to do with <span class="arithmatex">\(C_{in}\)</span>, no need to wait for <span class="arithmatex">\(C_{in}\)</span> signal.</p>
+</li>
+</ul>
+<h4 id="36-propagate-and-generate">3.6: Propagate and Generate<a class="headerlink" href="#36-propagate-and-generate" title="Permanent link">&para;</a></h4>
+<ul>
+<li>P and G come from A and B and only have single gate delay <span class="arithmatex">\(\tau\)</span>.</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-14-37-06.png" /></p>
+<ul>
+<li>
+<p>If we define every C signal as a sum of products of <span class="arithmatex">\(G_k\)</span>, <span class="arithmatex">\(P_k\)</span> and <span class="arithmatex">\(C_{in}\)</span> only.</p>
+</li>
+<li>
+<p>We generate the carry path by <strong>recursively</strong> using the formula:
+<img alt="" src="../image/2023-02-27-14-46-39.png" /></p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{split}
+    C_k &amp;= G_k +P_kC_{k-1} \\ 
+    &amp;= G_k + P_k(G_{k-1}+P_{k-1}C_{k-2}) \\
+\end{split} 
+\end{equation*}
+\]</div>
+<ul>
+<li>
+<p>Recursive until <span class="arithmatex">\(C_{-1}\)</span> remains on the right side.</p>
+</li>
+<li>
+<p>All carries are evaluated in parallel:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-14-48-28.png" /></p>
+<h4 id="37-taking-out-the-carry-chain">3.7: Taking out the carry chain<a class="headerlink" href="#37-taking-out-the-carry-chain" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-02-27-14-51-16.png" /></p>
+<ul>
+<li>Combining existing parts to form a CLA adder:</li>
+</ul>
+<p><img alt="" src="../image/2023-02-27-14-52-51.png" /></p>
+<ul>
+<li><span class="arithmatex">\(S_k = P_k \oplus C_{k-1}\)</span></li>
+</ul>
+<h4 id="38-cla-adder-delay">3.8: CLA adder delay<a class="headerlink" href="#38-cla-adder-delay" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CLA adder formulas:</li>
+</ul>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{split}
+    C_k &amp;= G_k +P_kC_{k-1} \\ 
+    S_k &amp;= P_k \oplus C_{k-1} \\
+\end{split} 
+\end{equation*}
+\]</div>
+<ul>
+<li>The total CLA delay is therefore:</li>
+</ul>
+<p><img alt="" src="../image/20230301110617.png" /></p>
+<ul>
+<li>
+<p>Remember ripple carry adder delay <span class="arithmatex">\(2n\tau\)</span>.</p>
+</li>
+<li>
+<p>In this CLA design, the delay reduced from linear to constant.</p>
+</li>
+</ul>
+<h4 id="39-fan-in-and-fan-out">3.9: Fan-in and Fan-out<a class="headerlink" href="#39-fan-in-and-fan-out" title="Permanent link">&para;</a></h4>
+<ul>
+<li>We need to consider fan-in and fan-out for a realistic estimation of performance:<ul>
+<li>The CLA have fan-in and fan-out increasing with the increasing of bits.</li>
+</ul>
+</li>
+</ul>
+<h4 id="310-gate-switching">3.10: Gate switching<a class="headerlink" href="#310-gate-switching" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Gate switching can be modelled as the charging through resistors.</p>
+</li>
+<li>
+<p>The gate delay is noted as <span class="arithmatex">\(\tau = RC\)</span>:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230301112035.png" /></p>
+<ul>
+<li>For example of a NOR Gate with 2 fan-in and 4 fan-out:</li>
+</ul>
+<p><img alt="" src="../image/20230301112246.png" /></p>
+<h4 id="311-gate-delay">3.11: Gate delay<a class="headerlink" href="#311-gate-delay" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The rise and fall times of the voltage at Y in previous NOR gate example depends on the <span class="arithmatex">\(C_{load}\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(C_{load}\)</span> is proportional to fan-out N(Y), so that the gate delay is proportional to N(Y).</p>
+</li>
+<li>
+<p>Each input adds a pair of transistors to the gate which causing extra capacitance.</p>
+</li>
+<li>
+<p>In general, pull-up and pull-down delays are not equal.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230301132449.png" /></p>
+<h4 id="312-fan-out-delay-cost">3.12: Fan-out delay cost<a class="headerlink" href="#312-fan-out-delay-cost" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Drive m outputs - single gate delay has become <span class="arithmatex">\(m\tau\)</span>.</p>
+</li>
+<li>
+<p>CLA is even worse than ripple carry in the cost of delay as for a single <span class="arithmatex">\(P_n\)</span> will be several fan-out.</p>
+</li>
+<li>
+<p>To solve this problem, we use fan-in (out) trees to decrease the number of fan-out by adding levels.</p>
+</li>
+</ul>
+<h4 id="313-fan-out-fan-in-buffers">3.13: Fan-out / Fan-in buffers<a class="headerlink" href="#313-fan-out-fan-in-buffers" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/20230301134309.png" /></p>
+<ul>
+<li>
+<p>For this condition, the fan-out (controlled gate) of one gate is only 3.</p>
+</li>
+<li>
+<p>If we note B is the <strong>branching ratio</strong> and L is the <strong>level</strong>, the realistic controlled by the input is <span class="arithmatex">\(B^L\)</span>, which is 27 in this condition.</p>
+</li>
+<li>
+<p>As we know, the delay time is proportional to the total value of capacitance.</p>
+</li>
+<li>
+<p>To calculate the equivalent capacitance of fan-out (parallel), we can find that <span class="arithmatex">\(C_{load}=B \times C_{load_in}\)</span>.</p>
+</li>
+<li>
+<p>As the fan-out is same for each level, if we note 'k' is the proportional constant, the total delay is :</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+t_{tot} = L \times k \times B
+\]</div>
+<ul>
+<li>
+<p>Compare the total delay of this method (9k) and common method (27k), it reduced obviously.</p>
+</li>
+<li>
+<p>As the delay is <span class="arithmatex">\(kBL\)</span>, we can change the value of B or L as long as BL is constant:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230312174007.png" /></p>
+<ul>
+<li>
+<p>The optimal value for B is <span class="arithmatex">\(e \approx 2.718\)</span>.</p>
+</li>
+<li>
+<p>In custom, the fan-out and fan-in should be limited to 4 for optimal performance.</p>
+</li>
+</ul>
+<h4 id="314-fan-out-tree-optimization">3.14: Fan-out Tree optimization<a class="headerlink" href="#314-fan-out-tree-optimization" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The best possible worst-case delay for a buffer delay is:</li>
+</ul>
+<div class="arithmatex">\[
+t_{pd} = 4 + B[ns]
+\]</div>
+<ul>
+<li>If we want a fan-out of 60, for B = 2:</li>
+</ul>
+<p><img alt="" src="../image/20230312174849.png" /></p>
+<p><img alt="" src="../image/20230312175146.png" /></p>
+<p><img alt="" src="../image/20230312175430.png" /></p>
+<ul>
+<li>For B = 3:</li>
+</ul>
+<p><img alt="" src="../image/20230312175512.png" /></p>
+<ul>
+<li>For B = 4:</li>
+</ul>
+<p><img alt="" src="../image/20230312175655.png" /></p>
+<ul>
+<li>For B = 5:</li>
+</ul>
+<p><img alt="" src="../image/20230312175950.png" /></p>
+<p><img alt="" src="../image/20230312180038.png" /></p>
+<p><img alt="" src="../image/20230312180133.png" /></p>
+<h4 id="315-fan-in-optimization-example">3.15: Fan-in optimization example<a class="headerlink" href="#315-fan-in-optimization-example" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Consider a circuit which used to justify if all bits of a 64-bit word are zero.</p>
+</li>
+<li>
+<p>The easiest way is using the NAND gate or NOR gate with 64 fan-in and 1 fan-out.</p>
+</li>
+<li>
+<p>To reduce the delay, we can use the circuit below which combine the NOR gate and NAND gate:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230312201002.png" /></p>
+<ul>
+<li>The delay formula is given as:</li>
+</ul>
+<div class="arithmatex">\[
+t = 2+ (1\times B_{in}) + (2 \times B_{out})[ns]
+\]</div>
+<ul>
+<li>And we can change the number of fan-in as well as the level (layer) of the gate:</li>
+</ul>
+<p><img alt="" src="../image/20230312201143.png" /></p>
+<h3 id="4-large-adders">4: Large Adders<a class="headerlink" href="#4-large-adders" title="Permanent link">&para;</a></h3>
+<h4 id="41-adder-size-limits">4.1: Adder size limits<a class="headerlink" href="#41-adder-size-limits" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For a 4-bit adder delays:</li>
+</ul>
+<p><img alt="" src="../image/20230306141438.png" /></p>
+<ul>
+<li>
+<p>CLA has better performance, but the max fan-out delay grows with adder size.</p>
+</li>
+<li>
+<p>CLA adder size therefore cannot be more bits and 4-bits is almost the optimizable choice.</p>
+</li>
+</ul>
+<h4 id="42-large-adder-design">4.2: Large adder design<a class="headerlink" href="#42-large-adder-design" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Two ways to extend the size of these adders, whilst keeping the fan-in an fan-out problem in check:<ul>
+<li>Ripple carry</li>
+<li>Block carry</li>
+</ul>
+</li>
+</ul>
+<h5 id="421-ripple-carrying-cla-blocks">4.2.1: Ripple carrying CLA blocks<a class="headerlink" href="#421-ripple-carrying-cla-blocks" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Ripple carry with constant max fan-in and fan-out unrelated to the size of adder, can be applied between CLA adder blocks.</li>
+</ul>
+<p><img alt="" src="../image/20230306142223.png" /></p>
+<h5 id="422-block-carry-of-cla">4.2.2: Block carry of CLA<a class="headerlink" href="#422-block-carry-of-cla" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>We use the same CLA method to a 4-bit CLA. Instead of using the <span class="arithmatex">\(C_3\)</span> as the output, the block carry needs to output G and P, which can also be noted as <span class="arithmatex">\(G'\)</span> and <span class="arithmatex">\(P'\)</span>.</p>
+</li>
+<li>
+<p>Block carry generate G':</p>
+<ul>
+<li>G' = 1 when carry is generated without regard to <span class="arithmatex">\(C_{in}\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Block carry propagate P':</p>
+<ul>
+<li>P' = 1 when block carry output depends on block carry input.</li>
+</ul>
+</li>
+<li>
+<p>The 4-bit adder carry output is redefined as:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230313062915.png" /></p>
+<ul>
+<li>The output of normal of CLA is <span class="arithmatex">\(C_{n-1}\)</span></li>
+</ul>
+<p><img alt="" src="../image/20230313063312.png" /></p>
+<ul>
+<li>The output of the block CLA is <span class="arithmatex">\(G\)</span> and <span class="arithmatex">\(P\)</span>.</li>
+</ul>
+<p><img alt="" src="../image/20230313063437.png" /></p>
+<ul>
+<li>
+<p>Example of 16 bits CLA:</p>
+<ul>
+<li>Delay to form G, P is <strong>1 <span class="arithmatex">\(\tau\)</span></strong></li>
+<li>Delay to form final sum is <strong>1 <span class="arithmatex">\(\tau\)</span></strong></li>
+<li>Delay to do the first carry calculation C0, C1, C2 is  <strong>2 <span class="arithmatex">\(\tau\)</span></strong></li>
+<li>Delay to do other carry calculation (in parallel) is <strong>2 <span class="arithmatex">\(\tau\)</span></strong></li>
+<li>Delay to do CLA is <strong>2 <span class="arithmatex">\(\tau\)</span></strong></li>
+</ul>
+</li>
+<li>
+<p>Each level multiply the size by 4, only adds a constant of <span class="arithmatex">\(4\tau\)</span>:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230313071210.png" /></p>
+<ul>
+<li>We can find that O(n) to O(log(n)) in this method.</li>
+</ul>
+<h3 id="5-multiplication-basics">5: Multiplication Basics<a class="headerlink" href="#5-multiplication-basics" title="Permanent link">&para;</a></h3>
+<h4 id="51-binary-multiplication">5.1: Binary multiplication<a class="headerlink" href="#51-binary-multiplication" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Long multiplication example as 13 <span class="arithmatex">\(\times\)</span> 11:</li>
+</ul>
+<p><img alt="" src="../image/20230313072115.png" /></p>
+<ul>
+<li>This requires 3 or n-bit adder.</li>
+</ul>
+<h4 id="52-parallel-multiplier">5.2: Parallel Multiplier<a class="headerlink" href="#52-parallel-multiplier" title="Permanent link">&para;</a></h4>
+<ul>
+<li>We don't need to complete each partial product before starting the next.</li>
+</ul>
+<p><img alt="" src="../image/20230316102000.png" /></p>
+<ul>
+<li>
+<p>Before you can add in <span class="arithmatex">\(r_0d_2\)</span>, the previous row's addition needs to have processed to column 2.</p>
+</li>
+<li>
+<p>The addition order is a kind of wavefront form <span class="arithmatex">\(r_0d_0\)</span>, <span class="arithmatex">\(r_0d_1\)</span>,<span class="arithmatex">\(r_0d_2\)</span> to <span class="arithmatex">\(r_0d_3\)</span>, as the red line in below:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230328152159.png" /></p>
+<h5 id="521-delay-analysis">5.2.1: Delay analysis<a class="headerlink" href="#521-delay-analysis" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Using the previous method:</p>
+<ul>
+<li>Single <span class="arithmatex">\(\tau\)</span> for one-bit multiplication (using AND gate, fully parallel)</li>
+<li>Addition step has a delay which is approx to <span class="arithmatex">\(\tau\log n\)</span> if we use the CLA adder.</li>
+</ul>
+</li>
+<li>
+<p>To reduce the delay, we find that the adding starts from the right-side, so some bit-wise multiplication in the left is not required:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230316101221.png" /></p>
+<ul>
+<li>So we can use the only calculate what we need (Note that the figure may not correct)</li>
+</ul>
+<p><img alt="" src="../image/20230327082242.png" /></p>
+<ul>
+<li>Using the delay analysis of Ripple Carry Adder, we can find the delay of:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/20230327082907.png" /></th>
+<th><img alt="" src="../image/20230328153234.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>If we set <span class="arithmatex">\(n\)</span> is the partial product number, so the total delay can be expressed as:</li>
+</ul>
+<div class="arithmatex">\[
+1\tau (n-1) + 3\tau (n-1) + 2\tau (n-1) = 6n\tau - 6\tau
+\]</div>
+<ul>
+<li>Compared to the previous method delay of <span class="arithmatex">\(\tau + k_1.(n-1).\log{n}.\tau\)</span>, the parallel method is only <span class="arithmatex">\(k_2.(n-1).\tau\)</span></li>
+</ul>
+<h5 id="522-scope-for-further-speedup">5.2.2: Scope for further speedup<a class="headerlink" href="#522-scope-for-further-speedup" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>The last-row ripple-carry adder cannot be replaced by CLA cause the feed-in are not parallel.</p>
+</li>
+<li>
+<p>The carry chain still exist on downward path.</p>
+</li>
+</ul>
+<h5 id="523-carry-save-scheme">5.2.3: Carry-save scheme<a class="headerlink" href="#523-carry-save-scheme" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>We may change the algorithm so that the final product remains but each row have different partial product, which means the final result of each row appearing at the same time.</p>
+</li>
+<li>
+<p>If we want to add two A + B block, the carry number need to be passed leftward:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230328161013.png" /></p>
+<ul>
+<li>But if we add three A + B block, the addition order can be changed as right (carry-save) or left (previous):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/20230328161149.png" /></th>
+<th><img alt="" src="../image/20230328161203.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>This doesn't work if there is only one adder row.</p>
+</li>
+<li>
+<p>The final row needs special attention to catch all carries saved from the previous row, we use CLA here.</p>
+</li>
+</ul>
+<h5 id="524-16-x-16-multiplier-example">5.2.4: 16 x 16 Multiplier Example<a class="headerlink" href="#524-16-x-16-multiplier-example" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../image/20230328185714.png" /></p>
+<ul>
+<li>
+<p>As there is no more leftward carry in the first row, so the full-adders can be replaced by half-adders (HA).</p>
+</li>
+<li>
+<p>The delay depth per row is now a single instead of two.</p>
+</li>
+<li>
+<p>One more row because of carry save.</p>
+</li>
+</ul>
+<h5 id="525-per-row-delay-reduction">5.2.5: Per-row delay reduction<a class="headerlink" href="#525-per-row-delay-reduction" title="Permanent link">&para;</a></h5>
+<ul>
+<li>The previous ripple carry delay per-row is <span class="arithmatex">\(4\tau\)</span>, which only happen  at the right-most diagonal:</li>
+</ul>
+<p><img alt="" src="../image/20230328190249.png" /></p>
+<ul>
+<li>The total delay is only <span class="arithmatex">\(2\tau\)</span> in the carry save condition:</li>
+</ul>
+<p><img alt="" src="../image/20230328190715.png" /></p>
+<ul>
+<li>
+<p>Passing to the next row avoids the sequential propagation (the waiting for the previous signals) within single row.</p>
+</li>
+<li>
+<p>The total delay consist of:</p>
+<ul>
+<li>One A, B to S delay (<span class="arithmatex">\(2\tau\)</span>) for n-1 row.</li>
+<li>Last row is block CLA adder (log delay)</li>
+</ul>
+</li>
+<li>
+<p>Assuming a 4-bits CLA adders in the final row, the delay is:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+D = 2(n-1)\tau + 4\tau \log_{4}{n} + \tau
+\]</div>
+<ul>
+<li>If we use ripple-carry adder in the last line, the delay will be:</li>
+</ul>
+<div class="arithmatex">\[
+D = 4(n-1)\tau + 2(n-2)\tau + \tau
+\]</div>
+<h5 id="526-further-speedup-methods">5.2.6: Further Speedup Methods<a class="headerlink" href="#526-further-speedup-methods" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Wallace / Dadda trees</p>
+<ul>
+<li>Reduce the middle layer of partial product.</li>
+<li>The total time is O(log(n))</li>
+</ul>
+</li>
+<li>
+<p>Approximate computing</p>
+<ul>
+<li>Full precision is not needed most of time.</li>
+<li>Eg. if we use a OR gate as a single-bit adder, the accuracy is 75%.</li>
+</ul>
+</li>
+<li>
+<p>Analogue Multiplier</p>
+</li>
+</ul>
+<h4 id="53-serial-multiplier">5.3: Serial Multiplier<a class="headerlink" href="#53-serial-multiplier" title="Permanent link">&para;</a></h4>
+<h5 id="531-serial-arithmetic">5.3.1: Serial arithmetic<a class="headerlink" href="#531-serial-arithmetic" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Parallel Multiplier featuren large hardware size.</p>
+</li>
+<li>
+<p>The block CLA multiplier makes the addition happens in 1 step, each step is the same, so we don't need n-1 n-bit block CLA adders.</p>
+</li>
+<li>
+<p>If we reuse the same CLA repeatedly n-1 times, this is method of serial operation.</p>
+</li>
+<li>
+<p>The carry-save multiplier is parallel at the level of individual cell, which can also be serialized.</p>
+</li>
+</ul>
+<h5 id="532-serial-multiplication">5.3.2: Serial Multiplication<a class="headerlink" href="#532-serial-multiplication" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>If the multiplication / AND step is also serialized, we need <span class="arithmatex">\(2n\)</span> AND gates.</p>
+</li>
+<li>
+<p>A single adder (block CLA for speed)</p>
+</li>
+<li>
+<p>Some memory to store partial products between steps.</p>
+</li>
+<li>
+<p>Significant reduction of silicon compared to the parallel version.</p>
+</li>
+<li>
+<p>The simpler version of serial multiplier:</p>
+<ul>
+<li>Repeatedly using a single adder row and a single row of ANDs.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/20230328195040.png" /></p>
+<h5 id="533-the-algorithm-of-serial-multiplication">5.3.3: The algorithm of serial multiplication<a class="headerlink" href="#533-the-algorithm-of-serial-multiplication" title="Permanent link">&para;</a></h5>
+<ul>
+<li>The sequence of the operations should be:<ul>
+<li>Load R and D, and reset P to 0.</li>
+<li>Add the partial product <span class="arithmatex">\(r_0\)</span> AND D to P.</li>
+<li>Shift R right 1 bit; Shift D left 1 bit.</li>
+<li>Repeat from step 2 for 4 times.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/20230328195829.png" /></p>
+<ul>
+<li>
+<p>Multiplying two n-digit numbers the result may be up to 2n digit wide.</p>
+</li>
+<li>
+<p>Adding two n-digit numbers the result may be up to n+1 digits wide.</p>
+</li>
+<li>
+<p>Shifting the R Register right makes it possible to AND the correct <span class="arithmatex">\(r_i\)</span>.</p>
+</li>
+<li>
+<p>Shifting the D register left can ensure the last-digit on the left is zero in partial product register.</p>
+</li>
+<li>
+<p>Time control signals for the registers:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230328201958.png" /></p>
+<h5 id="534-improvement-of-serial-multiplication">5.3.4: Improvement of Serial multiplication<a class="headerlink" href="#534-improvement-of-serial-multiplication" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Half of the bits in the adder have 0 in each addition steps.</p>
+<ul>
+<li>Only half of the adder is ever used at a time.</li>
+<li>We can do this with a n-bit adder instead of 2n-bit adder.</li>
+</ul>
+</li>
+<li>
+<p>It may save registers and AND gates as well.</p>
+</li>
+<li>
+<p>So if we apply a smaller version, the size an be reduced if the output register shifts.</p>
+</li>
+<li>
+<p>For example of 13 x 11 (1101 x 1011):</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230329003725.png" /></p>
+<ul>
+<li>
+<p>In each calculation, we can right-shift the register instead of the D or R.</p>
+</li>
+<li>
+<p>Move one of the partial product when doing the adding:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230329004621.png" /></p>
+<ul>
+<li>
+<p>As we are doing the right-shift for the R register, it is gradually empty from left to right.</p>
+</li>
+<li>
+<p>The right-hand cell storing the right-shifted value can be replaced by Multiplier R:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230329010549.png" /></p>
+<ul>
+<li>The carry bit is not necessory if the adder drops the result to the right by one bit (combine add with shift).</li>
+</ul>
+<h5 id="535-delay-calculation">5.3.5: Delay Calculation<a class="headerlink" href="#535-delay-calculation" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>After initialization, the multiplier takes n CLK cycle to multiply two n-bits numbers:</p>
+</li>
+<li>
+<p>Each addition takes one n-bit adder delay, which should be accomodate with the CLK cycle.</p>
+</li>
+<li>
+<p>Assuming using the CLA adder, the delay should be <span class="arithmatex">\(n(4\tau\log_{4}{n})\)</span> (the max of CLA block is 4).</p>
+</li>
+<li>
+<p>So it is O(n x log(n))</p>
+</li>
+<li>
+<p>For n = 16, the delay is 128<span class="arithmatex">\(\tau\)</span>.</p>
+</li>
+<li>
+<p>CLA serial multiplier is slower, and the size also grow with n because of CLA trees.</p>
+</li>
+</ul>
+<h5 id="536-carry-save-in-serial-multiplier">5.3.6: Carry-save in serial multiplier<a class="headerlink" href="#536-carry-save-in-serial-multiplier" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Carry-save in serial multipliers:<ul>
+<li>Carry-bits must be stored in a register between steps; If D is shifted, the partial product are accumulated at the same position and the carry is shifted to the left at each clock., which requires 2n single-bit adder.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../image/20230329025807.png" /></p>
+<ul>
+<li>
+<p>Combining shift with add:</p>
+<ul>
+<li>if the product register P is shifted and D remains the same, thesum outputs must be shifted right each clock and the carries remain at the same position, which requires n single-bit adders.</li>
+</ul>
+</li>
+<li>
+<p>As the steps are controlled by clocks, we cannot exploit the tolerance for late <span class="arithmatex">\(C_{in}\)</span> to produce <span class="arithmatex">\(C_{out}\)</span>. S and <span class="arithmatex">\(C_{out}\)</span> must be ready at the clock edge.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/20230329030042.png" /></p>
+<ul>
+<li>However, the space savings from serialization, we can make the single-bit adders a bit bigger and use the sum-of-product truth table design which has two layers of gates for a delayed of <span class="arithmatex">\(2\tau\)</span></li>
+</ul>
+<p><img alt="" src="../image/20230329031027.png" /></p>
+<ul>
+<li>
+<p>Carry-save allows the parallelization of carries, and the remaining carries must be added at the last step.</p>
+<ul>
+<li>n-1 CLK steps needed, with D held at 0, to sort out the final carries (like ripple-carry scheme)</li>
+</ul>
+</li>
+<li>
+<p>Delay at each step is now only 1 adder delay (<span class="arithmatex">\(2\tau\)</span>):</p>
+<ul>
+<li><span class="arithmatex">\(t_{total} = (n+(n-1))\times 2\tau\)</span></li>
+</ul>
+</li>
+<li>
+<p>The time-complexity is <em>O(n)</em>.</p>
+</li>
+<li>
+<p>For example, for n =16, the delay is 62 <span class="arithmatex">\(\tau\)</span> without AND gates.</p>
+</li>
+</ul>
+<h2 id="v-sequential-logic-control-and-fsm">V: Sequential Logic: Control and FSM<a class="headerlink" href="#v-sequential-logic-control-and-fsm" title="Permanent link">&para;</a></h2>
+<h3 id="1-basic-control">1: Basic control<a class="headerlink" href="#1-basic-control" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2023-05-21-08-02-25.png" /></p>
+<ul>
+<li>Data path needs to be put under control, which could determine when the previous step ends and next step starts.</li>
+</ul>
+<h4 id="11-hazard">1.1: Hazard<a class="headerlink" href="#11-hazard" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-05-21-08-04-08.png" /></p>
+<ul>
+<li>
+<p>For different signals reach the same port at different time, it may cause an unexpected pause.</p>
+</li>
+<li>
+<p>Hazards do not necessarily lead to errors.</p>
+</li>
+<li>
+<p>To avoid hazards:</p>
+<ul>
+<li>Adding extra gates / delays</li>
+<li>Synchronous design </li>
+</ul>
+</li>
+<li>
+<p>For example of a D-FF with one enable output:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-07-28.png" /></p>
+<h3 id="2-finite-state-machine-fsm-types">2: Finite State Machine (FSM) Types<a class="headerlink" href="#2-finite-state-machine-fsm-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Two main FSM types:</p>
+<ul>
+<li>Sync:  State changes only on the CLK pulse.</li>
+<li>Async: State changes when input changes </li>
+</ul>
+</li>
+<li>
+<p>In sync-FSM, there are:</p>
+<ul>
+<li><strong>Mealy</strong>:  output is valid at the CLK' event. Output depends on state and inputs.</li>
+<li><strong>Moore</strong>: output valid during entire CLK period.</li>
+</ul>
+</li>
+<li>
+<p>For Mealy model FSM:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-12-12.png" /></p>
+<ul>
+<li>For Moore model FSM:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-12-30.png" /></p>
+<h3 id="3-sync-fsm-minimization">3: Sync-FSM minimization<a class="headerlink" href="#3-sync-fsm-minimization" title="Permanent link">&para;</a></h3>
+<h4 id="31-y-map-k-map-reduction">3.1: Y-map / K-map reduction<a class="headerlink" href="#31-y-map-k-map-reduction" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../image/2023-05-21-08-14-22.png" /></p>
+<ul>
+<li>From the state-graph shown above, we can convert it to <strong>Y-map</strong>:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-15-11.png" /></p>
+<ul>
+<li>
+<p>If we using binary code '0' and '1' for two state S0 and S1, the map can be shown as above. For more states such as 4 states, '00','01','11', '10' can be applied.</p>
+</li>
+<li>
+<p>To find the relation of Y(x,y) and Z(x,y), K-map for each function can be deduced:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-17-48.png" /></p>
+<ul>
+<li>For more complicated condition:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-26-21.png" /></p>
+<p><img alt="" src="../image/2023-05-21-08-28-02.png" /></p>
+<h4 id="32-finding-equivalence-redundancies">3.2: Finding equivalence / redundancies<a class="headerlink" href="#32-finding-equivalence-redundancies" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Rows are equivalent <strong>if their outputs are the same and their next states are equivalent</strong> or identical.</p>
+</li>
+<li>
+<p>If we can find two different states have at least one input sequence to make the output different, it is called the <strong>distinguishable</strong>.</p>
+</li>
+<li>
+<p>If not distinguishable, the two states are called '<strong>equivalence</strong>'.</p>
+</li>
+<li>
+<p>As the example below, we can use the <strong>implication table</strong> to check equal and reduce the states numbers:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-33-42.png" /></p>
+<p><img alt="" src="../image/2023-05-21-08-36-32.png" /></p>
+<ul>
+<li>Finally:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-36-54.png" /></p>
+<p><img alt="" src="../image/2023-05-21-08-37-05.png" /></p>
+<ul>
+<li>So the new table can be expressed as:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-37-36.png" /></p>
+<h3 id="4-async-fsm-minimization">4: Async-FSM minimization<a class="headerlink" href="#4-async-fsm-minimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>To reduce cost, async-FSM can be applied.</p>
+</li>
+<li>
+<p>State changed immediately on an input change.</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-41-24.png" /></p>
+<ul>
+<li>
+<p>In async-FSM, we use Fundamental Mode iff:</p>
+<ul>
+<li>Only one input is allowed at a time.</li>
+<li>The input changes only when y is stable.</li>
+</ul>
+</li>
+<li>
+<p>We use primitive flow tables to describe the transition:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-43-37.png" /></p>
+<ul>
+<li>
+<p>The steady state is circled, such as in state-1, when input is 00, the next-state is still state-1.</p>
+</li>
+<li>
+<p>Two-bits changing is not allowed:</p>
+</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-45-16.png" /></p>
+<ul>
+<li>To minimize the PFT, y-map can be used:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-48-50.png" /></p>
+<p><img alt="" src="../image/2023-05-21-08-50-09.png" /></p>
+<p><img alt="" src="../image/2023-05-21-08-51-06.png" /></p>
+<p><img alt="" src="../image/2023-05-21-08-51-16.png" /></p>
+<ul>
+<li>However, one ringed stable state can only on one 'group' (connected with '='):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2023-05-21-08-52-44.png" /></th>
+<th><img alt="" src="../image/2023-05-21-08-52-52.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The final result can be expressed as:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-54-48.png" /></p>
+<ul>
+<li>Merge the don't care term:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-56-19.png" /></p>
+<ul>
+<li>Encode the states to '0' and '1', then minimizing:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-08-57-20.png" /></p>
+<h3 id="5-race-condition">5: Race condition<a class="headerlink" href="#5-race-condition" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2023-05-21-09-22-24.png" /></p>
+<p><img alt="" src="../image/2023-05-21-09-22-35.png" /></p>
+<ul>
+<li>The transition changing two-bits will cause race:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-09-25-09.png" /></p>
+<ul>
+<li>The using of cycles can reduce race using empty cell:</li>
+</ul>
+<p><img alt="" src="../image/2023-05-21-09-46-42.png" /></p>
+<p><img alt="" src="../image/2023-05-21-09-47-49.png" /></p>
+<p><img alt="" src="../image/2023-05-21-09-48-27.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ziyu Tian
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ziyu-Tian" target="_blank" rel="noopener" title="GitHub | Ziyu Tian" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

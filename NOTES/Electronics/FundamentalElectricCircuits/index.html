@@ -1,0 +1,2079 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ziyu Tian's Website">
+      
+      
+        <meta name="author" content="Ziyu Tian">
+      
+      
+        <link rel="canonical" href="https://ziyu-tian.github.io/NOTES/Electronics/FundamentalElectricCircuits/">
+      
+      
+        <link rel="prev" href="../../Stage_1/Coding/PythonDataAnalysis/">
+      
+      
+        <link rel="next" href="../../Stage_2/semiconductor/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>Fundamentals of Electric Circuits - Nothing except Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fundamentals-of-electric-circuits" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Nothing except Notes" class="md-header__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nothing except Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fundamentals of Electric Circuits
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../DEV/" class="md-tabs__link">
+          
+  
+    
+  
+  Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BLOGS/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Nothing except Notes" class="md-nav__button md-logo" aria-label="Nothing except Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Nothing except Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ziyu-Tian/ziyu-tian.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ziyu-tian.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage1_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Stage1_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Job_Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1000/Placement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Placement Year
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/1001/EngineeringMath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engineering Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Programing Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/Matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MATLAB Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_1/Coding/PythonDataAnalysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Data Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electronics Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Electronics Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fundamentals of Electric Circuits
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals of Electric Circuits
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Basic Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Basic Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passive-sign-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passive sign convention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-of-the-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type of the Sources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-basic-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Basic Laws
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Basic Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ohms-law-conductance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ohm's Law &amp; Conductance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-branches-and-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes, Branches, and Loops
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#series-and-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Series and parallel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kirchhoffs-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kirchhoff's Laws
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wye-delta-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wye-Delta Transformations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-methods-of-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Methods of Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Methods of Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodal-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodal Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mesh Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodal-and-mesh-analysis-by-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodal and Mesh Analysis by inspection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-methods-of-bjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Methods of BJT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage2_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Stage2_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/semiconductor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semiconductors Devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/signalsAndCommunication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signals and Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/computerSystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Systems and Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/analogElectronic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analogue Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/microProcessors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/digitalElectronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/vhdl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VHDL Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/statisticalMethod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/acElectrical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AC Electrical Power
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_2/automaticControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatic Control Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage3_Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Stage3_Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Industrial_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Control and PLC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Introduction_to_Law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction to Business Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage_3/Digital_Signal_Process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Signal Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../DEV/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Dev
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/TimeComplexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time & Space Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/StaticInC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static modifier in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/ValueRefPass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pass-by-Value & Pass-by-Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEV/BitOperation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bit Operation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../BLOGS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/BlogsZero/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blogs_Zero
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_220822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 22/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Thoughts_240822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thoughts 24/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BLOGS/Literature_260822/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Poem Thoughts 26/08/22
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Basic Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Basic Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passive-sign-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passive sign convention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-of-the-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type of the Sources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-basic-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Basic Laws
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Basic Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ohms-law-conductance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ohm's Law &amp; Conductance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-branches-and-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes, Branches, and Loops
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#series-and-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Series and parallel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kirchhoffs-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kirchhoff's Laws
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wye-delta-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wye-Delta Transformations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-methods-of-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Methods of Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Methods of Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodal-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodal Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mesh Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodal-and-mesh-analysis-by-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodal and Mesh Analysis by inspection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-methods-of-bjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Methods of BJT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="fundamentals-of-electric-circuits">Fundamentals of Electric Circuits<a class="headerlink" href="#fundamentals-of-electric-circuits" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>The source textbook is the <em>Fundamentals of Electric Circuits,The Seventh Edition</em>, written by Charles Alexander and Matthew Sadiku.
+The index of this note are not following the same number of the textbook. </p>
+</blockquote>
+<h2 id="1-basic-concepts">1: Basic Concepts<a class="headerlink" href="#1-basic-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="passive-sign-convention">Passive sign convention<a class="headerlink" href="#passive-sign-convention" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Passive sign convention is the convention we commonly used, which is satisfied when the current enters through the <em>positive terminal (+)</em>of an element. For the voltage analysis (eg. mesh analysis), if we follow a vested direction (mostly clockwise) of a loop, if the direction arrow enter the <em>positive terminal (+)</em> of a element, that voltage will be marked as <em>'+'</em> and vice versa.</li>
+<li>For example, the 5 V source in the Loop 1 should be marked as '-' as the following image.
+<img alt="" src="../image/2022-08-17-18-10-38.png" /></li>
+</ul>
+<h3 id="type-of-the-sources">Type of the Sources<a class="headerlink" href="#type-of-the-sources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ideal Independent sources</strong> is an active elements(could generate power) that provides a specified voltage or current is <em>completely independent</em> of other elements. We use the 'circled sources' refer to <strong>independent sources</strong>.</li>
+</ul>
+<p><img alt="" src="../image/2022-08-17-18-23-51.png" /></p>
+<ul>
+<li><strong>Ideal dependent (controlled) source</strong> is an active element in which the source quantity is controlled by another voltage or current. There are four types of dependent sources, namely:  VCVS (voltage-controlled voltage source), CCVS, VCCS, CCCS. We use the 'diamond-shaped symbols' refer to <strong>dependent source</strong>.</li>
+</ul>
+<p><img alt="" src="../image/2022-08-17-18-30-36.png" /></p>
+<h2 id="2-basic-laws">2: Basic Laws<a class="headerlink" href="#2-basic-laws" title="Permanent link">&para;</a></h2>
+<h3 id="ohms-law-conductance">Ohm's Law &amp; Conductance<a class="headerlink" href="#ohms-law-conductance" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ohm's Law which is <span class="arithmatex">\(v\propto i\)</span>, or more commonly <span class="arithmatex">\(v=iR\)</span>. The unit of resistance is Ohm.</li>
+<li>A useful quantity in circuit analysis is the reciprocal of resistance <span class="arithmatex">\(R\)</span>, <strong>Conductance</strong>,<span class="arithmatex">\(G=\frac{1}{R}\)</span>. The unit of the conductance is <em>mho</em> (<span class="arithmatex">\(\mho\)</span>) or <em>Siemens</em> (<span class="arithmatex">\(S\)</span>).</li>
+</ul>
+<h3 id="nodes-branches-and-loops">Nodes, Branches, and Loops<a class="headerlink" href="#nodes-branches-and-loops" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../image/2022-08-18-10-15-52.png" /></p>
+<ul>
+<li>A <strong>branch</strong> represents a single element such as a voltage source or a resistor. Such as the 10-V voltage source, the 2-A current source and three resistors.</li>
+<li>A <strong>node</strong> is the point of the connection between two or more branches.(the point with same electric potential).</li>
+<li>A <strong>Loop</strong> is a closed path formed by starting at a node. A loop is said to be independent if it is a single circle which doesn't contain another loop. (a brief understanding) The circuit in the graph have 3 independent loops for example.</li>
+<li>According to the topology, we have <span class="arithmatex">\(*b=l+n-1*\)</span>.</li>
+</ul>
+<h3 id="series-and-parallel">Series and parallel<a class="headerlink" href="#series-and-parallel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Two or more elements are in <strong>series</strong> if they exclusively share a single node and consequently carry the same current.</li>
+<li>Two or more elements are in <strong>parallel</strong> if they are connected to the same two nodes and consequently have the same voltage across them.</li>
+</ul>
+<h3 id="kirchhoffs-laws">Kirchhoff's Laws<a class="headerlink" href="#kirchhoffs-laws" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Kirchhoff's current Law</strong> states that the algebraic sum of currents entering a node is zero.</li>
+<li><strong>Kirchhoff's voltage Law</strong> states that the algebraic sum of all voltages around a closed loop is zero.</li>
+</ul>
+<h3 id="wye-delta-transformations">Wye-Delta Transformations<a class="headerlink" href="#wye-delta-transformations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Wye-Delta Transformation</strong> is used to convert 'Y' or 'T' networks and '<span class="arithmatex">\(\Delta\)</span>' or '<span class="arithmatex">\(\Pi\)</span>' each other. </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-08-18-14-10-58.png" /></th>
+<th><img alt="" src="../image/2022-08-18-14-21-20.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Normally we use the graph below to do the conversion between 'Wye' and 'delta'.</li>
+</ul>
+<p><img alt="" src="../image/2022-08-18-16-44-35.png" /></p>
+<ul>
+<li>Note the rule that <span class="arithmatex">\(R_1\)</span> faces to the <span class="arithmatex">\(R_a\)</span> and same for other two resisters.(use alphas for 'delta' and digits for 'Wye')</li>
+<li>For the Delta to Wye conversion:<ul>
+<li><span class="arithmatex">\(R_1=\frac{R_bR_c}{R_1+R_b+R_c}\)</span></li>
+<li><span class="arithmatex">\(R_2=\frac{R_cR_a}{R_a+R_b+R_c}\)</span></li>
+<li><span class="arithmatex">\(R_3=\frac{R_aR_b}{R_a+R_b+R_c}\)</span></li>
+</ul>
+</li>
+<li>For the Wye to Delta conversion:<ul>
+<li><span class="arithmatex">\(R_a=\frac{R_1R_2+R_2R_3+R_3R_1}{R_1}\)</span></li>
+<li><span class="arithmatex">\(R_b=\frac{R_1R_2+R_2R_3+R_3R_1}{R_2}\)</span></li>
+<li><span class="arithmatex">\(R_c=\frac{R_1R_2+R_2R_3+R_3R_1}{R_3}\)</span></li>
+</ul>
+</li>
+<li>When <span class="arithmatex">\(R_1=R_2=R_3\)</span>, we say the network is <strong>balanced</strong>.</li>
+</ul>
+<h2 id="3-methods-of-analysis">3: Methods of Analysis<a class="headerlink" href="#3-methods-of-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="nodal-analysis">Nodal Analysis<a class="headerlink" href="#nodal-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nodal Analysis is a general method to analyze the circuits which using the nodal voltages as variables, so it is also known as <em>node-voltage method</em>.</li>
+<li>The Step of nodal analysis:<ul>
+<li>Determine a <em>reference node</em> which could be treated as ground.</li>
+<li>Apply KCL to each of the non-reference nodes, then use Ohm's Law to express the current in nodal voltages.</li>
+<li>Solve the Simultaneous Equations.</li>
+</ul>
+</li>
+<li>Nodal analysis with voltage sources:<ul>
+<li>When voltage source is connected between the reference node and a non-reference node, simply set the voltage at the no-reference node equal to the voltage of the voltage source as the '10 V' source in the picture below.</li>
+<li>When voltage source is between two non-reference nodes, which form a <em>supernode</em>(as the '5 V' source below) we use both KCL and KVL on the supernode: <span class="arithmatex">\(i_1-i_2+i_4-i_3=0\)</span>, then use the KVL between the supernode and the ground (a loop): <span class="arithmatex">\(-v_2+5+v_3=0\)</span>.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-08-18-17-11-28.png" /></th>
+<th><img alt="" src="../image/2022-08-18-17-18-16.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mesh-analysis">Mesh Analysis<a class="headerlink" href="#mesh-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mesh analysis is also known as <em>loop analysis</em>, which focus on the <em>mesh</em>, (i.e.a independent loop). The mesh analysis is only available to a circuit that is a <em>planar</em> (a topology term, means can be redraw with non branches crossing one another).</li>
+<li>For example, there are two meshes on the picture below.</li>
+</ul>
+<p><img alt="" src="../image/2022-08-18-17-33-42.png" /></p>
+<ul>
+<li>Steps to determine the mesh current:<ul>
+<li>Assign mesh current of the each mesh as the picture above. (Note that the direction of the current is arbitrary)</li>
+<li>Apply KVL to the meshes, use Ohm's Law to express the voltage in terms of the mesh current.</li>
+<li>Solve the equations. </li>
+</ul>
+</li>
+<li>Mesh Analysis with Current Sources:<ul>
+<li>The presence of the current sources will reduce the equations. </li>
+<li>When a current source exists only in one mesh, such as the left picture below, set <span class="arithmatex">\(i_2=5\)</span> A and write the other mesh in usual way.</li>
+<li>When a current source exists between the two meshes, such as the right picture below, we will create a <em>supermesh</em>, which means two meshes have a (dependent or independent) current source in common.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-08-19-09-41-37.png" /></th>
+<th><img alt="" src="../image/2022-08-19-09-41-52.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>When dealing with the <em>supermesh</em>, we can omit the branch with the current source, as the picture below, then apply the KVL of the new loop as <span class="arithmatex">\(-20+6i_1+10i_2+4i_2=0\)</span> and KCL to node in the branch when two meshes intersect as <span class="arithmatex">\(i_2=i_1+6\)</span>, the answer will be apparent.</li>
+<li>Three meshes can also create a large <em>supermesh</em>.(the right schematic)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-08-19-09-46-24.png" /></th>
+<th><img alt="" src="../image/2022-08-19-09-47-27.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nodal-and-mesh-analysis-by-inspection">Nodal and Mesh Analysis by inspection<a class="headerlink" href="#nodal-and-mesh-analysis-by-inspection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When <strong>all the sources in a circuit are independent current sources</strong>, we have a easier way to get the matrix form of the equations.</li>
+<li>We can use the formula <span class="arithmatex">\(Gv=i\)</span> to generate the <em>conductance matrix</em>, such as:</li>
+</ul>
+<div class="arithmatex">\[
+\left(\begin{array}{cccc}
+G_{11} &amp; G_{12} &amp; \cdots &amp; G_{1N} \\
+G_{21} &amp; G_{22} &amp; \cdots &amp; G_{2N} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+G_{N1} &amp; G_{n2} &amp; \vdots &amp; G_{NN}
+\end{array}\right)\left(\begin{array}{cccc}
+v_1 \\
+v_2 \\
+\vdots \\
+v_N
+\end{array}\right)=\left(\begin{array}{cccc}
+i_1 \\
+i_2 \\
+\vdots \\
+i_N
+\end{array}\right)
+\]</div>
+<ul>
+<li>
+<p>In the formula above:</p>
+<ul>
+<li><span class="arithmatex">\(G_{kk}\)</span>= Sum of the conductances connected to node k.</li>
+<li><span class="arithmatex">\(G_{kj}=G_{jk}=\)</span> Negative of the sum of the conductances of directly connecting nodes <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(j\)</span>.</li>
+<li><span class="arithmatex">\(v_k\)</span>= Unknown voltage at node <span class="arithmatex">\(k\)</span></li>
+<li><span class="arithmatex">\(i_k=\)</span> Sum of all independent current sources directly connected to node <span class="arithmatex">\(k\)</span>, with current entering the node treated as positive.</li>
+</ul>
+</li>
+<li>
+<p>When a linear resistive circuit <strong>has only independent voltage sources</strong>, we can obtain the mesh equations by inspections.</p>
+</li>
+<li>We can generate the <em>resistance matrix</em> using the formula <span class="arithmatex">\(Ri=v\)</span>, such as:</li>
+</ul>
+<div class="arithmatex">\[
+\left[\begin{array}{cccc}
+R_{11} &amp; R_{12} &amp; \cdots &amp; R_{1N} \\
+R_{21} &amp; R_{21} &amp; \cdots &amp; R_{2N} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+R_{N1} &amp; R_{N2} &amp; \cdots &amp; R_{NN}
+\end{array}\right] \left[\begin{array}{cccc}
+i_1 \\
+i_2 \\
+\vdots \\
+v_N
+\end{array}\right]=\left[\begin{array}{cccc}
+v_1 \\
+v_2 \\
+\vdots \\
+v_N
+\end{array}\right]
+\]</div>
+<ul>
+<li>In the formula above:<ul>
+<li><span class="arithmatex">\(R_kk\)</span>= Sum of the resistances in mesh <span class="arithmatex">\(k\)</span>.</li>
+<li><span class="arithmatex">\(R_{kj}=R_{jk}=\)</span> Negative of the resistances <strong>in common</strong> with meshes <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(j\)</span>.</li>
+<li><span class="arithmatex">\(i_k\)</span> = Unknown mesh current for mesh <span class="arithmatex">\(k\)</span> in the clockwise direction.</li>
+<li><span class="arithmatex">\(v_k\)</span> = Sum taken clockwise of all independent voltages sources in mesh <span class="arithmatex">\(k\)</span>, with voltage rise treated as positive.</li>
+</ul>
+</li>
+</ul>
+<h3 id="analysis-methods-of-bjt">Analysis Methods of BJT<a class="headerlink" href="#analysis-methods-of-bjt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The structure of a NPN BJT (left) and the current direction (right):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../image/2022-08-23-22-23-10.png" /></th>
+<th><img alt="" src="../image/2022-08-23-22-23-23.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The basic rules of BJT: <span class="arithmatex">\(I_C=\beta I_B\)</span></li>
+<li>To use the nodal analysis method on BJT, we can change it to the equivalent model below:</li>
+</ul>
+<p><img alt="" src="../image/2022-08-23-22-37-34.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ziyu Tian
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ziyu-Tian" target="_blank" rel="noopener" title="GitHub | Ziyu Tian" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
